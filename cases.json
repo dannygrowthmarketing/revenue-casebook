@@ -269,19 +269,20 @@
       "geoGroup": "India",
       "status": "Active",
       "statusClass": "live",
-      "period": "Audit 25–26 Sep 2026 · Business Profile work from 28 Sep",
-      "role": "Revenue audit, Business Profile management",
-      "grade": "D",
-      "gradeNote": "Outside-in audit plus Business Profile performance data; no ad or booking data yet",
-      "leak": "Guests want to buy; the journey ends at 'Enquire' while the same room sells 55% cheaper on an OTA",
-      "kpiBig": "−55%",
-      "kpiText": "room price on an OTA via Google Hotels vs the resort's own site (₹1,780 vs ₹3,999)",
+      "period": "Audit 25–26 Sep 2026 · engagement from 28 Sep",
+      "role": "Revenue audit, Business Profile management, marketing and sales dashboard",
+      "grade": "B",
+      "gradeNote": "Sales CRM, Meta, Google Ads, GA4 and Business Profile data; bookings not yet tied to channels",
+      "leak": "Ad spend rose 3.2× in a quarter and bookings fell 13%: the leak sits between the enquiry and the booking",
+      "kpiBig": "24% → 14%",
+      "kpiText": "enquiry-to-booking conversion, Q2 to Q3 2026, while enquiries grew 46%",
       "kpiEv": "m",
       "leakIds": [
+        "speed",
+        "measurement",
+        "allocation",
         "pricing",
         "postclick",
-        "measurement",
-        "speed",
         "visibility",
         "notmarketing"
       ],
@@ -296,12 +297,12 @@
           "t": "Mobile LCP 7.6 s (lab)"
         },
         "enquiry": {
-          "s": "l",
-          "t": "No book-now, no online payment; 'Enquire' only"
+          "s": "o",
+          "t": "5,621 enquiries Jan–1 Oct; Q3 up 46% on Q2"
         },
         "booking": {
           "s": "l",
-          "t": "Profile calls down 65% May→Sep while directions rose"
+          "t": "788 booked (14%); conversion 24% → 14% Q2→Q3"
         },
         "revenue": {
           "s": "l",
@@ -313,7 +314,7 @@
         },
         "measurement": {
           "s": "l",
-          "t": "No Ads conversion tag, no Meta Pixel; bookings confirmed by hand"
+          "t": "82% of enquiries logged only as 'IVR'; 0 bookings tied to an ad"
         }
       }
     },
