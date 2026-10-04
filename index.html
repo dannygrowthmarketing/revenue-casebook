@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Revenue Leak Casebook</title>
+<meta name="description" content="Daniel Deepak, revenue-growth consultant in Bengaluru. Seven businesses diagnosed from first search to the till: where revenue leaked, how it was found, what changed, and what the numbers can and cannot prove.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"><style>/* Layout: a casebook. Wide expanded-grotesk headlines over a cool mineral ground; money flows in teal, leaks mark in burnt orange. Sections are numbered only where the order is the method. */
+:root{
+  --bg:#ECEFED; --surface:#F7F9F8; --sunk:#E2E7E4; --ink:#0F1D1A; --ink-2:#3B4C47; --ink-3:#66766F; --rule:#C7D0CC;
+  --flow:#0B6B5F; --flow-soft:#D3E8E2; --leak:#B93D0C; --leak-soft:#F5DFD3; --est:#946200; --est-soft:#F2E6C8;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1412; --surface:#121C19; --sunk:#18241F; --ink:#E4ECE9; --ink-2:#A8B7B2; --ink-3:#7E8F89; --rule:#26342F;
+  --flow:#47B9A6; --flow-soft:#143029; --leak:#F0804F; --leak-soft:#3A2016; --est:#D9A93E; --est-soft:#33290F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1412; --surface:#121C19; --sunk:#18241F; --ink:#E4ECE9; --ink-2:#A8B7B2; --ink-3:#7E8F89; --rule:#26342F;
+  --flow:#47B9A6; --flow-soft:#143029; --leak:#F0804F; --leak-soft:#3A2016; --est:#D9A93E; --est-soft:#33290F; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+a{color:var(--flow);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--flow);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font:500 11.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.muted{color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand{font:800 15px/1 var(--display);font-stretch:125%;text-decoration:none;color:var(--ink);letter-spacing:.01em;white-space:nowrap}
+.brand span{color:var(--leak)}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font:500 13px/1 var(--body);text-decoration:none;color:var(--ink-2);padding:8px 10px;border-radius:4px}
+.nav a:hover,.nav a[aria-current="page"]{background:var(--sunk);color:var(--ink)}
+@media(max-width:640px){.nav a.hide-sm{display:none}}
+
+/* hero */
+.hero{padding-block:56px 40px;display:grid;gap:22px;border-bottom:2px solid var(--ink)}
+.hero h1{font-weight:850;font-stretch:118%;font-size:clamp(38px,7.2vw,92px);line-height:.92;letter-spacing:-.025em;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--leak)}
+.hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--ink-2);max-width:54ch}
+.hero-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule)}
+.hero-row>div{padding:16px 16px 4px 0;display:grid;gap:6px;align-content:start}
+.hero-row>div+div{border-left:1px solid var(--rule);padding-left:16px}
+.big{font:850 clamp(34px,4.2vw,58px)/.9 var(--display);font-stretch:104%;white-space:nowrap;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.big.leak{color:var(--leak)} .big.flow{color:var(--flow)}
+.hero-row p{font-size:14.5px;color:var(--ink-2)}
+@media(max-width:820px){.hero-row{grid-template-columns:1fr 1fr}.hero-row>div:nth-child(3){border-left:0;padding-left:0}.hero-row>div:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* sections */
+.sec{padding-block:56px 16px;display:grid;gap:24px}
+.sec+.sec{border-top:1px solid var(--rule)}
+.sh{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 20px;align-items:end}
+.sh .n{font:850 clamp(48px,7vw,88px)/.8 var(--display);font-stretch:110%;color:var(--flow);grid-row:span 2;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.sh h2{font-weight:800;font-stretch:112%;font-size:clamp(26px,3.6vw,42px);line-height:1.02}
+.sh p{grid-column:2;color:var(--ink-2);max-width:62ch}
+.sh.nonum{grid-template-columns:minmax(0,1fr)} .sh.nonum p{grid-column:1}
+@media(max-width:560px){.sh{grid-template-columns:minmax(0,1fr)}.sh .n{grid-row:auto}.sh p{grid-column:1}}
+.prose{max-width:66ch;display:grid;gap:14px;color:var(--ink-2)}
+.prose b,.prose strong{color:var(--ink)}
+.thesis{font:700 clamp(21px,2.6vw,28px)/1.22 var(--display);font-stretch:105%;max-width:40ch;border-left:4px solid var(--leak);padding-left:18px}
+
+/* evidence tags */
+.ev{display:inline-flex;align-items:center;gap:4px;font:600 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px;vertical-align:2px;white-space:nowrap;border:1px solid currentColor}
+.ev.m{color:var(--ink-2)} .ev.c{color:var(--flow)} .ev.e{color:var(--est)} .ev.u{color:var(--ink-3);border-style:dashed} .ev.x{color:var(--leak)}
+.grade{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;font:800 14px/1 var(--display);border:2px solid currentColor}
+.grade.A{color:var(--flow)} .grade.B{color:var(--ink-2)} .grade.C{color:var(--est)} .grade.D{color:var(--ink-3)}
+
+/* cards & grids */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))} .g3{grid-template-columns:repeat(3,minmax(0,1fr))} .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.panel h3{font-size:17px;font-weight:700}
+.panel .cap,.cap{font-size:13.5px;color:var(--ink-3);line-height:1.45}
+.stat{display:grid;gap:6px;align-content:start;min-width:0}
+.stat b{font:850 clamp(32px,4vw,52px)/.9 var(--display);font-stretch:108%;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat b.leak{color:var(--leak)} .stat b.flow{color:var(--flow)}
+.stat span{font-size:14px;color:var(--ink-2)}
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border-top:2px solid var(--ink)}
+.statrow>.stat{padding:16px 16px 12px 0;border-bottom:1px solid var(--rule)}
+
+/* case record (AI + skim) */
+.record{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);border-top:2px solid var(--ink);background:var(--surface)}
+.record dt,.record dd{margin:0;padding:12px 14px;border-bottom:1px solid var(--rule)}
+.record dt{font:600 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.record dd{font-size:15.5px}
+@media(max-width:560px){.record{grid-template-columns:minmax(0,1fr)}.record dt{border-bottom:0;padding-bottom:0}}
+
+/* journey */
+.journey{overflow-x:auto;padding-bottom:6px}
+.jtrack{display:flex;gap:0;min-width:760px;align-items:stretch}
+.jstep{flex:1;min-width:0;display:grid;grid-template-rows:auto auto 1fr;gap:6px;padding:14px 12px 14px;border-top:4px solid var(--flow);background:var(--surface);position:relative}
+.jstep+.jstep{border-left:1px solid var(--rule)}
+.jstep::after{content:"";position:absolute;right:-7px;top:-9px;width:0;height:0;border-left:7px solid var(--flow);border-top:7px solid transparent;border-bottom:7px solid transparent;z-index:2}
+.jstep:last-child::after{display:none}
+.jstep .st{font:700 13.5px/1.2 var(--display);font-stretch:105%}
+.jstep .tp{font-size:12.5px;color:var(--ink-3);line-height:1.35}
+.jstep .mt{font:600 13px/1.3 var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.jstep.leak{border-top-color:var(--leak);background:var(--leak-soft)}
+.jstep.leak::after{border-left-color:var(--leak)}
+.jstep.unk{border-top-style:dashed;border-top-color:var(--ink-3)}
+.jstep.unk::after{border-left-color:var(--ink-3)}
+.jstep .drip{font-size:12.5px;line-height:1.35;color:var(--leak);font-weight:600;border-top:1px dashed var(--leak);padding-top:6px;align-self:end}
+.jstep.unk .drip{color:var(--ink-3);border-top-color:var(--ink-3)}
+.jlegend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-3)}
+.jlegend i{display:inline-block;width:18px;height:4px;margin-right:6px;vertical-align:3px;background:var(--flow)}
+.jlegend i.l{background:var(--leak)} .jlegend i.u{background:none;border-top:2px dashed var(--ink-3)}
+
+/* measurement ladder */
+.ladder{display:grid;gap:0;border-top:2px solid var(--ink)}
+.rung{display:grid;grid-template-columns:28px minmax(110px,190px) minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.rung .i{font:700 12px/1 var(--mono);color:var(--ink-3)}
+.rung .k{font:700 14.5px/1.2 var(--display)}
+.rung .v{font-size:14.5px;color:var(--ink-2);min-width:0}
+.rung .v b{color:var(--ink);font-family:var(--mono);font-weight:600}
+.rung.gap .k,.rung.gap .v{color:var(--ink-3)}
+.rung.gap{background:repeating-linear-gradient(135deg,transparent 0 6px,var(--sunk) 6px 8px)}
+@media(max-width:560px){.rung{grid-template-columns:24px minmax(0,1fr) auto}.rung .v{grid-column:2/4}}
+
+/* list of changes / failures */
+.items{display:grid;gap:0;border-top:2px solid var(--ink)}
+.item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px 24px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.item h4{font-size:16px;font-weight:700}
+.item p{font-size:15px;color:var(--ink-2)}
+.item .meta{font:500 12px/1.4 var(--mono);color:var(--ink-3);margin-top:6px}
+@media(max-width:700px){.item{grid-template-columns:minmax(0,1fr)}}
+.fail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--rule);background:var(--surface)}
+.fail>div{padding:14px;border-right:1px solid var(--rule);display:grid;gap:4px;align-content:start;min-width:0}
+.fail>div:last-child{border-right:0}
+.fail .k{font:600 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.fail p{font-size:14.5px}
+.fail .res p{color:var(--leak)}
+@media(max-width:820px){.fail{grid-template-columns:minmax(0,1fr)}.fail>div{border-right:0;border-bottom:1px solid var(--rule)}}
+.failhead{font:700 18px/1.25 var(--display);margin-bottom:8px}
+
+/* tables */
+.tw{overflow-x:auto;border-top:2px solid var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 10.5px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* charts */
+.chart{position:relative;min-width:0}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .ax{fill:var(--ink-3);font:12px var(--mono)}
+.chart .lbl{fill:var(--ink);font:600 12.5px var(--body)}
+.chart .lbl2{fill:var(--ink-2);font:13px var(--body)}
+.chart .val{fill:var(--ink-2);font:12.5px var(--mono)}
+.chart .grid{stroke:var(--rule);stroke-dasharray:2 4}
+.chart .base{stroke:var(--ink-3)}
+.chart .shade{fill:var(--flow-soft)}
+.chart .hit{fill:transparent;cursor:crosshair}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.tip{position:fixed;pointer-events:none;z-index:50;background:var(--ink);color:var(--bg);font:12.5px/1.4 var(--body);padding:7px 10px;border-radius:4px;max-width:260px}
+.tip b{font-family:var(--mono)}
+
+/* matrix */
+.matrix{overflow-x:auto;border-top:2px solid var(--ink)}
+.matrix table{min-width:820px;font-size:13px}
+.matrix th{padding:10px 8px 10px 0}
+.matrix td{padding:8px 8px 8px 0;vertical-align:middle}
+.matrix td.case a{font:700 14px/1.2 var(--display);color:var(--ink);text-decoration:none}
+.matrix td.case span{display:block;font-size:12px;color:var(--ink-3)}
+.cell{display:block;min-height:40px;padding:6px 8px;border-radius:3px;font-size:12px;line-height:1.3;text-decoration:none}
+.cell.l{background:var(--leak-soft);color:var(--ink);border-left:3px solid var(--leak)}
+.cell.o{background:var(--flow-soft);color:var(--ink-2)}
+.cell.n{background:repeating-linear-gradient(135deg,transparent 0 6px,var(--sunk) 6px 8px);color:var(--ink-3)}
+
+/* filters & case cards */
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:14px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.filters label{display:grid;gap:4px;font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.filters select{font:15px var(--body);padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);color:var(--ink);min-width:150px;max-width:100%}
+.filters button{font:600 13px var(--body);padding:9px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:4px;cursor:pointer}
+.count{font:500 13px var(--mono);color:var(--ink-3);margin-left:auto;align-self:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+@media(max-width:400px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;display:flex;flex-direction:column;gap:12px;padding:20px;text-decoration:none;color:var(--ink);min-width:0;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--ink);transform:translateY(-2px)}
+.card .top-r{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card h3{font-size:22px;font-weight:800;font-stretch:110%;line-height:1}
+.card .ind{font-size:13px;color:var(--ink-3);margin-top:4px}
+.card .leakline{font-size:15px;color:var(--ink-2)}
+.card .leakline b{color:var(--leak);font-weight:600}
+.card .kpi{margin-top:auto;display:flex;gap:16px;align-items:baseline;border-top:1px solid var(--rule);padding-top:12px;flex-wrap:wrap}
+.card .kpi b{font:850 34px/.9 var(--display);font-stretch:108%;letter-spacing:-.02em}
+.card .kpi>span{font-size:13px;color:var(--ink-2);flex:1;min-width:140px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
+.chip{font:500 11.5px/1 var(--body);padding:5px 8px;border-radius:99px;background:var(--sunk);color:var(--ink-2)}
+.status{font:600 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border-radius:3px;white-space:nowrap}
+.status.live{background:var(--flow-soft);color:var(--flow)} .status.done{background:var(--sunk);color:var(--ink-2)} .status.diag{background:var(--est-soft);color:var(--est)}
+
+/* method strip */
+.method{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--ink)}
+.method>div{padding:16px 14px 16px 0;display:grid;gap:8px;align-content:start;min-width:0}
+.method>div+div{border-left:1px solid var(--rule);padding-left:14px}
+.method b{font:800 18px/1 var(--display);font-stretch:112%}
+.method p{font-size:14px;color:var(--ink-2)}
+.method .ex{font-size:12.5px;color:var(--ink-3);border-top:1px dashed var(--rule);padding-top:8px}
+@media(max-width:900px){.method{grid-template-columns:minmax(0,1fr)}.method>div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+
+/* case header */
+.chead{padding-block:44px 28px;display:grid;gap:18px;border-bottom:2px solid var(--ink)}
+.chead h1{font-weight:850;font-stretch:118%;font-size:clamp(36px,6.4vw,78px);line-height:.92;letter-spacing:-.025em}
+.chead .q{font:700 clamp(20px,2.6vw,30px)/1.15 var(--display);font-stretch:104%;max-width:34ch;color:var(--ink-2)}
+.chead .q em{font-style:normal;color:var(--leak)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 12.5px/1.4 var(--mono);color:var(--ink-3)}
+.facts b{color:var(--ink);font-weight:600}
+.crumbs{font:500 12.5px var(--mono);color:var(--ink-3)} .crumbs a{color:var(--ink-3)}
+
+/* toc for case */
+.ctoc{display:flex;gap:6px;flex-wrap:wrap}
+.ctoc a{font:500 12px var(--mono);text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);padding:6px 9px;border-radius:99px}
+.ctoc a:hover{border-color:var(--ink)}
+
+/* outreach tool */
+.tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
+@media(max-width:860px){.tool{grid-template-columns:minmax(0,1fr)}}
+.checks{display:grid;gap:6px}
+.checks label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;padding:10px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);cursor:pointer;font-size:14.5px}
+.checks label:has(input:checked){border-color:var(--leak);background:var(--leak-soft)}
+.checks input{margin-top:3px;accent-color:var(--leak)}
+.checks small{display:block;color:var(--ink-3);font-size:12.5px}
+.out{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px;display:grid;gap:12px;position:sticky;top:70px}
+.out textarea{width:100%;min-height:400px;font:15px/1.55 var(--body);padding:12px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);resize:vertical}
+.btn{font:600 13px var(--body);padding:9px 14px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:4px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* footer */
+.foot{margin-top:56px;border-top:2px solid var(--ink);padding-block:28px 64px;display:grid;gap:14px;font-size:14px;color:var(--ink-2)}
+.foot .row{justify-content:space-between}
+.copybox{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:14px;background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:6px 6px 6px 10px}
+.copybox button{font:600 11px var(--mono);border:0;background:var(--ink);color:var(--bg);padding:6px 8px;border-radius:3px;cursor:pointer}
+.src{font-size:13px;color:var(--ink-3);display:grid;gap:6px;max-width:80ch}
+@media(max-width:640px){
+ .jtrack{flex-direction:column;min-width:0}
+ .jstep{border-top:0;border-left:4px solid var(--flow);grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto;padding:10px 12px}
+ .jstep+.jstep{border-left:4px solid var(--flow);border-top:1px solid var(--rule)}
+ .jstep.leak,.jstep+.jstep.leak{border-left-color:var(--leak)}
+ .jstep.unk,.jstep+.jstep.unk{border-left:4px dashed var(--ink-3)}
+ .jstep .tp{grid-column:1/-1} .jstep .drip{grid-column:1/-1}
+ .jstep::after{display:none}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Revenue Leak Casebook", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/", "author": {"@type": "Person", "name": "Daniel Deepak (Danny)", "email": "danieldeepak3519@gmail.com", "address": "Bengaluru, India", "sameAs": ["https://linkedin.com/in/danny-ai-marketing", "https://github.com/dannygrowthmarketing"]}, "description": "Before I spend a rupee, I find where the last one leaked.", "hasPart": [{"@type": "Article", "name": "TONI&GUY Bangalore case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/toni-and-guy.html", "about": "Salon", "abstract": "Leads hit record volume while ticket size fell and no callback loop existed"}, {"@type": "Article", "name": "MR Jewels case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html", "about": "Jewellery e-commerce", "abstract": "Google claimed 11.8× the company's monthly revenue; the real losses sat in the cart and in returns"}, {"@type": "Article", "name": "Elites Dental Care case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html", "about": "Dental clinic", "abstract": "₹3,140 per booking: the clicks were fine, everything after the click was broken"}, {"@type": "Article", "name": "Resort & events venue case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html", "about": "Hospitality", "abstract": "Guests want to buy; the journey ends at 'Enquire' while the same room sells 55% cheaper on an OTA"}, {"@type": "Article", "name": "Foremost Public Adjusters case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html", "about": "Insurance claims (public adjuster)", "abstract": "Lead cost swung on post-click conversion, not budget, and the firm had stopped appearing for its own name"}, {"@type": "Article", "name": "EveryWatch case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/everywatch.html", "about": "Luxury-watch marketplace", "abstract": "Acquisition scaled; returning users stayed near one in ten"}, {"@type": "Article", "name": "Swift Restoration case study", "url": "https://dannygrowthmarketing.github.io/revenue-casebook/swift-restoration.html", "about": "Emergency restoration", "abstract": "A 5.0★ operator with no service pages, no location pages and no Local Services Ads"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">DANNY DEEPAK<span>.</span></a><nav class="nav" aria-label="Main"><a class="" href="index.html" aria-current="page">Cases</a><a class="" href="leaks.html">Leak library</a><a class="hide-sm" href="outreach.html">Leak scan</a><a class="hide-sm" href="index.html#contact">Contact</a></nav></div></header>
+<main class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Daniel Deepak · Revenue growth consulting · Bengaluru · Working with India, US and UK businesses</p>
+  <h1>Before I spend a rupee, I find where <em>the last one leaked.</em></h1>
+  <p class="lede">I start with the business problem, not the ad channel. Seven businesses below, traced from the first search to the till: where money leaked, how I found it, what I changed, and what the numbers can and can't prove.</p>
+  <div class="hero-row">
+    <div><b class="big leak">5 / 6</b><p>ad accounts I audited where reported conversions could not be trusted as-is</p></div>
+    <div><b class="big flow">+₹2.06 Cr</b><p>salon revenue, Mar–Aug 2026 vs 2025, across 16 salons <span class="ev m">Measured</span></p></div>
+    <div><b class="big">−66%</b><p>cost per click after one conversion-goal fix on a showroom campaign <span class="ev m">Measured</span></p></div>
+    <div><b class="big leak">₹3,140</b><p>per dental booking, found and diagnosed before a rupee more was spent <span class="ev m">Measured</span></p></div>
+  </div>
+</header>
+
+<section class="sec" id="find">
+  <div class="sh nonum"><h2>Find a business like yours</h2><p>Filter by industry, model, the leak you suspect, or where you operate. Every case uses the same structure, so you can compare them.</p></div>
+  <div class="filters" role="group" aria-label="Filter cases">
+    <label for="f-ind">Industry<select id="f-ind"><option value="">All</option></select></label>
+    <label for="f-model">Business model<select id="f-model"><option value="">All</option></select></label>
+    <label for="f-leak">Leak<select id="f-leak"><option value="">All</option></select></label>
+    <label for="f-geo">Market<select id="f-geo"><option value="">All</option></select></label>
+    <label for="f-status">Status<select id="f-status"><option value="">All</option></select></label>
+    <button type="button" id="f-reset">Clear</button>
+    <span class="count" id="f-count" aria-live="polite"></span>
+  </div>
+  <div class="cards" id="cards"></div>
+  <p class="cap">Evidence grade: <span class="grade A" style="width:22px;height:22px;font-size:11px">A</span> ad data joined to revenue · <span class="grade B" style="width:22px;height:22px;font-size:11px">B</span> platform data, no revenue · <span class="grade C" style="width:22px;height:22px;font-size:11px">C</span> reconstructed from an earlier report · <span class="grade D" style="width:22px;height:22px;font-size:11px">D</span> outside-in audit.</p>
+</section>
+
+<section class="sec" id="matrix">
+  <div class="sh nonum"><h2>Where each business was leaking</h2><p>Same seven stages for every case. Orange is a leak backed by evidence. Green held up. Hatched means the data wasn't available, which is a finding in itself.</p></div>
+  <div class="matrix"><table id="mx"><thead></thead><tbody></tbody></table></div>
+  <div class="jlegend"><span><i class="l"></i>Leak found</span><span><i></i>Held up</span><span><i class="u"></i>Not assessed or no data</span></div>
+  <p class="thesis">The pattern across all seven: the first leak was rarely the ad. It was the measurement, the booking path, or something on the shop floor.</p>
+</section>
+
+<section class="sec" id="method">
+  <div class="sh nonum"><h2>How I work</h2><p>The same five moves on every engagement. Each one has a real example behind it.</p></div>
+  <div class="method">
+    <div><b>Diagnose</b><p>Trace the journey from search to till. Check the measurement before trusting any result.</p><p class="ex">MR Jewels: Google reported ₹12.56 Cr of value in a ₹1.07 Cr month.</p></div>
+    <div><b>Strategize</b><p>Rank fixes by rupees recovered per hour. Separate marketing problems from ops problems.</p><p class="ex">TONI&GUY: the biggest number was average bill, a shop-floor lever worth ₹17.78 L a month.</p></div>
+    <div><b>Implement</b><p>Build it myself: campaigns, feeds, profiles, pages, tracking, apps.</p><p class="ex">25 Google and 26 Meta campaigns live across 15 salons.</p></div>
+    <div><b>Measure</b><p>Grade every figure: measured, calculated, estimated or unavailable. Show both sources when they disagree.</p><p class="ex">Three conflicting cost totals shown side by side, not silently picked.</p></div>
+    <div><b>Optimize</b><p>Set stop rules before spend scales. Write down what failed.</p><p class="ex">Demand Gen at ₹790 per lead vs ₹33.71 average: switched off.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="evidence">
+  <div class="sh nonum"><h2>How to read the numbers</h2><p>Every figure on this site carries one of four labels. Nothing estimated is shown as measured.</p></div>
+  <div class="grid g4">
+    <div class="panel"><span class="ev m">Measured</span><p>Read straight from a platform export, point-of-sale sheet, Shopify or Business Profile.</p></div>
+    <div class="panel"><span class="ev c">Calculated</span><p>Derived from measured figures. The formula is shown next to it.</p></div>
+    <div class="panel"><span class="ev e">Estimate</span><p>Modelled or assumed. Always says what it assumed.</p></div>
+    <div class="panel"><span class="ev u">Data unavailable</span><p>The business didn't have it, or didn't share it. Shown as a gap, never filled in.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="next">
+  <div class="sh nonum"><h2>Two more ways in</h2></div>
+  <div class="grid g2">
+    <a class="card" href="leaks.html"><div><p class="eyebrow">Pattern library</p><h3 style="margin-top:8px">Eight revenue leaks</h3></div><p class="leakline">Each leak, where I found it, the signal that gave it away, and the fix. Start here if you know your symptom but not your industry.</p><span></span><span class="chip" style="justify-self:start">Open the library →</span></a>
+    <a class="card" href="outreach.html"><div><p class="eyebrow">For prospects</p><h3 style="margin-top:8px">The 20-minute outside-in leak scan</h3></div><p class="leakline">What I check on any business before we speak, using only public data. Tick what you see; get the matching case.</p><span></span><span class="chip" style="justify-self:start">Run the scan →</span></a>
+  </div>
+</section>
+
+</main>
+<footer class="wrap foot" id="contact">
+<div class="row"><div style="display:grid;gap:6px"><b style="font:800 22px/1.1 var(--display);font-stretch:112%;color:var(--ink)">Seen a leak in your own journey?</b><span>Send me the symptom. I'll tell you which case is closest and what I'd check first.</span></div>
+<div class="row"><span class="copybox"><span>danieldeepak3519@gmail.com</span><button type="button" data-copy="danieldeepak3519@gmail.com">Copy</button></span><a href="https://linkedin.com/in/danny-ai-marketing">LinkedIn</a><a href="https://github.com/dannygrowthmarketing">GitHub</a></div></div>
+<p class="cap">Daniel Deepak · Bengaluru · Casebook updated 2026-10-04. Client names appear only where the engagement has ended or the work is already public; the active resort engagement is anonymised. Figures are labelled measured, calculated, estimated or unavailable. <a href="llms.txt">Machine-readable summary</a> · <a href="cases.json">cases.json</a></p>
+</footer>
+<script>window.CASES={"updated": "2026-10-04", "consultant": {"name": "Daniel Deepak (Danny)", "base": "Bengaluru, India", "email": "danieldeepak3519@gmail.com", "linkedin": "https://linkedin.com/in/danny-ai-marketing", "github": "https://github.com/dannygrowthmarketing", "positioning": "Before I spend a rupee, I find where the last one leaked."}, "stages": [{"id": "visibility", "name": "Get found", "hint": "Search, Maps, directories, social, ads"}, {"id": "click", "name": "Click to site", "hint": "Landing page, speed, message match"}, {"id": "enquiry", "name": "Site to enquiry / cart", "hint": "CTA, form, booking widget, cart"}, {"id": "booking", "name": "Enquiry to booking / order", "hint": "Callback, checkout, confirmation"}, {"id": "revenue", "name": "Booking to revenue", "hint": "Visit, bill, returns, ticket size"}, {"id": "repeat", "name": "Revenue to repeat", "hint": "Reviews, retention, rebooking"}, {"id": "measurement", "name": "Measurement", "hint": "Can the business see which rupee worked?"}], "leaks": [{"id": "measurement", "name": "Miscounted conversions", "short": "The ad platform reports results the till never saw"}, {"id": "allocation", "name": "Money on the wrong intent", "short": "Budget sits where it is easiest to spend, not where buyers convert"}, {"id": "postclick", "name": "Post-click friction", "short": "Slow pages, long forms, broken booking paths"}, {"id": "visibility", "name": "Invisible where buyers look", "short": "Missing from Maps, directories, brand search or page one"}, {"id": "pricing", "name": "Price and distribution leakage", "short": "Your own inventory sold cheaper elsewhere"}, {"id": "speed", "name": "Lead-to-booking gap", "short": "Leads arrive; nobody converts them fast enough"}, {"id": "postsale", "name": "Post-sale leakage", "short": "Returns, falling ticket size, no repeat"}, {"id": "notmarketing", "name": "Not a marketing problem", "short": "The fix sits with ops, product or the shop floor"}], "cases": [{"id": "toni-and-guy", "url": "toni-and-guy.html", "name": "TONI&GUY Bangalore", "industry": "Salon", "model": "Multi-location B2C services", "geo": "Bengaluru, India", "geoGroup": "India", "status": "Closed", "statusClass": "done", "period": "28 Feb – 16 Sep 2026", "role": "Growth consultant: Google, Meta, GBP, web, reporting, booking app", "grade": "A", "gradeNote": "Ad exports joined to point-of-sale revenue by salon", "leak": "Leads hit record volume while ticket size fell and no callback loop existed", "kpiBig": "+14.7%", "kpiText": "salon revenue, Mar–Aug 2026 vs same six months of 2025 (₹16.10 Cr vs ₹14.04 Cr)", "kpiEv": "m", "leakIds": ["allocation", "measurement", "speed", "postsale", "notmarketing"], "objective": "Store visits and bills", "stages": {"visibility": {"s": "o", "t": "CPC ₹11.34 → ₹4.22; 22.11% impression share, #1 in auction"}, "click": {"s": "n", "t": "Site speed not assessed"}, "enquiry": {"s": "o", "t": "1,18,253 Google MQLs Mar–Aug (+165% YoY)"}, "booking": {"s": "l", "t": "No lead-to-booking view; callback automation proposed, not built"}, "revenue": {"s": "l", "t": "Average bill ₹2,813 vs ₹2,983 a year earlier"}, "repeat": {"s": "n", "t": "Repeat-visit data not supplied"}, "measurement": {"s": "l", "t": "Conversion rate 19.3% for 7 days, 1.7% for 24"}}}, {"id": "mr-jewels", "url": "mr-jewels.html", "name": "MR Jewels", "industry": "Jewellery e-commerce", "model": "D2C e-commerce with one showroom", "geo": "Bengaluru, India (ships nationally)", "geoGroup": "India", "status": "Closed", "statusClass": "done", "period": "1 Aug – 3 Sep 2026", "role": "Google Ads lead + business review across Shopify, Meta and Google", "grade": "A", "gradeNote": "Google exports reconciled to Shopify orders and billing", "leak": "Google claimed 11.8× the company's monthly revenue; the real losses sat in the cart and in returns", "kpiBig": "−66%", "kpiText": "showroom campaign CPC after one conversion-goal fix (₹38.60 → ₹13.13)", "kpiEv": "m", "leakIds": ["measurement", "allocation", "postclick", "postsale", "notmarketing"], "objective": "Online orders and showroom visits", "stages": {"visibility": {"s": "l", "t": "66% of 8,396 feed SKUs never shown; 80.9% of spend on Shopping"}, "click": {"s": "o", "t": "CTR 1.57%, CPC ₹5.07 in August"}, "enquiry": {"s": "o", "t": "Session→cart 5.45%, steady"}, "booking": {"s": "l", "t": "Cart→order 13.5%: 85 of 100 carts never buy"}, "revenue": {"s": "l", "t": "19.8% of gross reversed: ₹2.41 Cr in 12 months"}, "repeat": {"s": "l", "t": "79.6% of customers new; month-1 repeat 12.6%"}, "measurement": {"s": "l", "t": "₹12.56 Cr conversion value vs ₹1.07 Cr real sales"}}}, {"id": "elites-dental", "url": "elites-dental.html", "name": "Elites Dental Care", "industry": "Dental clinic", "model": "Single-location healthcare", "geo": "Bengaluru, India", "geoGroup": "India", "status": "Active", "statusClass": "live", "period": "Audit 18 Sep 2026 · rebuild from 27 Sep", "role": "Audit, Business Profile rebuild, Search campaign rebuild", "grade": "B", "gradeNote": "Google Ads, GA4, Search Console and GBP data; no clinic revenue yet", "leak": "₹3,140 per booking: the clicks were fine, everything after the click was broken", "kpiBig": "₹3,140", "kpiText": "cost per booking before the rebuild (₹25,122 for 8 bookings)", "kpiEv": "m", "leakIds": ["postclick", "allocation", "visibility", "measurement"], "objective": "Booked appointments by treatment value", "stages": {"visibility": {"s": "l", "t": "Not on page one for 'dental clinic tc palya'; no Practo listing"}, "click": {"s": "l", "t": "2.6 s server response; 96% of spend on mobile"}, "enquiry": {"s": "l", "t": "4-step booking; widget blank after an expired SSL certificate"}, "booking": {"s": "l", "t": "8 bookings from 469 clicks (1.71%)"}, "revenue": {"s": "n", "t": "Attendance and treatment value not yet shared"}, "repeat": {"s": "o", "t": "4.9★ from 271 reviews, owner replies to all"}, "measurement": {"s": "l", "t": "Every booking valued at ₹1; GA4 sees ~1 in 6 ad clicks"}}}, {"id": "resort", "url": "resort.html", "name": "Resort & events venue", "anon": true, "industry": "Hospitality", "model": "Resort: rooms, day-outs, weddings, corporate", "geo": "Electronic City, Bengaluru", "geoGroup": "India", "status": "Active", "statusClass": "live", "period": "Audit 25–26 Sep 2026 · Business Profile work from 28 Sep", "role": "Revenue audit, Business Profile management", "grade": "D", "gradeNote": "Outside-in audit plus Business Profile performance data; no ad or booking data yet", "leak": "Guests want to buy; the journey ends at 'Enquire' while the same room sells 55% cheaper on an OTA", "kpiBig": "−55%", "kpiText": "room price on an OTA via Google Hotels vs the resort's own site (₹1,780 vs ₹3,999)", "kpiEv": "m", "leakIds": ["pricing", "postclick", "measurement", "speed", "visibility", "notmarketing"], "objective": "Direct bookings and paid day-out tickets", "stages": {"visibility": {"s": "l", "t": "Top 10 on 2 of 14 target searches"}, "click": {"s": "l", "t": "Mobile LCP 7.6 s (lab)"}, "enquiry": {"s": "l", "t": "No book-now, no online payment; 'Enquire' only"}, "booking": {"s": "l", "t": "Profile calls down 65% May→Sep while directions rose"}, "revenue": {"s": "l", "t": "Own rooms on Yatra at ₹1,780 vs ₹3,999 direct"}, "repeat": {"s": "l", "t": "3.9★ on 5,406 reviews vs 4.6★ category leader"}, "measurement": {"s": "l", "t": "No Ads conversion tag, no Meta Pixel; bookings confirmed by hand"}}}, {"id": "foremost-pa", "url": "foremost-pa.html", "name": "Foremost Public Adjusters", "industry": "Insurance claims (public adjuster)", "model": "Local lead generation, contingency fee", "geo": "South Florida, USA", "geoGroup": "USA", "status": "Closed", "statusClass": "done", "period": "Jan – Jul 2026", "role": "Paid search audit, SEO fixes, campaign build, brand investigation", "grade": "B", "gradeNote": "Google Ads and Search Console exports; no claim or fee data", "leak": "Lead cost swung on post-click conversion, not budget, and the firm had stopped appearing for its own name", "kpiBig": "0 / 247", "kpiText": "live keywords that were branded: the brand campaign had been paused in a restructure", "kpiEv": "m", "leakIds": ["postclick", "visibility", "allocation"], "objective": "Qualified claim leads", "stages": {"visibility": {"s": "l", "t": "23% impression share; 0 of 247 live keywords branded"}, "click": {"s": "l", "t": "88 paid clicks landed on the homepage"}, "enquiry": {"s": "l", "t": "Desktop CPL $398 vs mobile $93; May CVR fell on flat spend"}, "booking": {"s": "n", "t": "Lead-to-signed-claim rate not supplied"}, "revenue": {"s": "n", "t": "Fees per settled claim not supplied"}, "repeat": {"s": "n", "t": "Not applicable / not assessed"}, "measurement": {"s": "o", "t": "Lead tracking in place; two exports disagree (56 vs 48 leads)"}}}, {"id": "everywatch", "url": "everywatch.html", "name": "EveryWatch", "industry": "Luxury-watch marketplace", "model": "Two-sided marketplace, subscription", "geo": "Global (remote)", "geoGroup": "Global", "status": "In-house role", "statusClass": "done", "period": "2024 – 2025", "role": "Growth & performance lead (in-house)", "grade": "C", "gradeNote": "Monthly series reconstructed in an earlier case study; raw exports not in the repo", "leak": "Acquisition scaled; returning users stayed near one in ten", "kpiBig": "20×", "kpiText": "monthly new users, Jan 2024 (9,113) to May 2025 (182,782), GA4", "kpiEv": "m", "leakIds": ["postsale", "measurement"], "objective": "Collector sign-ups and subscriptions", "stages": {"visibility": {"s": "o", "t": "Organic impressions 0.10M → 5.5M a month"}, "click": {"s": "n", "t": "Not assessed"}, "enquiry": {"s": "o", "t": "Paid leads at sub-$1 cost"}, "booking": {"s": "n", "t": "Lead-to-subscriber data not in the record"}, "revenue": {"s": "n", "t": "'Revenue' was leads × ~$15 assumed value, not sales"}, "repeat": {"s": "l", "t": "Returning users 10.2% of May 2025 users"}, "measurement": {"s": "l", "t": "Reported CVR above 100% in peak months"}}}, {"id": "swift-restoration", "url": "swift-restoration.html", "name": "Swift Restoration", "industry": "Emergency restoration", "model": "Local services, 24/7 emergency", "geo": "Central Iowa, USA", "geoGroup": "USA", "status": "Diagnostic", "statusClass": "diag", "period": "Jun 2026", "role": "Audit and execution plan", "grade": "D", "gradeNote": "Site crawl, Ahrefs, SERP and ad checks; no lead or revenue data", "leak": "A 5.0★ operator with no service pages, no location pages and no Local Services Ads", "kpiBig": "0", "kpiText": "service or location pages on the site at audit (service cards linked to '#')", "kpiEv": "m", "leakIds": ["visibility", "postclick"], "objective": "Emergency calls", "stages": {"visibility": {"s": "l", "t": "Domain Rating 3.2; no Local Services Ads"}, "click": {"s": "l", "t": "Homepage title is placeholder text"}, "enquiry": {"s": "n", "t": "Call tracking not assessed"}, "booking": {"s": "n", "t": "Not assessed"}, "revenue": {"s": "n", "t": "Not assessed"}, "repeat": {"s": "o", "t": "5.0★ on 15 Google reviews"}, "measurement": {"s": "n", "t": "Not assessed"}}}]};</script><script>/* Casebook chart + component kit. Plain SVG, theme tokens only. */
+(function(){
+const NS='http://www.w3.org/2000/svg';
+const C={flow:'var(--flow)',leak:'var(--leak)',ink:'var(--ink-2)',mute:'var(--rule)',muted:'var(--ink-3)',est:'var(--est)'};
+const col=c=>C[c]||c||C.flow;
+function el(t,a,txt){const e=document.createElementNS(NS,t);for(const k in a){if(k==='style')e.setAttribute('style',a[k]);else e.setAttribute(k,a[k]);}if(txt!=null)e.textContent=txt;return e;}
+let tip;
+function showTip(html,ev){if(!tip){tip=document.createElement('div');tip.className='tip';tip.hidden=true;document.body.appendChild(tip);}tip.innerHTML=html;tip.hidden=false;const x=Math.min(ev.clientX+14,innerWidth-275),y=ev.clientY+16;tip.style.left=x+'px';tip.style.top=y+'px';}
+function hideTip(){if(tip)tip.hidden=true;}
+function bindTip(node,html){node.addEventListener('mousemove',e=>showTip(html,e));node.addEventListener('mouseleave',hideTip);node.addEventListener('focus',e=>{const r=node.getBoundingClientRect();showTip(html,{clientX:r.left+r.width/2,clientY:r.top});});node.addEventListener('blur',hideTip);node.setAttribute('tabindex','0');}
+function niceMax(v){if(v<=0)return 1;const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;const m=n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10;return m*p;}
+function niceStep(v){const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p;}
+function scale(max,min){min=min||0;const st=niceStep((max-min)/4);return {min:Math.floor(min/st)*st,max:Math.ceil(max/st)*st,step:st};}
+function tickList(sc){const o=[];for(let v=sc.min;v<=sc.max+1e-9;v+=sc.step)o.push(+v.toFixed(6));return o;}
+const K={};
+function fitW(host,o){const a=host.clientWidth||o.W||760;return Math.round(Math.max(320,Math.min(o.W||760,a)));}
+const narrow=W=>W<520;
+
+/* Line chart: one axis. opts {labels, series:[{name,values,color,dash}], yfmt, shade:[a,b], shadeLabel, height, ymax, mark:[{i,label}]} */
+K.line=function(id,o){
+  const host=document.getElementById(id);if(!host)return;
+  const W=fitW(host,o),H=o.height||300,L=52,R=Math.min(o.right||64,W*0.14),T=18,B=34;
+  const all=o.series.flatMap(s=>s.values.filter(v=>v!=null));
+  const sc=scale(o.ymax||Math.max(...all)*1.04,o.ymin||0);const ymax=sc.max,ymin=sc.min;
+  const n=o.labels.length;const x=i=>L+(W-L-R)*(n===1?0.5:i/(n-1));const y=v=>T+(H-T-B)*(1-(v-ymin)/(ymax-ymin));
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':o.aria||''});
+  if(o.shade){const a=x(o.shade[0])-((W-L-R)/(n-1))/2,b=x(o.shade[1])+((W-L-R)/(n-1))/2;svg.append(el('rect',{x:Math.max(L,a),y:T,width:Math.min(W-R,b)-Math.max(L,a),height:H-T-B,class:'shade'}));if(o.shadeLabel)svg.append(el('text',{x:Math.max(L,a)+6,y:T+14,class:'ax',style:'fill:var(--flow)'},o.shadeLabel));}
+  tickList(sc).forEach(v=>{svg.append(el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),class:'grid'}));svg.append(el('text',{x:L-8,y:y(v)+4,'text-anchor':'end',class:'ax'},o.yfmt?o.yfmt(v):v));});
+  const step=Math.ceil(n/(o.xEvery?n/o.xEvery:10));
+  const ev=(o.xEvery||step)*(narrow(W)?2:1);o.labels.forEach((t,i)=>{if((i%ev===0&&(n-1-i>=ev/2||i===n-1))||i===n-1)svg.append(el('text',{x:x(i),y:H-10,'text-anchor':'middle',class:'ax'},t));});
+  o.series.forEach(s=>{
+    let d='';s.values.forEach((v,i)=>{if(v==null)return;d+=(d?'L':'M')+x(i).toFixed(1)+','+y(v).toFixed(1);});
+    svg.append(el('path',{d,fill:'none',style:`stroke:${col(s.color)}`,'stroke-width':2,'stroke-linejoin':'round','stroke-dasharray':s.dash||''}));
+    const li=s.values.length-1;if(s.values[li]!=null){svg.append(el('circle',{cx:x(li),cy:y(s.values[li]),r:4.5,style:`fill:${col(s.color)};stroke:var(--surface)`,'stroke-width':2}));
+      if(o.endLabels!==false)svg.append(el('text',{x:x(li)+8,y:y(s.values[li])+4,class:'val'},(o.yfmt?o.yfmt(s.values[li]):s.values[li])));}
+  });
+  (o.mark||[]).forEach(m=>{const s=o.series[m.s||0];const v=s.values[m.i];svg.append(el('circle',{cx:x(m.i),cy:y(v),r:4.5,style:`fill:var(--surface);stroke:${col(m.color||s.color)}`,'stroke-width':2}));svg.append(el('text',{x:x(m.i),y:y(v)+(m.below?18:-10),'text-anchor':'middle',class:'lbl2'},m.label));});
+  // crosshair
+  const cross=el('line',{x1:0,x2:0,y1:T,y2:H-B,style:'stroke:var(--ink-3)','stroke-dasharray':'3 3',visibility:'hidden'});svg.append(cross);
+  const hit=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,class:'hit'});svg.append(hit);
+  hit.addEventListener('mousemove',e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;let i=Math.round((px-L)/((W-L-R)/(n-1)));i=Math.max(0,Math.min(n-1,i));cross.setAttribute('x1',x(i));cross.setAttribute('x2',x(i));cross.setAttribute('visibility','visible');
+    showTip('<div>'+o.labels[i]+'</div>'+o.series.map(s=>s.values[i]==null?'':`<div>${s.name}: <b>${o.yfmt?o.yfmt(s.values[i]):s.values[i]}</b></div>`).join(''),e);});
+  hit.addEventListener('mouseleave',()=>{cross.setAttribute('visibility','hidden');hideTip();});
+  host.appendChild(svg);
+};
+
+/* Vertical bars. opts {labels, values, colors(array or fn), yfmt, vfmt, height, labelEvery, notes} */
+K.bars=function(id,o){
+  const host=document.getElementById(id);if(!host)return;
+  const W=fitW(host,o),H=o.height||280,L=52,R=12,T=22,B=34;const n=o.values.length;
+  const sc=scale(o.ymax||Math.max(...o.values)*1.06);const ymax=sc.max;
+  const bw=(W-L-R)/n;const y=v=>T+(H-T-B)*(1-v/ymax);
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':o.aria||''});
+  if(o.shade){svg.append(el('rect',{x:L+bw*o.shade[0],y:T-8,width:bw*(o.shade[1]-o.shade[0]+1),height:H-T-B+8,class:'shade'}));if(o.shadeLabel)svg.append(el('text',{x:L+bw*o.shade[0]+6,y:T+4,class:'ax',style:'fill:var(--flow)'},o.shadeLabel));}
+  tickList(sc).forEach(v=>{svg.append(el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),class:'grid'}));svg.append(el('text',{x:L-8,y:y(v)+4,'text-anchor':'end',class:'ax'},o.yfmt?o.yfmt(v):v));});
+  o.values.forEach((v,i)=>{
+    const c=typeof o.colors==='function'?o.colors(i,v):(o.colors?o.colors[i]:'flow');
+    const g=el('g',{});const bx=L+bw*i+bw*0.18,w=bw*0.64,top=y(v),h=Math.max(1,y(0)-top);
+    const r=Math.min(4,w/2,h);
+    g.append(el('path',{d:`M${bx},${y(0)}V${top+r}Q${bx},${top} ${bx+r},${top}H${bx+w-r}Q${bx+w},${top} ${bx+w},${top+r}V${y(0)}Z`,style:`fill:${col(c)}`}));
+    if(o.showVals&&o.showVals(i)&&!(narrow(W)&&n>8))g.append(el('text',{x:bx+w/2,y:top-6,'text-anchor':'middle',class:'val'},o.vfmt?o.vfmt(v):v));
+    const le=(o.labelEvery||1)*(narrow(W)&&n>8?2:1);if((i%le===0&&n-1-i>=le/2)||i===n-1)svg.append(el('text',{x:bx+w/2,y:H-10,'text-anchor':'middle',class:'ax'},o.labels[i]));
+    g.append(el('rect',{x:L+bw*i,y:T,width:bw,height:H-T-B,class:'hit'}));
+    bindTip(g,`<div>${o.labels[i]}</div><div><b>${o.vfmt?o.vfmt(v):v}</b>${o.notes&&o.notes[i]?' · '+o.notes[i]:''}</div>`);
+    svg.append(g);
+  });
+  svg.append(el('line',{x1:L,x2:W-R,y1:y(0),y2:y(0),class:'base'}));
+  host.appendChild(svg);
+};
+
+/* Paired bars (two periods). opts {labels, a:{name,values,color}, b:{...}, yfmt, vfmt} */
+K.paired=function(id,o){
+  const host=document.getElementById(id);if(!host)return;
+  const W=fitW(host,o),H=o.height||280,L=52,R=12,T=24,B=34;const n=o.labels.length;
+  const sc=scale(o.ymax||Math.max(...o.a.values,...o.b.values)*1.08);const ymax=sc.max;const y=v=>T+(H-T-B)*(1-v/ymax);
+  const gw=(W-L-R)/n;const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':o.aria||''});
+  tickList(sc).forEach(v=>{svg.append(el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),class:'grid'}));svg.append(el('text',{x:L-8,y:y(v)+4,'text-anchor':'end',class:'ax'},o.yfmt?o.yfmt(v):v));});
+  o.labels.forEach((lab,i)=>{
+    const g=el('g',{});const w=gw*0.3;[o.a,o.b].forEach((s,j)=>{const v=s.values[i];const bx=L+gw*i+gw*0.18+j*(w+2),top=y(v),r=Math.min(3,w/2);
+      g.append(el('path',{d:`M${bx},${y(0)}V${top+r}Q${bx},${top} ${bx+r},${top}H${bx+w-r}Q${bx+w},${top} ${bx+w},${top+r}V${y(0)}Z`,style:`fill:${col(s.color)}`}));});
+    if(o.delta){const d=(o.b.values[i]/o.a.values[i]-1)*100;g.append(el('text',{x:L+gw*i+gw/2,y:y(Math.max(o.a.values[i],o.b.values[i]))-7,'text-anchor':'middle',class:'val',style:d>=0?'fill:var(--flow)':'fill:var(--leak)'},(d>=0?'+':'')+d.toFixed(1)+'%'));}
+    svg.append(el('text',{x:L+gw*i+gw/2,y:H-10,'text-anchor':'middle',class:'ax'},lab));
+    g.append(el('rect',{x:L+gw*i,y:T,width:gw,height:H-T-B,class:'hit'}));
+    bindTip(g,`<div>${lab}</div><div>${o.a.name}: <b>${o.vfmt?o.vfmt(o.a.values[i]):o.a.values[i]}</b></div><div>${o.b.name}: <b>${o.vfmt?o.vfmt(o.b.values[i]):o.b.values[i]}</b></div>`);
+    svg.append(g);});
+  svg.append(el('line',{x1:L,x2:W-R,y1:y(0),y2:y(0),class:'base'}));
+  host.appendChild(svg);
+};
+
+/* Horizontal bars. opts {rows:[{label,value,color,note}], vfmt, max, labelW, marker:{value,label}} */
+K.hbar=function(id,o){
+  const host=document.getElementById(id);if(!host)return;
+  const rowH=o.rowH||30,W=fitW(host,o),L=Math.min(o.labelW||200,W*0.42),R=Math.min(o.right||90,W*0.26),T=6;const H=T+rowH*o.rows.length+(o.marker?22:6);
+  const max=o.max||Math.max(...o.rows.map(r=>r.value));const x=v=>L+(W-L-R)*v/max;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':o.aria||''});
+  if(o.marker){svg.append(el('line',{x1:x(o.marker.value),x2:x(o.marker.value),y1:T,y2:T+rowH*o.rows.length,style:'stroke:var(--ink-3)','stroke-dasharray':'4 3'}));svg.append(el('text',{x:x(o.marker.value),y:H-4,'text-anchor':'middle',class:'ax'},o.marker.label));}
+  o.rows.forEach((r,i)=>{const g=el('g',{});const y0=T+i*rowH,bh=Math.min(16,rowH-10);
+    g.append(el('text',{x:L-10,y:y0+rowH/2+4,'text-anchor':'end',class:r.bold?'lbl':'lbl2'},r.label));
+    const w=Math.max(2,x(r.value)-L),rr=Math.min(3,w/2);const by=y0+(rowH-bh)/2;
+    g.append(el('path',{d:`M${L},${by}H${L+w-rr}Q${L+w},${by} ${L+w},${by+rr}V${by+bh-rr}Q${L+w},${by+bh} ${L+w-rr},${by+bh}H${L}Z`,style:`fill:${col(r.color)}`}));
+    g.append(el('text',{x:L+w+8,y:y0+rowH/2+4,class:'val'},r.text||(o.vfmt?o.vfmt(r.value):r.value)));
+    g.append(el('rect',{x:0,y:y0,width:W,height:rowH,class:'hit'}));
+    bindTip(g,`<div>${r.label}</div><div><b>${r.text||(o.vfmt?o.vfmt(r.value):r.value)}</b>${r.note?' · '+r.note:''}</div>`);
+    svg.append(g);});
+  svg.append(el('line',{x1:L,x2:L,y1:T,y2:T+rowH*o.rows.length,class:'base'}));
+  host.appendChild(svg);
+};
+
+/* Split bar: share of spend vs share of results. opts {rows:[{label,a,b}], aName,bName} values in % */
+K.split=function(id,o){
+  const host=document.getElementById(id);if(!host)return;
+  const W=fitW(host,o),rowH=46,L=Math.min(o.labelW||150,W*0.3),R=60,T=4;const H=T+rowH*o.rows.length;const x=v=>L+(W-L-R)*v/100;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':o.aria||''});
+  o.rows.forEach((r,i)=>{const g=el('g',{});const y0=T+i*rowH;
+    g.append(el('text',{x:L-10,y:y0+24,'text-anchor':'end',class:'lbl'},r.label));
+    [[r.a,o.aColor||'ink',0],[r.b,o.bColor||'flow',1]].forEach(([v,c,j])=>{const by=y0+6+j*17;const w=Math.max(2,x(v)-L);g.append(el('rect',{x:L,y:by,width:w,height:13,rx:2,style:`fill:${col(c)}`}));g.append(el('text',{x:L+w+6,y:by+11,class:'val'},v.toFixed(1)+'%'));});
+    g.append(el('rect',{x:0,y:y0,width:W,height:rowH,class:'hit'}));
+    bindTip(g,`<div>${r.label}</div><div>${o.aName}: <b>${r.a.toFixed(1)}%</b></div><div>${o.bName}: <b>${r.b.toFixed(1)}%</b></div>${r.note?'<div>'+r.note+'</div>':''}`);
+    svg.append(g);});
+  host.appendChild(svg);
+};
+
+/* Journey: steps [{st,tp,mt,state:'ok'|'leak'|'unk',drip}] */
+K.journey=function(id,steps){
+  const host=document.getElementById(id);if(!host)return;
+  const t=document.createElement('div');t.className='jtrack';
+  steps.forEach(s=>{const d=document.createElement('div');d.className='jstep '+(s.state==='leak'?'leak':s.state==='unk'?'unk':'');
+    d.innerHTML=`<div class="st"></div><div class="tp"></div><div class="mt"></div>`+(s.drip?`<div class="drip"></div>`:'');
+    d.querySelector('.st').textContent=s.st;d.querySelector('.tp').textContent=s.tp||'';d.querySelector('.mt').innerHTML=s.mt||'';
+    if(s.drip)d.querySelector('.drip').textContent=s.drip;t.appendChild(d);});
+  host.appendChild(t);
+};
+
+/* Measurement ladder: [{k, v (html), ev:'m'|'c'|'e'|'u'}] */
+K.ladder=function(id,rungs){
+  const host=document.getElementById(id);if(!host)return;
+  const names={m:'Measured',c:'Calculated',e:'Estimate',u:'Data unavailable'};
+  rungs.forEach((r,i)=>{const d=document.createElement('div');d.className='rung'+(r.ev==='u'?' gap':'');
+    d.innerHTML=`<span class="i">${String(i+1).padStart(2,'0')}</span><span class="k"></span><span class="v">${r.v}</span><span class="ev ${r.ev}">${names[r.ev]}</span>`;
+    d.querySelector('.k').textContent=r.k;host.appendChild(d);});
+};
+
+/* copy buttons */
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const txt=b.getAttribute('data-copy');const done=()=>{const o=b.textContent;b.textContent='Copied';setTimeout(()=>b.textContent=o,1300);};
+  try{navigator.clipboard.writeText(txt).then(done,()=>sel(b));}catch(err){sel(b);} });
+function sel(b){const t=b.previousElementSibling;if(!t)return;const r=document.createRange();r.selectNodeContents(t);const s=getSelection();s.removeAllRanges();s.addRange(r);}
+K.fmt={cr:v=>'₹'+v.toFixed(2)+' Cr',L:v=>'₹'+v.toFixed(2)+' L',inr:v=>'₹'+Math.round(v).toLocaleString('en-IN'),n:v=>Math.round(v).toLocaleString('en-IN'),k:v=>v>=1000?(v/1000).toFixed(v>=10000?0:1)+'k':String(Math.round(v)),usd:v=>'$'+(Math.round(v*100)/100).toLocaleString('en-US'),pct:v=>v.toFixed(1)+'%'};
+window.K=K;
+})();
+</script>
+<script>
+(function(){
+const D=window.CASES;const leakName=Object.fromEntries(D.leaks.map(l=>[l.id,l.name]));
+const sels={ind:'industry',model:'model',leak:'leak',geo:'geoGroup',status:'status'};
+function uniq(k){return [...new Set(D.cases.map(c=>c[k]))].sort();}
+function fill(id,vals,labels){const s=document.getElementById(id);vals.forEach((v,i)=>{const o=document.createElement('option');o.value=v;o.textContent=labels?labels[i]:v;s.appendChild(o);});}
+fill('f-ind',uniq('industry'));fill('f-model',uniq('model'));fill('f-leak',D.leaks.map(l=>l.id),D.leaks.map(l=>l.name));fill('f-geo',uniq('geoGroup'));fill('f-status',uniq('status'));
+const evName={m:'Measured',c:'Calculated',e:'Estimate'};
+function card(c){const a=document.createElement('a');a.className='card';a.href=c.url;
+  a.innerHTML=`<div class="top-r"><div><h3></h3><p class="ind"></p></div><span class="grade ${c.grade}" title="Evidence grade ${c.grade}: ${c.gradeNote}">${c.grade}</span></div>
+  <p class="leakline"><b>Leak.</b> <span class="lk"></span></p>
+  <div class="chips">${c.leakIds.map(id=>`<span class="chip">${leakName[id]}</span>`).join('')}</div>
+  <div class="kpi"><b>${c.kpiBig}</b><span><span class="kt"></span> <span class="ev ${c.kpiEv}">${evName[c.kpiEv]}</span></span></div>
+  <div class="row" style="justify-content:space-between"><span class="status ${c.statusClass}">${c.status}</span><span class="mono" style="font-size:12px;color:var(--ink-3)"></span></div>`;
+  a.querySelector('h3').textContent=c.name;a.querySelector('.ind').textContent=c.industry+' · '+c.geo;a.querySelector('.lk').textContent=c.leak;a.querySelector('.kt').textContent=c.kpiText;a.querySelector('.row .mono').textContent=c.period;return a;}
+function apply(){const f={};for(const k in sels)f[k]=document.getElementById('f-'+k).value;
+  const host=document.getElementById('cards');host.innerHTML='';let n=0;
+  D.cases.forEach(c=>{if(f.ind&&c.industry!==f.ind)return;if(f.model&&c.model!==f.model)return;if(f.leak&&!c.leakIds.includes(f.leak))return;if(f.geo&&c.geoGroup!==f.geo)return;if(f.status&&c.status!==f.status)return;host.appendChild(card(c));n++;});
+  if(!n){host.innerHTML='<p class="muted">No case matches all of those. Clear one filter.</p>';}
+  document.getElementById('f-count').textContent=n+' of '+D.cases.length+' cases';
+  try{localStorage.setItem('cb-f',JSON.stringify(f));}catch(e){}}
+try{const s=JSON.parse(localStorage.getItem('cb-f')||'{}');for(const k in s){const e=document.getElementById('f-'+k);if(e)e.value=s[k];}}catch(e){}
+for(const k in sels)document.getElementById('f-'+k).addEventListener('change',apply);
+document.getElementById('f-reset').addEventListener('click',()=>{for(const k in sels)document.getElementById('f-'+k).value='';apply();});
+apply();
+// matrix
+const mx=document.getElementById('mx');
+mx.tHead.innerHTML='<tr><th>Business</th>'+D.stages.map(s=>`<th title="${s.hint}">${s.name}</th>`).join('')+'</tr>';
+D.cases.forEach(c=>{const tr=document.createElement('tr');const td=document.createElement('td');td.className='case';td.innerHTML=`<a href="${c.url}"></a><span></span>`;td.querySelector('a').textContent=c.name;td.querySelector('span').textContent=c.industry;tr.appendChild(td);
+  D.stages.forEach(s=>{const v=c.stages[s.id];const t=document.createElement('td');const a=document.createElement('a');a.className='cell '+v.s;a.href=c.url+'#journey';a.textContent=v.t;t.appendChild(a);tr.appendChild(t);});mx.tBodies[0].appendChild(tr);});
+})();
+</script>
+</body>
+</html>
