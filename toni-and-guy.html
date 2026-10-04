@@ -1,389 +1,398 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>TONI&amp;GUY Bangalore Case</title>
-<meta name="description" content="16-salon network, Bengaluru. Six months of rebuilt demand measured against the till: +14.7% revenue YoY, record leads, and the leaks left open at exit.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"><style>/* Layout: a casebook. Wide expanded-grotesk headlines over a cool mineral ground; money flows in teal, leaks mark in burnt orange. Sections are numbered only where the order is the method. */
-:root{
-  --bg:#ECEFED; --surface:#F7F9F8; --sunk:#E2E7E4; --ink:#0F1D1A; --ink-2:#3B4C47; --ink-3:#66766F; --rule:#C7D0CC;
-  --flow:#0B6B5F; --flow-soft:#D3E8E2; --leak:#B93D0C; --leak-soft:#F5DFD3; --est:#946200; --est-soft:#F2E6C8;
-  --display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0C1412; --surface:#121C19; --sunk:#18241F; --ink:#E4ECE9; --ink-2:#A8B7B2; --ink-3:#7E8F89; --rule:#26342F;
-  --flow:#47B9A6; --flow-soft:#143029; --leak:#F0804F; --leak-soft:#3A2016; --est:#D9A93E; --est-soft:#33290F; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0C1412; --surface:#121C19; --sunk:#18241F; --ink:#E4ECE9; --ink-2:#A8B7B2; --ink-3:#7E8F89; --rule:#26342F;
-  --flow:#47B9A6; --flow-soft:#143029; --leak:#F0804F; --leak-soft:#3A2016; --est:#D9A93E; --est-soft:#33290F; color-scheme:dark}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
-a{color:var(--flow);text-underline-offset:3px}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--flow);outline-offset:2px}
-h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
-p{margin:0}
-.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.num{font-variant-numeric:tabular-nums}
-.eyebrow{font:500 11.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-.muted{color:var(--ink-3)}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TONI&amp;GUY Bangalore · Case study · Danny Deepak</title><meta name="description" content="TONI&amp;GUY Bangalore, Bengaluru: Leads hit record volume; ticket size fell and no callback loop existed."><meta property="og:title" content="TONI&amp;GUY Bangalore · Case study · Danny Deepak"><meta property="og:description" content="TONI&amp;GUY Bangalore, Bengaluru: Leads hit record volume; ticket size fell and no callback loop existed.">
+<meta name="theme-color" content="#0C1222"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"><style>:root{
+--bg:#F6F3ED;--surface:#FFFFFF;--surface-2:#EEEAE2;--ink:#0E1424;--ink-2:#3E4659;--ink-3:#7B8396;--rule:#E3DDD2;--mute:#CFC8BC;
+--leak:#E0454B;--leak-bg:#FCEBEA;--move:#4B49D9;--move-bg:#ECECFD;--flow:#0E9F6A;--flow-bg:#E3F5EC;--est:#B97F00;--est-bg:#FBF1D6;
+--night:#0C1222;--night-2:#151D33;--night-3:#222C47;--on-night:#F3F1EC;--on-night-2:#A8B0C4;--glow:#FFB547;
+--display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+--r:18px;--r-sm:10px;--shadow:0 1px 2px rgba(14,20,36,.05),0 8px 28px -12px rgba(14,20,36,.18);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0E19;--surface:#121829;--surface-2:#192038;--ink:#EEF0F6;--ink-2:#B9C0D0;--ink-3:#7F889D;--rule:#252E47;--mute:#3A4562;
+--leak:#FF6A6E;--leak-bg:rgba(255,106,110,.12);--move:#9491FF;--move-bg:rgba(148,145,255,.14);--flow:#33CF8E;--flow-bg:rgba(51,207,142,.12);--est:#F0B53A;--est-bg:rgba(240,181,58,.13);
+--night:#060913;--night-2:#10172A;--night-3:#1E2742;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0E19;--surface:#121829;--surface-2:#192038;--ink:#EEF0F6;--ink-2:#B9C0D0;--ink-3:#7F889D;--rule:#252E47;--mute:#3A4562;
+--leak:#FF6A6E;--leak-bg:rgba(255,106,110,.12);--move:#9491FF;--move-bg:rgba(148,145,255,.14);--flow:#33CF8E;--flow-bg:rgba(51,207,142,.12);--est:#F0B53A;--est-bg:rgba(240,181,58,.13);
+--night:#060913;--night-2:#10172A;--night-3:#1E2742;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;text-wrap:balance;font-weight:700}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:20px}
+.mono,.eyebrow{font:500 11.5px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{color:var(--ink-3)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:2px solid var(--move);outline-offset:2px;border-radius:4px}
 
-/* top bar */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
-.brand{font:800 15px/1 var(--display);font-stretch:125%;text-decoration:none;color:var(--ink);letter-spacing:.01em;white-space:nowrap}
-.brand span{color:var(--leak)}
-.nav{display:flex;gap:4px;flex-wrap:wrap}
-.nav a{font:500 13px/1 var(--body);text-decoration:none;color:var(--ink-2);padding:8px 10px;border-radius:4px}
-.nav a:hover,.nav a[aria-current="page"]{background:var(--sunk);color:var(--ink)}
-@media(max-width:640px){.nav a.hide-sm{display:none}}
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--night) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.brand{white-space:nowrap;font:800 17px/1 var(--display);letter-spacing:-.01em;text-decoration:none;color:var(--on-night);display:flex;align-items:center;gap:10px}
+.brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--leak),var(--move) 55%,var(--flow));display:inline-block}
+.nav{display:flex;gap:2px}
+.nav a{white-space:nowrap;font:500 14px var(--body);color:var(--on-night-2);text-decoration:none;padding:8px 12px;border-radius:999px}
+.nav a:hover{color:var(--on-night);background:rgba(255,255,255,.06)}
+.nav a[aria-current]{color:var(--on-night);background:rgba(255,255,255,.1)}
+.nav a.cta{background:var(--on-night);color:var(--night);font-weight:600;margin-left:6px}
+@media(max-width:640px){.nav .hide-sm{display:none}.nav a{padding:8px 9px;font-size:13.5px}.brand i{display:none}}
 
-/* hero */
-.hero{padding-block:56px 40px;display:grid;gap:22px;border-bottom:2px solid var(--ink)}
-.hero h1{font-weight:850;font-stretch:118%;font-size:clamp(38px,7.2vw,92px);line-height:.92;letter-spacing:-.025em;max-width:16ch}
-.hero h1 em{font-style:normal;color:var(--leak)}
-.hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--ink-2);max-width:54ch}
-.hero-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule)}
-.hero-row>div{padding:16px 16px 4px 0;display:grid;gap:6px;align-content:start}
-.hero-row>div+div{border-left:1px solid var(--rule);padding-left:16px}
-.big{font:850 clamp(34px,4.2vw,58px)/.9 var(--display);font-stretch:104%;white-space:nowrap;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.big.leak{color:var(--leak)} .big.flow{color:var(--flow)}
-.hero-row p{font-size:14.5px;color:var(--ink-2)}
-@media(max-width:820px){.hero-row{grid-template-columns:1fr 1fr}.hero-row>div:nth-child(3){border-left:0;padding-left:0}.hero-row>div:nth-child(n+3){border-top:1px solid var(--rule)}}
+/* colour language chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--body);padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.chip.leak{background:var(--leak-bg);color:var(--leak)}
+.chip.move{background:var(--move-bg);color:var(--move)}
+.chip.flow{background:var(--flow-bg);color:var(--flow)}
+.chip i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.ev{display:inline-flex;align-items:center;gap:5px;font:600 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:6px;white-space:nowrap;vertical-align:middle}
+.ev::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ev.m{color:var(--flow);background:var(--flow-bg)}
+.ev.c{color:var(--move);background:var(--move-bg)}
+.ev.e{color:var(--est);background:var(--est-bg)}
+.ev.u{color:var(--ink-3);background:var(--surface-2)}
+.ev.u::before{background:transparent;border:1.5px dashed currentColor;width:5px;height:5px}
+
+/* dark bands */
+.band{background:var(--night);color:var(--on-night)}
+.band .eyebrow{color:var(--on-night-2)}
+
+/* case hero */
+.chero{padding-block:40px 0}
+.chero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:stretch}
+.chero .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.chero .crumbs a{color:var(--on-night-2);text-decoration:none;font:500 13px var(--body)}
+.chero .crumbs a:hover{color:var(--on-night)}
+.chero .chip{background:rgba(255,255,255,.08);color:var(--on-night)}
+.chero .chip.live{background:rgba(51,207,142,.16);color:#5BE0A6}
+.chero h1{font-size:clamp(40px,6.4vw,82px);font-weight:800;line-height:.95;letter-spacing:-.035em;color:#fff}
+.chero .q{font:500 clamp(19px,2.3vw,26px)/1.3 var(--display);color:var(--on-night-2);margin-top:18px;max-width:30ch;letter-spacing:-.01em}
+.chero .q b{color:#fff;font-weight:600}
+.chero .q em{font-style:normal;color:#FF8A8D}
+.res{margin-top:30px;display:grid;gap:8px;padding:20px 22px;border-radius:var(--r);background:var(--night-2);border:1px solid var(--night-3);max-width:520px}
+.res .big{font:800 clamp(52px,8vw,104px)/.88 var(--display);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.res .big.long{font-size:clamp(46px,6vw,80px)}
+.res .big.flow{color:#3BE09A}.res .big.leak{color:#FF7376}.res .big.move{color:#A9A7FF}
+.res p{color:var(--on-night-2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.res .ev{background:rgba(255,255,255,.08)}
+.res .ev.m{color:#5BE0A6}.res .ev.c{color:#A9A7FF}.res .ev.e{color:#F6C35A}
+.photo{position:relative;border-radius:22px;overflow:hidden;min-height:360px;background:var(--night-3)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,9,19,.72))}
+.photo figcaption{position:absolute;left:14px;bottom:12px;right:14px;z-index:1;font:500 11px/1.3 var(--mono);color:rgba(255,255,255,.75);letter-spacing:.04em}
+.hstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:36px;border-top:1px solid var(--night-3)}
+.hstats>div{padding:20px 18px 24px 0;display:grid;gap:6px;align-content:start}
+.hstats>div+div{padding-left:18px;border-left:1px solid var(--night-3)}
+.hstats b{font:700 clamp(26px,3vw,36px)/1 var(--display);letter-spacing:-.03em;color:#fff;font-variant-numeric:tabular-nums}
+.hstats b.flow{color:#3BE09A}.hstats b.leak{color:#FF7376}
+.hstats span{font-size:13.5px;color:var(--on-night-2);line-height:1.35}
+@media(max-width:900px){.chero .grid{grid-template-columns:minmax(0,1fr)}.photo{min-height:260px;order:-1}.hstats{grid-template-columns:repeat(2,minmax(0,1fr))}.hstats>div:nth-child(3){border-left:0;padding-left:0}.hstats>div:nth-child(n+3){border-top:1px solid var(--night-3)}}
+
+/* glance */
+.glance{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:-1px;padding-block:22px}
+.glance>div{display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px;align-items:start}
+.glance svg{width:36px;height:36px;padding:8px;border-radius:10px;background:var(--surface);color:var(--ink-2);box-shadow:var(--shadow)}
+.glance small{display:block;font:600 10.5px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+.glance span{font-size:14px;font-weight:600;line-height:1.3;display:block}
+@media(max-width:900px){.glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.glance{grid-template-columns:minmax(0,1fr)}}
 
 /* sections */
-.sec{padding-block:56px 16px;display:grid;gap:24px}
-.sec+.sec{border-top:1px solid var(--rule)}
-.sh{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 20px;align-items:end}
-.sh .n{font:850 clamp(48px,7vw,88px)/.8 var(--display);font-stretch:110%;color:var(--flow);grid-row:span 2;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
-.sh h2{font-weight:800;font-stretch:112%;font-size:clamp(26px,3.6vw,42px);line-height:1.02}
-.sh p{grid-column:2;color:var(--ink-2);max-width:62ch}
-.sh.nonum{grid-template-columns:minmax(0,1fr)} .sh.nonum p{grid-column:1}
-@media(max-width:560px){.sh{grid-template-columns:minmax(0,1fr)}.sh .n{grid-row:auto}.sh p{grid-column:1}}
-.prose{max-width:66ch;display:grid;gap:14px;color:var(--ink-2)}
-.prose b,.prose strong{color:var(--ink)}
-.thesis{font:700 clamp(21px,2.6vw,28px)/1.22 var(--display);font-stretch:105%;max-width:40ch;border-left:4px solid var(--leak);padding-left:18px}
+.sec{padding-block:64px 8px}
+.sh{display:grid;gap:10px;margin-bottom:26px;max-width:760px}
+.sh .n{font:600 12px/1 var(--mono);letter-spacing:.12em;color:var(--move);display:flex;gap:10px;align-items:center}
+.sh .n::after{content:"";height:1px;width:40px;background:currentColor;opacity:.5}
+.sh h2{font-size:clamp(28px,4vw,46px);font-weight:750}
+.sh p{color:var(--ink-2);font-size:17px;max-width:60ch}
+.legend3{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 
-/* evidence tags */
-.ev{display:inline-flex;align-items:center;gap:4px;font:600 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px;vertical-align:2px;white-space:nowrap;border:1px solid currentColor}
-.ev.m{color:var(--ink-2)} .ev.c{color:var(--flow)} .ev.e{color:var(--est)} .ev.u{color:var(--ink-3);border-style:dashed} .ev.x{color:var(--leak)}
-.grade{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;font:800 14px/1 var(--display);border:2px solid currentColor}
-.grade.A{color:var(--flow)} .grade.B{color:var(--ink-2)} .grade.C{color:var(--est)} .grade.D{color:var(--ink-3)}
+/* journey board */
+.jb{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x proximity}
+.jcol{scroll-snap-align:start;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);display:grid;grid-template-rows:auto 1fr 1fr 1fr;overflow:hidden;position:relative}
+.jhead{padding:14px 14px 10px;display:grid;gap:10px}
+.jhead .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--surface-2);color:var(--ink)}
+.jhead .ic svg{width:21px;height:21px}
+.jhead b{font:700 16px/1.15 var(--display);letter-spacing:-.01em}
+.jhead small{font:500 10.5px/1 var(--mono);color:var(--ink-3);letter-spacing:.1em}
+.jcell{padding:11px 14px;border-top:1px solid var(--rule);display:grid;gap:6px;align-content:start;font-size:13.5px;line-height:1.38}
+.jcell .k{font:600 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.jcell .k::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.jcell.saw .k{color:var(--ink-3)}
+.jcell.saw.leak{background:var(--leak-bg)}.jcell.saw.leak .k{color:var(--leak)}
+.jcell.saw.ok .k{color:var(--flow)}
+.jcell.did .k{color:var(--move)}.jcell.did{background:color-mix(in srgb,var(--move-bg) 55%,transparent)}
+.jcell.now .k{color:var(--ink-3)}
+.jcell.now.flow{background:var(--flow-bg)}.jcell.now.flow .k{color:var(--flow)}
+.jcell.now.leak .k{color:var(--leak)}
+.jcell .none{color:var(--ink-3)}
+.jcol.isleak{outline:2px solid var(--leak);outline-offset:-2px}
+.jcol.isleak .jhead .ic{background:var(--leak);color:#fff}
+.jcol.isfix .jhead .ic{background:var(--flow);color:#fff}
+.jnote{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--ink-3);align-items:center}
+@media(max-width:700px){.jb{grid-auto-flow:row;grid-auto-columns:auto;overflow:visible}.jcol{grid-template-rows:auto}.jcell.empty{display:none}}
 
-/* cards & grids */
-.grid{display:grid;gap:16px}
-.g2{grid-template-columns:repeat(2,minmax(0,1fr))} .g3{grid-template-columns:repeat(3,minmax(0,1fr))} .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
-.panel{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
-.panel h3{font-size:17px;font-weight:700}
-.panel .cap,.cap{font-size:13.5px;color:var(--ink-3);line-height:1.45}
-.stat{display:grid;gap:6px;align-content:start;min-width:0}
-.stat b{font:850 clamp(32px,4vw,52px)/.9 var(--display);font-stretch:108%;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.stat b.leak{color:var(--leak)} .stat b.flow{color:var(--flow)}
-.stat span{font-size:14px;color:var(--ink-2)}
-.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border-top:2px solid var(--ink)}
-.statrow>.stat{padding:16px 16px 12px 0;border-bottom:1px solid var(--rule)}
-
-/* case record (AI + skim) */
-.record{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);border-top:2px solid var(--ink);background:var(--surface)}
-.record dt,.record dd{margin:0;padding:12px 14px;border-bottom:1px solid var(--rule)}
-.record dt{font:600 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.record dd{font-size:15.5px}
-@media(max-width:560px){.record{grid-template-columns:minmax(0,1fr)}.record dt{border-bottom:0;padding-bottom:0}}
-
-/* journey */
-.journey{overflow-x:auto;padding-bottom:6px}
-.jtrack{display:flex;gap:0;min-width:760px;align-items:stretch}
-.jstep{flex:1;min-width:0;display:grid;grid-template-rows:auto auto 1fr;gap:6px;padding:14px 12px 14px;border-top:4px solid var(--flow);background:var(--surface);position:relative}
-.jstep+.jstep{border-left:1px solid var(--rule)}
-.jstep::after{content:"";position:absolute;right:-7px;top:-9px;width:0;height:0;border-left:7px solid var(--flow);border-top:7px solid transparent;border-bottom:7px solid transparent;z-index:2}
-.jstep:last-child::after{display:none}
-.jstep .st{font:700 13.5px/1.2 var(--display);font-stretch:105%}
-.jstep .tp{font-size:12.5px;color:var(--ink-3);line-height:1.35}
-.jstep .mt{font:600 13px/1.3 var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
-.jstep.leak{border-top-color:var(--leak);background:var(--leak-soft)}
-.jstep.leak::after{border-left-color:var(--leak)}
-.jstep.unk{border-top-style:dashed;border-top-color:var(--ink-3)}
-.jstep.unk::after{border-left-color:var(--ink-3)}
-.jstep .drip{font-size:12.5px;line-height:1.35;color:var(--leak);font-weight:600;border-top:1px dashed var(--leak);padding-top:6px;align-self:end}
-.jstep.unk .drip{color:var(--ink-3);border-top-color:var(--ink-3)}
-.jlegend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-3)}
-.jlegend i{display:inline-block;width:18px;height:4px;margin-right:6px;vertical-align:3px;background:var(--flow)}
-.jlegend i.l{background:var(--leak)} .jlegend i.u{background:none;border-top:2px dashed var(--ink-3)}
-
-/* measurement ladder */
-.ladder{display:grid;gap:0;border-top:2px solid var(--ink)}
-.rung{display:grid;grid-template-columns:28px minmax(110px,190px) minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
-.rung .i{font:700 12px/1 var(--mono);color:var(--ink-3)}
-.rung .k{font:700 14.5px/1.2 var(--display)}
-.rung .v{font-size:14.5px;color:var(--ink-2);min-width:0}
-.rung .v b{color:var(--ink);font-family:var(--mono);font-weight:600}
-.rung.gap .k,.rung.gap .v{color:var(--ink-3)}
-.rung.gap{background:repeating-linear-gradient(135deg,transparent 0 6px,var(--sunk) 6px 8px)}
-@media(max-width:560px){.rung{grid-template-columns:24px minmax(0,1fr) auto}.rung .v{grid-column:2/4}}
-
-/* list of changes / failures */
-.items{display:grid;gap:0;border-top:2px solid var(--ink)}
-.item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px 24px;padding:16px 0;border-bottom:1px solid var(--rule)}
-.item h4{font-size:16px;font-weight:700}
-.item p{font-size:15px;color:var(--ink-2)}
-.item .meta{font:500 12px/1.4 var(--mono);color:var(--ink-3);margin-top:6px}
-@media(max-width:700px){.item{grid-template-columns:minmax(0,1fr)}}
-.fail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--rule);background:var(--surface)}
-.fail>div{padding:14px;border-right:1px solid var(--rule);display:grid;gap:4px;align-content:start;min-width:0}
-.fail>div:last-child{border-right:0}
-.fail .k{font:600 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-.fail p{font-size:14.5px}
-.fail .res p{color:var(--leak)}
-@media(max-width:820px){.fail{grid-template-columns:minmax(0,1fr)}.fail>div{border-right:0;border-bottom:1px solid var(--rule)}}
-.failhead{font:700 18px/1.25 var(--display);margin-bottom:8px}
-
-/* tables */
-.tw{overflow-x:auto;border-top:2px solid var(--ink)}
-table{border-collapse:collapse;width:100%;font-size:14.5px}
-th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font:600 10.5px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* before / after */
+.ba{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.bac{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;display:grid;gap:12px;align-content:start}
+.bac h4{font:600 14px/1.3 var(--body);letter-spacing:0;color:var(--ink-2)}
+.bav{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.bav .b{font:600 20px/1 var(--display);color:var(--ink-3);text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:color-mix(in srgb,var(--ink-3) 60%,transparent)}
+.bav .ar{color:var(--ink-3)}
+.bav .a{font:800 clamp(30px,3.6vw,42px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.bac.flow .a{color:var(--flow)}.bac.leak .a{color:var(--leak)}.bac.est .a{color:var(--est)}.bac.move .a{color:var(--move)}
+.bac p{font-size:13.5px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bac .bar{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;display:flex}
+.bac .bar i{display:block;height:100%;border-radius:99px}
 
 /* charts */
-.chart{position:relative;min-width:0}
-.chart svg{display:block;width:100%;height:auto;overflow:visible}
-.chart .ax{fill:var(--ink-3);font:12px var(--mono)}
-.chart .lbl{fill:var(--ink);font:600 12.5px var(--body)}
-.chart .lbl2{fill:var(--ink-2);font:13px var(--body)}
-.chart .val{fill:var(--ink-2);font:12.5px var(--mono)}
-.chart .grid{stroke:var(--rule);stroke-dasharray:2 4}
-.chart .base{stroke:var(--ink-3)}
-.chart .shade{fill:var(--flow-soft)}
-.chart .hit{fill:transparent;cursor:crosshair}
-.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.tip{position:fixed;pointer-events:none;z-index:50;background:var(--ink);color:var(--bg);font:12.5px/1.4 var(--body);padding:7px 10px;border-radius:4px;max-width:260px}
-.tip b{font-family:var(--mono)}
+.charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.charts .wide{grid-column:1/-1}
+@media(max-width:860px){.charts{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.panel h3{font-size:clamp(19px,2vw,23px);font-weight:700}
+.panel .cap{font-size:13px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;line-height:1.45}
+.chart{width:100%;min-width:0}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg .grid{stroke:var(--rule);stroke-width:1}
+svg .base{stroke:var(--ink-3);stroke-width:1}
+svg .ax{font:500 11px var(--mono);fill:var(--ink-3)}
+svg .val{font:600 12px var(--body);fill:var(--ink);font-variant-numeric:tabular-nums}
+svg .lbl{font:600 13px var(--body);fill:var(--ink)}
+svg .lbl2{font:500 12.5px var(--body);fill:var(--ink-2)}
+svg .shade{fill:var(--move-bg)}
+svg .hit{fill:transparent;cursor:crosshair}
+svg g:hover path{opacity:.85}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--night);color:var(--on-night);font:13px/1.4 var(--body);padding:8px 11px;border-radius:9px;max-width:260px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.tip b{color:#fff}
 
-/* matrix */
-.matrix{overflow-x:auto;border-top:2px solid var(--ink)}
-.matrix table{min-width:820px;font-size:13px}
-.matrix th{padding:10px 8px 10px 0}
-.matrix td{padding:8px 8px 8px 0;vertical-align:middle}
-.matrix td.case a{font:700 14px/1.2 var(--display);color:var(--ink);text-decoration:none}
-.matrix td.case span{display:block;font-size:12px;color:var(--ink-3)}
-.cell{display:block;min-height:40px;padding:6px 8px;border-radius:3px;font-size:12px;line-height:1.3;text-decoration:none}
-.cell.l{background:var(--leak-soft);color:var(--ink);border-left:3px solid var(--leak)}
-.cell.o{background:var(--flow-soft);color:var(--ink-2)}
-.cell.n{background:repeating-linear-gradient(135deg,transparent 0 6px,var(--sunk) 6px 8px);color:var(--ink-3)}
+/* fails */
+.fails{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.fl{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;display:grid;align-content:start}
+.fl h4{font-size:17px;padding:18px 18px 12px}
+.fl div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px;padding:10px 18px;border-top:1px solid var(--rule);font-size:13.5px;line-height:1.4}
+.fl div span{font:600 10px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.fl div.r{background:var(--leak-bg)}.fl div.r span{color:var(--leak)}
+.fl div.l span{color:var(--move)}
 
-/* filters & case cards */
-.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:14px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
-.filters label{display:grid;gap:4px;font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.filters select{font:15px var(--body);padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);color:var(--ink);min-width:150px;max-width:100%}
-.filters button{font:600 13px var(--body);padding:9px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:4px;cursor:pointer}
-.count{font:500 13px var(--mono);color:var(--ink-3);margin-left:auto;align-self:center}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-@media(max-width:400px){.cards{grid-template-columns:minmax(0,1fr)}}
-.card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;display:flex;flex-direction:column;gap:12px;padding:20px;text-decoration:none;color:var(--ink);min-width:0;transition:border-color .15s,transform .15s}
-.card:hover{border-color:var(--ink);transform:translateY(-2px)}
-.card .top-r{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.card h3{font-size:22px;font-weight:800;font-stretch:110%;line-height:1}
-.card .ind{font-size:13px;color:var(--ink-3);margin-top:4px}
-.card .leakline{font-size:15px;color:var(--ink-2)}
-.card .leakline b{color:var(--leak);font-weight:600}
-.card .kpi{margin-top:auto;display:flex;gap:16px;align-items:baseline;border-top:1px solid var(--rule);padding-top:12px;flex-wrap:wrap}
-.card .kpi b{font:850 34px/.9 var(--display);font-stretch:108%;letter-spacing:-.02em}
-.card .kpi>span{font-size:13px;color:var(--ink-2);flex:1;min-width:140px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
-.chip{font:500 11.5px/1 var(--body);padding:5px 8px;border-radius:99px;background:var(--sunk);color:var(--ink-2)}
-.status{font:600 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border-radius:3px;white-space:nowrap}
-.status.live{background:var(--flow-soft);color:var(--flow)} .status.done{background:var(--sunk);color:var(--ink-2)} .status.diag{background:var(--est-soft);color:var(--est)}
+/* next */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:nx}
+.nx{position:relative;padding:20px;border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow);display:grid;gap:8px;align-content:start}
+.nx::before{counter-increment:nx;content:counter(nx);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--move);color:#fff;font:700 14px var(--display)}
+.nx small{font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--move)}
+.nx b{font:700 17px/1.2 var(--display)}
+.nx p{font-size:14px;color:var(--ink-2)}
 
-/* method strip */
-.method{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--ink)}
-.method>div{padding:16px 14px 16px 0;display:grid;gap:8px;align-content:start;min-width:0}
-.method>div+div{border-left:1px solid var(--rule);padding-left:14px}
-.method b{font:800 18px/1 var(--display);font-stretch:112%}
-.method p{font-size:14px;color:var(--ink-2)}
-.method .ex{font-size:12.5px;color:var(--ink-3);border-top:1px dashed var(--rule);padding-top:8px}
-@media(max-width:900px){.method{grid-template-columns:minmax(0,1fr)}.method>div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+/* proof chain */
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.lk{flex:1 1 140px;padding:14px 14px 12px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);display:grid;gap:6px;align-content:start;position:relative}
+.lk small{font:600 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.lk b{font:700 19px/1.1 var(--display);letter-spacing:-.02em}
+.lk span{font-size:12.5px;color:var(--ink-3);line-height:1.35}
+.lk.u{background:transparent;box-shadow:none;border:1.5px dashed var(--mute)}
+.lk.u b{color:var(--ink-3);font-size:15px}
+.lk.c b{color:var(--move)}
 
-/* case header */
-.chead{padding-block:44px 28px;display:grid;gap:18px;border-bottom:2px solid var(--ink)}
-.chead h1{font-weight:850;font-stretch:118%;font-size:clamp(36px,6.4vw,78px);line-height:.92;letter-spacing:-.025em}
-.chead .q{font:700 clamp(20px,2.6vw,30px)/1.15 var(--display);font-stretch:104%;max-width:34ch;color:var(--ink-2)}
-.chead .q em{font-style:normal;color:var(--leak)}
-.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font:500 12.5px/1.4 var(--mono);color:var(--ink-3)}
-.facts b{color:var(--ink);font-weight:600}
-.crumbs{font:500 12.5px var(--mono);color:var(--ink-3)} .crumbs a{color:var(--ink-3)}
+/* source + cta */
+.src{margin-top:40px;padding:20px 22px;border-radius:var(--r);background:var(--surface-2);font-size:13.5px;color:var(--ink-2);display:grid;gap:8px}
+.src a{color:var(--move);font-weight:600}
+.ctab{margin-top:72px;padding-block:56px}
+.ctab .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center}
+.ctab h2{font-size:clamp(28px,4vw,48px);color:#fff}
+.ctab p{color:var(--on-night-2);margin-top:10px;max-width:46ch}
+.ctab .acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+@media(max-width:800px){.ctab .wrap{grid-template-columns:minmax(0,1fr)}.ctab .acts{justify-content:flex-start}}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14.5px var(--body);padding:12px 18px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;background:var(--ink);color:var(--bg)}
+.band .btn{background:var(--on-night);color:var(--night)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.copybox{display:inline-flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--on-night);font:500 14.5px var(--body)}
+.copybox button{font:600 13px var(--body);border:0;border-radius:999px;padding:8px 12px;background:var(--on-night);color:var(--night);cursor:pointer}
+.foot{padding-block:28px 40px;font-size:13px;color:var(--on-night-2);background:var(--night);border-top:1px solid var(--night-3)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+.foot a{color:var(--on-night)}
 
-/* toc for case */
-.ctoc{display:flex;gap:6px;flex-wrap:wrap}
-.ctoc a{font:500 12px var(--mono);text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);padding:6px 9px;border-radius:99px}
-.ctoc a:hover{border-color:var(--ink)}
+/* hub */
+.hhero{padding-block:56px 0;position:relative;overflow:hidden}
+.hhero .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}
+.hhero h1{font-size:clamp(42px,6.6vw,86px);font-weight:800;line-height:.93;letter-spacing:-.04em;color:#fff}
+.hhero h1 em{font-style:normal;background:linear-gradient(90deg,#FF7376,#FFB547);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hhero .lede{font-size:clamp(17px,1.8vw,20px);color:var(--on-night-2);margin-top:20px;max-width:44ch}
+.hhero .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.mosaic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:120px;gap:10px}
+.mosaic a{position:relative;border-radius:16px;overflow:hidden;background:var(--night-3);text-decoration:none}
+.mosaic a.t2{grid-row:span 2}.mosaic a.w2{grid-column:span 2}
+.mosaic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mosaic a:hover img{transform:scale(1.05)}
+.mosaic a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,9,19,.8))}
+.mosaic span{position:absolute;left:10px;bottom:9px;z-index:1;color:#fff;font:600 12.5px/1.2 var(--body)}
+@media(max-width:900px){.hhero .grid{grid-template-columns:minmax(0,1fr)}.mosaic{grid-auto-rows:96px}}
+.method{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.mstep{padding:18px;border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow);display:grid;gap:10px;align-content:start}
+.mstep .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.mstep .ic svg{width:22px;height:22px}
+.mstep b{font:700 17px/1.15 var(--display)}
+.mstep p{font-size:13.5px;color:var(--ink-2)}
+@media(max-width:900px){.method{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.method{grid-template-columns:minmax(0,1fr)}}
+.lang{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.lang div{padding:16px 18px;border-radius:var(--r);display:grid;gap:4px}
+.lang b{font:800 22px/1 var(--display)}
+.lang span{font-size:13.5px}
+.lang .l{background:var(--leak-bg);color:var(--leak)}.lang .m{background:var(--move-bg);color:var(--move)}.lang .f{background:var(--flow-bg);color:var(--flow)}
+@media(max-width:600px){.lang{grid-template-columns:minmax(0,1fr)}}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.fchips button{font:600 13.5px var(--body);padding:9px 15px;border-radius:999px;border:0;background:var(--surface);color:var(--ink-2);box-shadow:var(--shadow);cursor:pointer}
+.fchips button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cards .feat{grid-column:span 2;flex-direction:row}
+.cards .feat .im{aspect-ratio:auto;flex:0 0 52%}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards .feat.last{grid-column:auto;flex-direction:column}.cards .feat.last .im{aspect-ratio:16/10;flex:none}}
+@media(max-width:700px){.cards{grid-template-columns:minmax(0,1fr)}.cards .feat{grid-column:auto;flex-direction:column}.cards .feat .im{aspect-ratio:16/10;flex:none}}
+.pn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pn a{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;padding:12px;border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow);text-decoration:none}
+.pn img{width:96px;height:72px;border-radius:12px;object-fit:cover}
+.pn small{font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--move)}
+.pn b{display:block;font:700 18px/1.15 var(--display);margin-top:4px}
+.pn span{font-size:13px;color:var(--ink-3)}
+@media(max-width:600px){.pn{grid-template-columns:minmax(0,1fr)}}
+.mono-av{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 28px/1 var(--display);background:linear-gradient(135deg,var(--leak),var(--move) 55%,var(--flow));flex:none}
+.card{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(14,20,36,.06),0 18px 40px -16px rgba(14,20,36,.35)}
+.card .im{position:relative;aspect-ratio:16/10;background:var(--night-3)}
+.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .im .chip{position:absolute;top:12px;left:12px;background:rgba(6,9,19,.7);color:#fff;backdrop-filter:blur(6px)}
+.card .im .chip.live{color:#5BE0A6}
+.card .bd{padding:18px 20px 20px;display:grid;gap:10px;flex:1;align-content:start}
+.card h3{font-size:23px;font-weight:750}
+.card .meta{font-size:13px;color:var(--ink-3)}
+.card .k{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:4px}
+.card .k b{font:800 38px/1 var(--display);letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.card .k b.flow{color:var(--flow)}.card .k b.leak{color:var(--leak)}
+.card .k span{font-size:13px;color:var(--ink-2);flex:1 1 140px;line-height:1.35}
+.card .lk2{font-size:14px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:10px}
+.card .lk2 b{color:var(--leak);font-weight:600}
+.card .go{margin-top:auto;font:600 13.5px var(--body);color:var(--move)}
+.hmap{overflow-x:auto;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:8px 8px 4px}
+.hmap table{border-collapse:collapse;width:100%;min-width:720px;font-size:13px}
+.hmap th{font:600 10.5px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 8px;text-align:center}
+.hmap th:first-child{text-align:left}
+.hmap td{padding:9px 8px;border-top:1px solid var(--rule);text-align:center}
+.hmap td:first-child{text-align:left;font-weight:600;white-space:nowrap}
+.hmap td:first-child a{text-decoration:none}
+.dot{display:inline-block;width:16px;height:16px;border-radius:50%;vertical-align:middle}
+.dot.o{background:var(--flow)}.dot.l{background:var(--leak);box-shadow:0 0 0 4px var(--leak-bg)}.dot.n{border:2px dashed var(--mute)}
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.about .me{display:flex;gap:16px;align-items:center}
+.about .me img{width:76px;height:76px;border-radius:50%;object-fit:cover}
+.about .me b{font:800 26px/1.1 var(--display)}
+.about p{color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+@media(max-width:860px){.about{grid-template-columns:minmax(0,1fr)}}
+.statbig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:48px;border-top:1px solid var(--night-3)}
+.statbig>div{padding:22px 18px 30px 0;display:grid;gap:8px;align-content:start}
+.statbig>div+div{padding-left:18px;border-left:1px solid var(--night-3)}
+.statbig b{font:800 clamp(34px,4.4vw,56px)/.95 var(--display);letter-spacing:-.04em;color:#fff;font-variant-numeric:tabular-nums}
+.statbig b.flow{color:#3BE09A}.statbig b.leak{color:#FF7376}.statbig b.move{color:#A9A7FF}
+.statbig span{font-size:13.5px;color:var(--on-night-2)}
+.statbig a{color:var(--on-night)}
+@media(max-width:820px){.statbig{grid-template-columns:repeat(2,minmax(0,1fr))}.statbig>div:nth-child(3){border-left:0;padding-left:0}.statbig>div:nth-child(n+3){border-top:1px solid var(--night-3)}}
 
-/* outreach tool */
-.tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
-@media(max-width:860px){.tool{grid-template-columns:minmax(0,1fr)}}
-.checks{display:grid;gap:6px}
-.checks label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;padding:10px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);cursor:pointer;font-size:14.5px}
-.checks label:has(input:checked){border-color:var(--leak);background:var(--leak-soft)}
-.checks input{margin-top:3px;accent-color:var(--leak)}
-.checks small{display:block;color:var(--ink-3);font-size:12.5px}
-.out{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px;display:grid;gap:12px;position:sticky;top:70px}
-.out textarea{width:100%;min-height:400px;font:15px/1.55 var(--body);padding:12px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink);resize:vertical}
-.btn{font:600 13px var(--body);padding:9px 14px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:4px;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink)}
-.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+/* leaks page */
+.leakgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.lc{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);padding:22px;display:grid;gap:12px;align-content:start;scroll-margin-top:80px}
+.lc .hd{display:flex;gap:12px;align-items:center}
+.lc .hd .ic{width:44px;height:44px;flex:none;border-radius:13px;background:var(--leak-bg);color:var(--leak);display:grid;place-items:center}
+.lc .hd .ic svg{width:22px;height:22px}
+.lc .hd small{font:600 11px/1 var(--mono);color:var(--ink-3);letter-spacing:.1em}
+.lc h3{font-size:22px}
+.lc .one{color:var(--ink-2);font-size:15px}
+.lc .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lc .row2>div{padding:12px;border-radius:12px;font-size:13.5px;line-height:1.4}
+.lc .row2 small{display:block;font:600 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.lc .sig{background:var(--leak-bg)}.lc .sig small{color:var(--leak)}
+.lc .fix{background:var(--move-bg)}.lc .fix small{color:var(--move)}
+.lc .seen{display:flex;flex-wrap:wrap;gap:6px}
+.lc .seen a{text-decoration:none}
+@media(max-width:420px){.lc .row2{grid-template-columns:minmax(0,1fr)}}
 
-/* footer */
-.foot{margin-top:56px;border-top:2px solid var(--ink);padding-block:28px 64px;display:grid;gap:14px;font-size:14px;color:var(--ink-2)}
-.foot .row{justify-content:space-between}
-.copybox{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:14px;background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:6px 6px 6px 10px}
-.copybox button{font:600 11px var(--mono);border:0;background:var(--ink);color:var(--bg);padding:6px 8px;border-radius:3px;cursor:pointer}
-.src{font-size:13px;color:var(--ink-3);display:grid;gap:6px;max-width:80ch}
-@media(max-width:640px){
- .jtrack{flex-direction:column;min-width:0}
- .jstep{border-top:0;border-left:4px solid var(--flow);grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto;padding:10px 12px}
- .jstep+.jstep{border-left:4px solid var(--flow);border-top:1px solid var(--rule)}
- .jstep.leak,.jstep+.jstep.leak{border-left-color:var(--leak)}
- .jstep.unk,.jstep+.jstep.unk{border-left:4px dashed var(--ink-3)}
- .jstep .tp{grid-column:1/-1} .jstep .drip{grid-column:1/-1}
- .jstep::after{display:none}
-}
-</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"TONI&GUY Bangalore: from record leads to the till","author":{"@type":"Person","name":"Daniel Deepak"},"datePublished":"2026-10-04","about":["Salon","Multi-location retail","Google Ads","Meta Ads","Revenue attribution"],"abstract":"Context: 16-salon premium network in Bengaluru, engagement 28 Feb–16 Sep 2026. Problem: February 2026 was the worst revenue month on record. Evidence: Google and Meta exports joined to point-of-sale revenue by salon. Action: store-level Google and Meta rebuild, new site, booking app, salon P&L reporting. Outcome: Mar–Aug 2026 revenue ₹16.10 Cr vs ₹14.04 Cr (+14.7%), bills +21.6%. Limitations: no lead-to-booking data; new stores opened in 2026; growth not causally attributed. Next: callback loop, tracking repair, average-bill work on the salon floor."}</script>
-</head>
-<body>
-<header class="top"><div class="wrap"><a class="brand" href="index.html">DANNY DEEPAK<span>.</span></a><nav class="nav" aria-label="Main"><a class="" href="index.html">Cases</a><a class="" href="leaks.html">Leak library</a><a class="hide-sm" href="outreach.html">Leak scan</a><a class="hide-sm" href="index.html#contact">Contact</a></nav></div></header>
-<main class="wrap">
-<header class="chead">
-  <p class="crumbs"><a href="index.html">Cases</a> / Salon · Multi-location B2C</p>
-  <h1>TONI&amp;GUY Bangalore</h1>
-  <p class="q">Leads hit an all-time high. So why did the <em>average bill</em> keep falling, and where did the leads go after the form?</p>
-  <div class="facts"><span>Industry <b>Premium salon, 16 locations</b></span><span>Market <b>Bengaluru</b></span><span>Period <b>28 Feb – 16 Sep 2026</b></span><span>Role <b>Growth consultant</b></span><span>Status <b>Closed</b></span><span>Evidence <b>Grade A</b>: ad exports joined to salon point-of-sale</span></div>
-  <nav class="ctoc" aria-label="On this page"><a href="#record">Record</a><a href="#s1">01 Situation</a><a href="#journey">02 Journey</a><a href="#s3">03 Evidence</a><a href="#s4">04 Diagnosis</a><a href="#s5">05 Changes</a><a href="#s6">06 Results</a><a href="#s7">07 What failed</a><a href="#s8">08 Next</a></nav>
-</header>
+/* self-check */
+.tool{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px;align-items:start}
+@media(max-width:900px){.tool{grid-template-columns:minmax(0,1fr)}}
+.checks{display:grid;gap:8px}
+.checks label{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;padding:13px 15px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);cursor:pointer;font-size:14.5px;font-weight:500}
+.checks label:has(input:checked){background:var(--leak-bg);box-shadow:inset 0 0 0 1.5px var(--leak)}
+.checks input{margin-top:2px;width:18px;height:18px;accent-color:var(--leak)}
+.checks small{display:block;color:var(--ink-3);font-size:12.5px;font-weight:400;margin-top:2px}
+.out{position:sticky;top:76px;border-radius:22px;padding:24px;display:grid;gap:14px}
+.out .score{font:800 64px/.9 var(--display);letter-spacing:-.04em}
+.out .bars{display:grid;gap:8px}
+.out .bars div{display:grid;grid-template-columns:120px minmax(0,1fr) 22px;gap:10px;align-items:center;font-size:13px;color:var(--on-night-2)}
+.out .bars i{display:block;height:8px;border-radius:99px;background:var(--night-3);overflow:hidden}
+.out .bars i em{display:block;height:100%;background:#FF7376;border-radius:99px}
+.out .match{padding:14px;border-radius:14px;background:var(--night-2);display:grid;gap:6px}
+.out .match a{color:#fff;font-weight:700}
+.out p{color:var(--on-night-2);font-size:14.5px}
+select.sel{font:500 15px var(--body);padding:11px 14px;border:0;border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);max-width:100%}
+.tw{overflow-x:auto;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow)}
+.tw table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+.tw th,.tw td{padding:12px 14px;text-align:left;border-top:1px solid var(--rule);vertical-align:top}
+.tw th{font:600 10.5px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);border-top:0}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-<section class="sec" id="record">
-  <div class="sh nonum"><h2>The case in eight lines</h2></div>
-  <dl class="record">
-    <dt>Context</dt><dd>16 premium salons across Bengaluru malls and high streets. Revenue is booked at the till; Google and Meta drive enquiries, calls, WhatsApp chats and walk-ins.</dd>
-    <dt>Problem</dt><dd>February 2026 was the worst month in a 20-month record: ₹1.91 Cr, 8,084 bills. Google ran without store-level structure; Meta wasn't run per salon at all.</dd>
-    <dt>Evidence</dt><dd>Google Ads exports Jan 2025–Aug 2026, Meta Ads Manager, salon point-of-sale sheets, auction insights, search terms, demographics.</dd>
-    <dt>Diagnosis</dt><dd>Demand was under-built and bought expensively. Once fixed, the leaks moved downstream: two campaigns wasting spend, no lead-to-bill visibility, and a falling average bill.</dd>
-    <dt>Action</dt><dd>Store-level Google rebuild (25 campaigns), Meta per salon (26), new website domain, Android booking app, salon-level P&amp;L joining spend to till.</dd>
-    <dt>Outcome</dt><dd>Mar–Aug 2026 revenue ₹16.10 Cr vs ₹14.04 Cr a year earlier (+14.7%). Bills +21.6%. Every month beat the same month of 2025.</dd>
-    <dt>Limitations</dt><dd>No lead-to-booking data. New stores opened in 2026. The revenue rise is not causally attributed to media. Cost per bill rose.</dd>
-    <dt>Next step</dt><dd>5-minute WhatsApp callback per store, tracking repair, and an average-bill programme on the salon floor.</dd>
-  </dl>
-</section>
-
-<section class="sec" id="s1">
-  <div class="sh"><span class="n">01</span><h2>What was happening</h2><p>I joined on 28 February 2026, in the weakest month on record.</p></div>
-  <div class="grid g2">
-    <div class="prose">
-      <p>The business sells haircuts, colour, treatments and packages from 16 salons. Most revenue is decided in the chair, not online. Marketing's job is to fill chairs at each salon, every day.</p>
-      <p>Through 2025 Google paid <b>₹10–14 a click</b> with click-through under 1%. There was no store-level campaign structure and no Meta activity per salon. Reporting stopped at clicks.</p>
-    </div>
-    <div class="statrow">
-      <div class="stat"><b class="leak">₹1.91 Cr</b><span>February 2026 revenue, lowest of 20 months <span class="ev m">Measured</span></span></div>
-      <div class="stat"><b>₹8.63</b><span>Google CPC in February; ₹11.34 average Mar–Aug 2025 <span class="ev m">Measured</span></span></div>
-      <div class="stat"><b>0.94%</b><span>Google CTR, Mar–Aug 2025 <span class="ev m">Measured</span></span></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="journey">
-  <div class="sh"><span class="n">02</span><h2>What looked wrong</h2><p>The salon journey, with what the data showed at each stage by August 2026.</p></div>
-  <div class="journey" id="j"></div>
-  <div class="jlegend"><span><i></i>Working</span><span><i class="l"></i>Leak found</span><span><i class="u"></i>No data to judge</span></div>
-</section>
-
-<section class="sec" id="s3">
-  <div class="sh"><span class="n">03</span><h2>How I found it</h2><p>One rule: judge March–August 2026 against March–August 2025. Same salons, same seasons, same festival calendar. Month-on-month proves nothing in a seasonal business.</p></div>
-  <div class="grid g2">
-    <div class="panel"><h3>Revenue, same month both years</h3><div class="legend"><span><i style="background:var(--ink-3)"></i>2025</span><span><i style="background:var(--flow)"></i>2026</span></div><div class="chart" id="c-yoy"></div><p class="cap">Point-of-sale revenue, all salons, ₹ Cr. Six for six. <span class="ev m">Measured</span></p></div>
-    <div class="panel"><h3>Twenty months of revenue</h3><div class="chart" id="c-arc"></div><p class="cap">Shaded: my tenure. Low in Feb 2026; ₹3 Cr line never crossed (May missed by ₹3 L). <span class="ev m">Measured</span></p></div>
-    <div class="panel"><h3>Google qualified leads per month</h3><div class="chart" id="c-mql"></div><p class="cap">Lead volume had already risen in Oct–Dec 2025, before I joined. It fell back when spend dropped to ₹1.19 L in January. <span class="ev m">Measured</span></p></div>
-    <div class="panel"><h3>Google cost per click</h3><div class="chart" id="c-cpc"></div><p class="cap">₹14.23 in Jan 2025 to ₹4.58 in Aug 2026. <span class="ev m">Measured</span></p></div>
-  </div>
-  <div class="panel"><h3>Revenue per advertising rupee, by salon, August 2026</h3><div class="chart" id="c-salon"></div><p class="cap">Salon revenue ÷ ad spend attributable to that salon (Google + Meta). Dashed line: network median 54×. Koramangala 4th Block took 15% of all advertising and returned 4.9×. Mantri Avenue had no ad spend and finished at 81% of target. <span class="ev c">Calculated</span></p></div>
-</section>
-
-<section class="sec" id="s4">
-  <div class="sh"><span class="n">04</span><h2>Diagnosis</h2></div>
-  <p class="thesis">By August, demand was no longer the constraint. Money was leaking in three places the ad dashboard couldn't see.</p>
-  <div class="items">
-    <div class="item"><div><h4>1 · Spend concentrated where it returned least</h4></div><div><p>Demand Gen (₹1,36,752 for 173 conversions, ₹790 each) and Koramangala 4th PMax (₹1,27,776) took 34.8% of Google spend for 7.9% of output.</p><p class="meta">Allocation leak · <span class="ev m">Measured</span></p></div></div>
-    <div class="item"><div><h4>2 · No path from lead to chair</h4></div><div><p>28,144 leads across Google and Meta in August, but Business Profile actions and the CRM call log weren't connected. Nobody could say how many leads became bills, or how fast anyone called back.</p><p class="meta">Lead-to-booking leak · <span class="ev u">Data unavailable</span></p></div></div>
-    <div class="item"><div><h4>3 · Average bill below last year</h4></div><div><p>₹2,813 vs ₹2,983 in August 2025. At August volume that gap is ₹17.78 L a month, more than the whole ad budget. Packages were 28.1% of sales, retail product 5.4%. This is a salon-floor problem: menu, packages, stylist conversation.</p><p class="meta">Not a marketing problem · <span class="ev c">Calculated</span>: (₹2,983 − ₹2,813) × 10,459 bills</p></div></div>
-    <div class="item"><div><h4>4 · A conversion spike nobody could explain</h4></div><div><p>6–12 August reported a 19.3% conversion rate; the other 24 days averaged 1.7%. Click-through rose with it, so it may be real. Or a conversion action changed. Most of August's 22,532 conversions sit in those seven days. I flagged it before anyone else found it.</p><p class="meta">Measurement leak · <span class="ev m">Measured</span>, cause unresolved at exit</p></div></div>
-  </div>
-</section>
-
-<section class="sec" id="s5">
-  <div class="sh"><span class="n">05</span><h2>What I changed</h2><p>Five workstreams. Media is the visible part.</p></div>
-  <div class="items">
-    <div class="item"><div><h4>Google Ads, rebuilt per store</h4></div><div><p>One demand unit per salon plus three always-on network campaigns. Search, Performance Max and Demand Gen. Intent-tiered keyword lists and negatives; competitor and off-geo suggestions rejected. Launches for Nexus Vega City and Lavelle Road.</p><p class="meta">25 campaigns live · naming: [Type]_[Store]_[Intent]_[Year]</p></div></div>
-    <div class="item"><div><h4>Meta, per salon, from zero</h4></div><div><p>Lead forms per salon from May, network-wide in June. Click-to-WhatsApp and click-to-call alongside. 132 Instagram boosts built.</p><p class="meta">26 campaigns · ₹31.74 per result in August, down from about ₹50</p></div></div>
-    <div class="item"><div><h4>Web and tracking</h4></div><div><p>New storefront domain, moved from Shopify to Netlify, plus a single-store site for Lavelle Road. Conversion tracking on the new domain started but not confirmed at exit.</p><p class="meta">2 domains</p></div></div>
-    <div class="item"><div><h4>Android booking app</h4></div><div><p>Jetpack Compose, 6-step booking, encrypted login, bookings synced to a Google Sheets CRM. Reached Play closed testing.</p><p class="meta">v1.0.1 · not in production</p></div></div>
-    <div class="item"><div><h4>Reporting that reaches the till</h4></div><div><p>Monthly report issues, a 20-month demand-to-till series every figure reconciles to, and the first salon-by-salon P&amp;L joining ad spend to point-of-sale revenue. A 19-item gap register, each finding traceable to a file.</p><p class="meta">Issues Nº 07–09 · review tracker for all 16 locations</p></div></div>
-  </div>
-</section>
-
-<section class="sec" id="s6">
-  <div class="sh"><span class="n">06</span><h2>What happened</h2><p>March–August 2026 against March–August 2025. Read the ladder top to bottom: it shows where measurement holds and where it breaks.</p></div>
-  <div class="statrow">
-    <div class="stat"><b class="flow">+₹2.06 Cr</b><span>salon revenue, ₹14.04 → ₹16.10 Cr (+14.7%) <span class="ev m">Measured</span></span></div>
-    <div class="stat"><b class="flow">+10,659</b><span>bills, 49,368 → 60,027 (+21.6%) <span class="ev m">Measured</span></span></div>
-    <div class="stat"><b>+165%</b><span>Google MQLs, 44,625 → 1,18,253 <span class="ev m">Measured</span></span></div>
-    <div class="stat"><b class="leak">₹29 → ₹42</b><span>Google spend per bill <span class="ev c">Calculated</span></span></div>
-  </div>
-  <div class="ladder" id="ladder"></div>
-  <div class="panel"><h3>Where August's extra spend went</h3><div class="chart" id="c-bridge"></div><p class="cap">Total invested rose from ₹5.47 L in July to ₹10.32 L. Meta scaled while its lead cost fell 37%; the two orange bars are the waste. <span class="ev m">Measured</span></p></div>
-  <div class="prose"><p><b>What the growth does not prove.</b> Two stores (Nexus Vega City, Lavelle Road) launched in 2026, so part of the year-on-year gain may be new capacity rather than marketing. Excluding March, the handover month, April–August still shows +16.0% revenue and +21.4% bills. Average bill fell 5.7% over the six months, so growth came from more customers, not bigger tickets.</p></div>
-</section>
-
-<section class="sec" id="s7">
-  <div class="sh"><span class="n">07</span><h2>What failed, and what blocked me</h2><p>Hypothesis, action, result, learning.</p></div>
-  <div><p class="failhead">Demand Gen as a prospecting layer</p><div class="fail"><div><span class="k">Hypothesis</span><p>Video and image prospecting adds demand Search can't reach.</p></div><div><span class="k">Action</span><p>Two Demand Gen campaigns, ₹1,36,752 in August.</p></div><div class="res"><span class="k">Result</span><p>173 conversions at ₹790, against ₹33.71 for the account.</p></div><div><span class="k">Learning</span><p>Switch off. Move the money to store PMax and Search. No version of it was working.</p></div></div></div>
-  <div><p class="failhead">Scaling Koramangala 4th Block</p><div class="fail"><div><span class="k">Hypothesis</span><p>A small salon under target needs more demand.</p></div><div><span class="k">Action</span><p>PMax spend up 89% month on month.</p></div><div class="res"><span class="k">Result</span><p>₹1,53,007 all-in for ₹7,45,995 of billing: 4.9×, ₹454 of media per bill.</p></div><div><span class="k">Learning</span><p>Cap at ₹60,000 and rebuild the asset group. Its target was the second-smallest in the estate.</p></div></div></div>
-  <div><p class="failhead">Instagram boosts</p><div class="fail"><div><span class="k">Hypothesis</span><p>Boosting organic posts builds cheap reach per salon.</p></div><div><span class="k">Action</span><p>132 boosts built.</p></div><div class="res"><span class="k">Result</span><p>59 never delivered. 51 were optimised to profile visits, a view, not a booking.</p></div><div><span class="k">Learning</span><p>Fix the scheduling handoff; switch the objective to leads or WhatsApp.</p></div></div></div>
-  <div class="items">
-    <div class="item"><div><h4>Blocked · Booking app</h4></div><div><p>Google Play requires 12+ testers on a closed track for 14 days before production. Not completed by exit.</p></div></div>
-    <div class="item"><div><h4>Blocked · Lead-to-bill tracking</h4></div><div><p>Business Profile actions and the CRM call log were never connected. Without them no report could prove which leads became customers.</p></div></div>
-    <div class="item"><div><h4>Cost of scale</h4></div><div><p>Cost per MQL rose from ₹17.13 (Feb) to ₹33.71 (Aug). Blended revenue per Google rupee fell from 96.5× to 63.5×. Volume was bought; some of it cheaply, some not.</p></div></div>
-  </div>
-</section>
-
-<section class="sec" id="s8">
-  <div class="sh"><span class="n">08</span><h2>What I'd do next</h2><p>Handed over on 16 September, ranked by rupees per hour of effort.</p></div>
-  <div class="items">
-    <div class="item"><div><h4>Week 1 · Settle the 6–12 August window</h4></div><div><p>One hour in the conversions report. Until then August's ₹33.71 cost per lead isn't a planning number.</p></div></div>
-    <div class="item"><div><h4>Reallocate, don't cut</h4></div><div><p>Hold ₹10.3 L. Kill Demand Gen, cap Koramangala 4th, move ₹2.0 L to the eight salons under target and Mantri Avenue.</p><p class="meta">Modelled September ₹2.62 Cr vs ₹2.53 Cr if the mix is left alone · <span class="ev e">Estimate</span></p></div></div>
-    <div class="item"><div><h4>Month 2 · Build the callback loop</h4></div><div><p>Every lead to the right salon's WhatsApp within five minutes. Leads are at record volume; speed is where they're lost.</p></div></div>
-    <div class="item"><div><h4>Take the average bill back to ₹2,983</h4></div><div><p>Menu pricing, packages, stylist conversation. Worth ₹17.78 L a month at August volume, and it isn't a media lever.</p></div></div>
-  </div>
-  <div class="src"><p><b>Sources.</b> Google Ads exports Jan 2025–Aug 2026 (campaigns, networks, devices, demographics, search terms, daily series, auction insights); Meta Ads Manager (26 campaigns, 132 boosts); salon point-of-sale sheets. Full reports: <a href="https://dannygrowthmarketing.github.io/toniguy-final-report/">Final report (Nº 09)</a> · <a href="https://dannygrowthmarketing.github.io/toniguy-july-2026-report/">July (Nº 07)</a> · <a href="https://dannygrowthmarketing.github.io/toniguy-june-2026-report/">June</a>.</p><p><b>Method.</b> Spend, cost per bill and revenue per rupee are Google-only so the series stays comparable to January 2025. Summary rows are weighted on six-month totals.</p></div>
-</section>
-</main>
-<footer class="wrap foot" id="contact">
-<div class="row"><div style="display:grid;gap:6px"><b style="font:800 22px/1.1 var(--display);font-stretch:112%;color:var(--ink)">Seen a leak in your own journey?</b><span>Send me the symptom. I'll tell you which case is closest and what I'd check first.</span></div>
-<div class="row"><span class="copybox"><span>danieldeepak3519@gmail.com</span><button type="button" data-copy="danieldeepak3519@gmail.com">Copy</button></span><a href="https://linkedin.com/in/danny-ai-marketing">LinkedIn</a><a href="https://github.com/dannygrowthmarketing">GitHub</a></div></div>
-<p class="cap">Daniel Deepak · Bengaluru · Casebook updated 2026-10-04. Client names appear only where the engagement has ended or the work is already public; the active resort engagement is anonymised. Figures are labelled measured, calculated, estimated or unavailable. <a href="llms.txt">Machine-readable summary</a> · <a href="cases.json">cases.json</a></p>
-</footer>
-<script>window.CASES={"updated": "2026-10-04", "consultant": {"name": "Daniel Deepak (Danny)", "base": "Bengaluru, India", "email": "danieldeepak3519@gmail.com", "linkedin": "https://linkedin.com/in/danny-ai-marketing", "github": "https://github.com/dannygrowthmarketing", "positioning": "Before I spend a rupee, I find where the last one leaked."}, "stages": [{"id": "visibility", "name": "Get found", "hint": "Search, Maps, directories, social, ads"}, {"id": "click", "name": "Click to site", "hint": "Landing page, speed, message match"}, {"id": "enquiry", "name": "Site to enquiry / cart", "hint": "CTA, form, booking widget, cart"}, {"id": "booking", "name": "Enquiry to booking / order", "hint": "Callback, checkout, confirmation"}, {"id": "revenue", "name": "Booking to revenue", "hint": "Visit, bill, returns, ticket size"}, {"id": "repeat", "name": "Revenue to repeat", "hint": "Reviews, retention, rebooking"}, {"id": "measurement", "name": "Measurement", "hint": "Can the business see which rupee worked?"}], "leaks": [{"id": "measurement", "name": "Miscounted conversions", "short": "The ad platform reports results the till never saw"}, {"id": "allocation", "name": "Money on the wrong intent", "short": "Budget sits where it is easiest to spend, not where buyers convert"}, {"id": "postclick", "name": "Post-click friction", "short": "Slow pages, long forms, broken booking paths"}, {"id": "visibility", "name": "Invisible where buyers look", "short": "Missing from Maps, directories, brand search or page one"}, {"id": "pricing", "name": "Price and distribution leakage", "short": "Your own inventory sold cheaper elsewhere"}, {"id": "speed", "name": "Lead-to-booking gap", "short": "Leads arrive; nobody converts them fast enough"}, {"id": "postsale", "name": "Post-sale leakage", "short": "Returns, falling ticket size, no repeat"}, {"id": "notmarketing", "name": "Not a marketing problem", "short": "The fix sits with ops, product or the shop floor"}], "cases": [{"id": "toni-and-guy", "url": "toni-and-guy.html", "name": "TONI&GUY Bangalore", "industry": "Salon", "model": "Multi-location B2C services", "geo": "Bengaluru, India", "geoGroup": "India", "status": "Closed", "statusClass": "done", "period": "28 Feb – 16 Sep 2026", "role": "Growth consultant: Google, Meta, GBP, web, reporting, booking app", "grade": "A", "gradeNote": "Ad exports joined to point-of-sale revenue by salon", "leak": "Leads hit record volume while ticket size fell and no callback loop existed", "kpiBig": "+14.7%", "kpiText": "salon revenue, Mar–Aug 2026 vs same six months of 2025 (₹16.10 Cr vs ₹14.04 Cr)", "kpiEv": "m", "leakIds": ["allocation", "measurement", "speed", "postsale", "notmarketing"], "objective": "Store visits and bills", "stages": {"visibility": {"s": "o", "t": "CPC ₹11.34 → ₹4.22; 22.11% impression share, #1 in auction"}, "click": {"s": "n", "t": "Site speed not assessed"}, "enquiry": {"s": "o", "t": "1,18,253 Google MQLs Mar–Aug (+165% YoY)"}, "booking": {"s": "l", "t": "No lead-to-booking view; callback automation proposed, not built"}, "revenue": {"s": "l", "t": "Average bill ₹2,813 vs ₹2,983 a year earlier"}, "repeat": {"s": "n", "t": "Repeat-visit data not supplied"}, "measurement": {"s": "l", "t": "Conversion rate 19.3% for 7 days, 1.7% for 24"}}}, {"id": "mr-jewels", "url": "mr-jewels.html", "name": "MR Jewels", "industry": "Jewellery e-commerce", "model": "D2C e-commerce with one showroom", "geo": "Bengaluru, India (ships nationally)", "geoGroup": "India", "status": "Closed", "statusClass": "done", "period": "1 Aug – 3 Sep 2026", "role": "Google Ads lead + business review across Shopify, Meta and Google", "grade": "A", "gradeNote": "Google exports reconciled to Shopify orders and billing", "leak": "Google claimed 11.8× the company's monthly revenue; the real losses sat in the cart and in returns", "kpiBig": "−66%", "kpiText": "showroom campaign CPC after one conversion-goal fix (₹38.60 → ₹13.13)", "kpiEv": "m", "leakIds": ["measurement", "allocation", "postclick", "postsale", "notmarketing"], "objective": "Online orders and showroom visits", "stages": {"visibility": {"s": "l", "t": "66% of 8,396 feed SKUs never shown; 80.9% of spend on Shopping"}, "click": {"s": "o", "t": "CTR 1.57%, CPC ₹5.07 in August"}, "enquiry": {"s": "o", "t": "Session→cart 5.45%, steady"}, "booking": {"s": "l", "t": "Cart→order 13.5%: 85 of 100 carts never buy"}, "revenue": {"s": "l", "t": "19.8% of gross reversed: ₹2.41 Cr in 12 months"}, "repeat": {"s": "l", "t": "79.6% of customers new; month-1 repeat 12.6%"}, "measurement": {"s": "l", "t": "₹12.56 Cr conversion value vs ₹1.07 Cr real sales"}}}, {"id": "elites-dental", "url": "elites-dental.html", "name": "Elites Dental Care", "industry": "Dental clinic", "model": "Single-location healthcare", "geo": "Bengaluru, India", "geoGroup": "India", "status": "Active", "statusClass": "live", "period": "Audit 18 Sep 2026 · rebuild from 27 Sep", "role": "Audit, Business Profile rebuild, Search campaign rebuild", "grade": "B", "gradeNote": "Google Ads, GA4, Search Console and GBP data; no clinic revenue yet", "leak": "₹3,140 per booking: the clicks were fine, everything after the click was broken", "kpiBig": "₹3,140", "kpiText": "cost per booking before the rebuild (₹25,122 for 8 bookings)", "kpiEv": "m", "leakIds": ["postclick", "allocation", "visibility", "measurement"], "objective": "Booked appointments by treatment value", "stages": {"visibility": {"s": "l", "t": "Not on page one for 'dental clinic tc palya'; no Practo listing"}, "click": {"s": "l", "t": "2.6 s server response; 96% of spend on mobile"}, "enquiry": {"s": "l", "t": "4-step booking; widget blank after an expired SSL certificate"}, "booking": {"s": "l", "t": "8 bookings from 469 clicks (1.71%)"}, "revenue": {"s": "n", "t": "Attendance and treatment value not yet shared"}, "repeat": {"s": "o", "t": "4.9★ from 271 reviews, owner replies to all"}, "measurement": {"s": "l", "t": "Every booking valued at ₹1; GA4 sees ~1 in 6 ad clicks"}}}, {"id": "resort", "url": "resort.html", "name": "Resort & events venue", "anon": true, "industry": "Hospitality", "model": "Resort: rooms, day-outs, weddings, corporate", "geo": "Electronic City, Bengaluru", "geoGroup": "India", "status": "Active", "statusClass": "live", "period": "Audit 25–26 Sep 2026 · Business Profile work from 28 Sep", "role": "Revenue audit, Business Profile management", "grade": "D", "gradeNote": "Outside-in audit plus Business Profile performance data; no ad or booking data yet", "leak": "Guests want to buy; the journey ends at 'Enquire' while the same room sells 55% cheaper on an OTA", "kpiBig": "−55%", "kpiText": "room price on an OTA via Google Hotels vs the resort's own site (₹1,780 vs ₹3,999)", "kpiEv": "m", "leakIds": ["pricing", "postclick", "measurement", "speed", "visibility", "notmarketing"], "objective": "Direct bookings and paid day-out tickets", "stages": {"visibility": {"s": "l", "t": "Top 10 on 2 of 14 target searches"}, "click": {"s": "l", "t": "Mobile LCP 7.6 s (lab)"}, "enquiry": {"s": "l", "t": "No book-now, no online payment; 'Enquire' only"}, "booking": {"s": "l", "t": "Profile calls down 65% May→Sep while directions rose"}, "revenue": {"s": "l", "t": "Own rooms on Yatra at ₹1,780 vs ₹3,999 direct"}, "repeat": {"s": "l", "t": "3.9★ on 5,406 reviews vs 4.6★ category leader"}, "measurement": {"s": "l", "t": "No Ads conversion tag, no Meta Pixel; bookings confirmed by hand"}}}, {"id": "foremost-pa", "url": "foremost-pa.html", "name": "Foremost Public Adjusters", "industry": "Insurance claims (public adjuster)", "model": "Local lead generation, contingency fee", "geo": "South Florida, USA", "geoGroup": "USA", "status": "Closed", "statusClass": "done", "period": "Jan – Jul 2026", "role": "Paid search audit, SEO fixes, campaign build, brand investigation", "grade": "B", "gradeNote": "Google Ads and Search Console exports; no claim or fee data", "leak": "Lead cost swung on post-click conversion, not budget, and the firm had stopped appearing for its own name", "kpiBig": "0 / 247", "kpiText": "live keywords that were branded: the brand campaign had been paused in a restructure", "kpiEv": "m", "leakIds": ["postclick", "visibility", "allocation"], "objective": "Qualified claim leads", "stages": {"visibility": {"s": "l", "t": "23% impression share; 0 of 247 live keywords branded"}, "click": {"s": "l", "t": "88 paid clicks landed on the homepage"}, "enquiry": {"s": "l", "t": "Desktop CPL $398 vs mobile $93; May CVR fell on flat spend"}, "booking": {"s": "n", "t": "Lead-to-signed-claim rate not supplied"}, "revenue": {"s": "n", "t": "Fees per settled claim not supplied"}, "repeat": {"s": "n", "t": "Not applicable / not assessed"}, "measurement": {"s": "o", "t": "Lead tracking in place; two exports disagree (56 vs 48 leads)"}}}, {"id": "everywatch", "url": "everywatch.html", "name": "EveryWatch", "industry": "Luxury-watch marketplace", "model": "Two-sided marketplace, subscription", "geo": "Global (remote)", "geoGroup": "Global", "status": "In-house role", "statusClass": "done", "period": "2024 – 2025", "role": "Growth & performance lead (in-house)", "grade": "C", "gradeNote": "Monthly series reconstructed in an earlier case study; raw exports not in the repo", "leak": "Acquisition scaled; returning users stayed near one in ten", "kpiBig": "20×", "kpiText": "monthly new users, Jan 2024 (9,113) to May 2025 (182,782), GA4", "kpiEv": "m", "leakIds": ["postsale", "measurement"], "objective": "Collector sign-ups and subscriptions", "stages": {"visibility": {"s": "o", "t": "Organic impressions 0.10M → 5.5M a month"}, "click": {"s": "n", "t": "Not assessed"}, "enquiry": {"s": "o", "t": "Paid leads at sub-$1 cost"}, "booking": {"s": "n", "t": "Lead-to-subscriber data not in the record"}, "revenue": {"s": "n", "t": "'Revenue' was leads × ~$15 assumed value, not sales"}, "repeat": {"s": "l", "t": "Returning users 10.2% of May 2025 users"}, "measurement": {"s": "l", "t": "Reported CVR above 100% in peak months"}}}, {"id": "swift-restoration", "url": "swift-restoration.html", "name": "Swift Restoration", "industry": "Emergency restoration", "model": "Local services, 24/7 emergency", "geo": "Central Iowa, USA", "geoGroup": "USA", "status": "Diagnostic", "statusClass": "diag", "period": "Jun 2026", "role": "Audit and execution plan", "grade": "D", "gradeNote": "Site crawl, Ahrefs, SERP and ad checks; no lead or revenue data", "leak": "A 5.0★ operator with no service pages, no location pages and no Local Services Ads", "kpiBig": "0", "kpiText": "service or location pages on the site at audit (service cards linked to '#')", "kpiEv": "m", "leakIds": ["visibility", "postclick"], "objective": "Emergency calls", "stages": {"visibility": {"s": "l", "t": "Domain Rating 3.2; no Local Services Ads"}, "click": {"s": "l", "t": "Homepage title is placeholder text"}, "enquiry": {"s": "n", "t": "Call tracking not assessed"}, "booking": {"s": "n", "t": "Not assessed"}, "revenue": {"s": "n", "t": "Not assessed"}, "repeat": {"s": "o", "t": "5.0★ on 15 Google reviews"}, "measurement": {"s": "n", "t": "Not assessed"}}}]};</script><script>/* Casebook chart + component kit. Plain SVG, theme tokens only. */
+/* revenue loop */
+.loopstrip{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:16px;align-items:center;padding-block:4px 10px}
+.loopstrip .lh{display:grid;gap:4px}.loopstrip .lh b{font:700 17px/1.2 var(--display)}
+.lps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.lp{display:grid;grid-template-columns:30px minmax(0,1fr);gap:2px 8px;align-items:center;padding:9px 10px;border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.lp .ic{grid-row:span 2;width:30px;height:30px;border-radius:9px;display:grid;place-items:center}
+.lp .ic svg{width:16px;height:16px}
+.lp b{font:700 13.5px/1.1 var(--display)}.lp small{font-size:11px;color:var(--ink-3);line-height:1.2}
+.lp.l2 .ic{background:var(--flow);color:#fff}.lp.l1 .ic{background:var(--move-bg);color:var(--move)}.lp.l0{opacity:.55;box-shadow:none;background:transparent;border:1.5px dashed var(--mute)}.lp.l0 .ic{background:var(--surface-2);color:var(--ink-3)}
+@media(max-width:900px){.loopstrip{grid-template-columns:minmax(0,1fr)}.lps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){.lps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.loopwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.ringp{place-items:center}.ring{width:100%;max-width:440px;height:auto}
+.stl{list-style:none;padding:0;display:grid;gap:8px;align-content:center}
+.stl li{display:grid;grid-template-columns:14px 110px minmax(0,1fr);gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+.stl i{width:14px;height:14px;border-radius:50%}.stl b{font:700 16px var(--display)}.stl span{font-size:14px;color:var(--ink-2)}
+@media(max-width:860px){.loopwrap{grid-template-columns:minmax(0,1fr)}.stl li{grid-template-columns:14px 90px minmax(0,1fr)}}
+.lv{display:inline-block;width:16px;height:16px;border-radius:50%;vertical-align:middle}
+.lv.v2{background:var(--flow)}.lv.v1{background:var(--move-bg);box-shadow:inset 0 0 0 2px var(--move)}.lv.v0{border:2px dashed var(--mute)}
+/* scenario */
+.attr{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:14px}
+@media(max-width:860px){.attr{grid-template-columns:minmax(0,1fr)}}
+.atop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.atop b{display:block;font:800 clamp(34px,4vw,48px)/1 var(--display);letter-spacing:-.03em}
+.atop span{font-size:14px;color:var(--ink-2)}
+.sbar{display:grid;gap:6px}.sbar small{font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.segs{display:flex;height:40px;border-radius:12px;overflow:hidden;gap:3px}
+.segs i{display:flex;align-items:center;justify-content:center;font:700 13px var(--body);color:#fff;min-width:0;overflow:hidden;white-space:nowrap}
+.segs i.flow,.sl i.flow{background:var(--flow)}.segs i.mute,.sl i.mute{background:var(--mute)}.segs i.mute{color:var(--ink)}.segs i.ink,.sl i.ink{background:var(--ink-3)}
+.ares{display:grid;gap:10px;align-content:start}
+.ares b{font:800 clamp(28px,3.2vw,38px)/1.05 var(--display);color:#3BE09A;letter-spacing:-.02em}
+.ares p{color:var(--on-night-2);font-size:14.5px}
+.ares ul{margin:4px 0 0;padding-left:18px;color:var(--on-night-2);font-size:13px;display:grid;gap:4px}
+.ares .ev{background:rgba(255,255,255,.08);color:#F6C35A;justify-self:start}
+</style><meta property="og:image" content="https://toniandguyhairdressing.com/cdn/shop/files/unnamed-2.jpg?width=1200&height=640&crop=center"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "TONI&GUY Bangalore: Leads hit record volume; ticket size fell and no callback loop existed", "author": {"@type": "Person", "name": "Daniel Deepak"}, "datePublished": "2026-10-04", "image": "https://toniandguyhairdressing.com/cdn/shop/files/unnamed-2.jpg?width=1200&height=640&crop=center", "about": ["Premium salon", "16 salons · multi-location"], "abstract": "Leads hit record volume; ticket size fell and no callback loop existed. Headline: +14.7% salon revenue, Mar–Aug 2026 vs 2025 (₹14.04 → ₹16.10 Cr). Role: Growth consultant: Google, Meta, web, booking app, reporting. Period: 28 Feb – 16 Sep 2026. Evidence grade A."}</script></head><body><header class="top"><div class="wrap"><a class="brand" href="index.html"><i></i>Danny Deepak</a><nav class="nav" aria-label="Main"><a class="" href="index.html#cases" aria-current="page">Cases</a><a class="" href="leaks.html">Leaks</a><a class="hide-sm" href="check.html">Free check</a><a class="cta" href="#contact">Contact</a></nav></div></header><main><section class="band chero"><div class="wrap"><div class="grid"><div>
+<div class="crumbs"><a href="index.html#cases">← All cases</a><span class="chip">Premium salon</span><span class="chip">Bengaluru</span><span class="chip "><i></i>Closed</span></div>
+<h1>TONI&amp;GUY Bangalore</h1><p class="q">I joined in the <b>worst revenue month in 20</b>. Six months later, every month beat last year. <em>Then the leak moved to the chair.</em></p>
+<div class="res"><div class="big flow">+14.7%</div><p>salon revenue, Mar–Aug 2026 vs 2025 (₹14.04 → ₹16.10 Cr) <span class="ev m">Measured</span></p></div></div>
+<figure class="photo"><img src="https://toniandguyhairdressing.com/cdn/shop/files/unnamed-2.jpg?width=1200&amp;height=640&amp;crop=center" alt="Inside a TONI&amp;GUY salon in Bengaluru" loading="eager" referrerpolicy="no-referrer"><figcaption>Photo: TONI&amp;GUY Hairdressing (client)</figcaption></figure></div>
+<div class="hstats"><div><b class="flow">+₹2.06 Cr</b><span>revenue on last year, same six months</span></div><div><b class="flow">+21.6%</b><span>bills: 49,368 → 60,027</span></div><div><b class="">₹11.34 → ₹4.22</b><span>Google cost per click</span></div><div><b class="leak">₹2,813</b><span>average bill, ₹170 below last year</span></div></div></div></section><div class="wrap glance"><div><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg><div><small>What they sell</small><span>Haircuts, colour, treatments, packages</span></div></div><div><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><small>Where</small><span>Bengaluru · 16 salons · multi-location</span></div></div><div><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small>When</small><span>28 Feb – 16 Sep 2026</span></div></div><div><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5.5 5.5 0 0 1 3.5 6"/></svg><div><small>My role</small><span>Growth consultant: Google, Meta, web, booking app, reporting</span></div></div><div><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><small>Evidence</small><span>Grade A: Ad exports joined to point-of-sale revenue by salon</span></div></div></div><div class="wrap loopstrip"><div class="lh"><span class="eyebrow">My part of the revenue loop</span><b>4 of 6 stages run end to end</b></div><div class="lps"><div class="lp l2"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><b>Attract</b><small>Ran it</small></div><div class="lp l2"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v3M3 9h3M4.6 4.6l2.1 2.1M12 10l8 3-3.5 1.5L15 18z"/></svg></span><b>Convert</b><small>Ran it</small></div><div class="lp l1"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><b>Sell</b><small>Diagnosed / specced</small></div><div class="lp l2"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5h10M7 9h10M7 5c6 0 6 8 0 8l7 7"/></svg></span><b>Revenue</b><small>Ran it</small></div><div class="lp l1"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a7 7 0 0 1 12-5l2 2M20 13a7 7 0 0 1-12 5l-2-2"/><path d="M18 4v4h-4M6 20v-4h4"/></svg></span><b>Retain</b><small>Diagnosed / specced</small></div><div class="lp l2"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></svg></span><b>Measure</b><small>Ran it</small></div></div></div><section class="sec wrap" id="journey"><div class="sh"><span class="n">01</span><h2>The customer journey: where it leaked, what I did</h2><p>Each column is one step a customer takes. Red: the leak. Purple: my move. Green: what changed.</p></div><div class="jb"><div class="jcol isfix"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><b>Get found</b></div>
+<div class="jcell saw leak"><span class="k">Leak</span>CPC ₹11.34, CTR 0.94% in 2025. No store-level campaigns.</div><div class="jcell did"><span class="k">My move</span>25 Google campaigns, one per salon + network. 26 Meta campaigns per salon.</div><div class="jcell now flow"><span class="k">Result</span>CPC ₹4.22, CTR 4.35%</div></div><div class="jcol isfix"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Enquire</b></div>
+<div class="jcell saw ok"><span class="k">Working</span>44,625 Google leads, Mar–Aug 2025</div><div class="jcell did"><span class="k">My move</span>Lead forms, click-to-WhatsApp and click-to-call for every salon</div><div class="jcell now flow"><span class="k">Result</span>1,18,253 leads (+165%)</div></div><div class="jcol isleak"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></span><b>Book a chair</b></div>
+<div class="jcell saw leak"><span class="k">Leak</span>No callback SLA. CRM call log not connected.</div><div class="jcell did"><span class="k">My move</span>Built an Android booking app. Specced a 5-minute WhatsApp callback.</div><div class="jcell now none"><span class="k">Status</span>App in closed testing. Not measured.</div></div><div class="jcol isfix"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></span><b>Visit &amp; bill</b></div>
+<div class="jcell saw ok"><span class="k">Working</span>49,368 bills, Mar–Aug 2025</div><div class="jcell did"><span class="k">My move</span>First salon-by-salon P&amp;L joining ad spend to the till</div><div class="jcell now flow"><span class="k">Result</span>60,027 bills (+21.6%)</div></div><div class="jcol isfix"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5h10M7 9h10M7 5c6 0 6 8 0 8l7 7"/></svg></span><b>Revenue</b></div>
+<div class="jcell saw leak"><span class="k">Leak</span>Feb 2026: ₹1.91 Cr, lowest of 20 months</div><div class="jcell did"><span class="k">My move</span>Moved money to salons under target; flagged two wasteful campaigns</div><div class="jcell now flow"><span class="k">Result</span>₹16.10 Cr in six months (+14.7%)</div></div><div class="jcol isleak"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 21h14M4 8h16"/><path d="m4 8-2 6a3 3 0 0 0 4 0zM20 8l-2 6a3 3 0 0 0 4 0z"/></svg></span><b>Ticket size</b></div>
+<div class="jcell saw leak"><span class="k">Leak</span>Average bill ₹2,813 vs ₹2,983 last year</div><div class="jcell did"><span class="k">My move</span>Valued it: ₹17.78 L a month. Handed to the salon floor.</div><div class="jcell now leak"><span class="k">Still leaking</span>Open. Not a media lever.</div></div><div class="jcol isleak"><div class="jhead"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></svg></span><b>Measurement</b></div>
+<div class="jcell saw leak"><span class="k">Leak</span>19.3% conversion rate for 7 days, 1.7% for 24</div><div class="jcell did"><span class="k">My move</span>Flagged first. 19-item gap register.</div><div class="jcell now none"><span class="k">Status</span>Unresolved at exit</div></div></div></section><section class="sec wrap" id="result"><div class="sh"><span class="n">02</span><h2>Six months against the same six months</h2><p>March–August 2026 vs March–August 2025. Same salons, same festival calendar.</p></div><div class="ba"><div class="bac flow"><h4>Salon revenue</h4><div class="bav"><span class="b">₹14.04 Cr</span><span class="ar">→</span><span class="a">₹16.10 Cr</span></div><p>+14.7%. Every month beat 2025. <span class="ev m">Measured</span></p></div><div class="bac flow"><h4>Bills</h4><div class="bav"><span class="b">49,368</span><span class="ar">→</span><span class="a">60,027</span></div><p>+21.6% more customers <span class="ev m">Measured</span></p></div><div class="bac flow"><h4>Google leads</h4><div class="bav"><span class="b">44,625</span><span class="ar">→</span><span class="a">1,18,253</span></div><p>+165% <span class="ev m">Measured</span></p></div><div class="bac leak"><h4>Google spend per bill</h4><div class="bav"><span class="b">₹29</span><span class="ar">→</span><span class="a">₹42</span></div><p>Volume was bought. Some cheaply, some not. <span class="ev c">Calculated</span></p></div></div></section><section class="sec wrap" id="attribution"><div class="sh"><span class="n">03</span><h2>How much of the ₹2.06 Cr can marketing claim?</h2><p>Two salons opened in 2026 and the market moved too. So I don&#x27;t claim all of it. A scenario range, with every assumption shown.</p></div><div class="attr"><div class="panel"><div class="atop"><div><b>+₹2.06 Cr</b><span>extra revenue, Mar–Aug 2026 vs 2025</span></div><span class="ev m">Measured</span></div>
+<div class="sbar"><small>Conservative</small><div class="segs"><i class="flow" style="width:45%"><span>45%</span></i><i class="mute" style="width:40%"><span>40%</span></i><i class="ink" style="width:15%"><span>15%</span></i></div></div><div class="sbar"><small>Upper case</small><div class="segs"><i class="flow" style="width:60%"><span>60%</span></i><i class="mute" style="width:25%"><span>25%</span></i><i class="ink" style="width:15%"><span>15%</span></i></div></div><div class="legend sl"><span><i class="flow"></i>Demand generation (my work)</span><span><i class="mute"></i>New salons</span><span><i class="ink"></i>Market &amp; season</span></div></div>
+<div class="panel band ares"><span class="eyebrow">Scenario result</span><b>₹0.93–1.24 Cr</b><p>revenue from demand generation · 8.6×–11.4× per extra Google rupee (₹10.81 L)</p><span class="ev e">Estimate</span><ul><li>Bills +21.6% while leads +165%: demand clearly moved</li><li>New salons: 25–40% of growth (two of 16 locations, partial year)</li><li>Market and season: 15% (both years share the festival calendar)</li><li>Revenue, not profit: margin by service was not shared</li></ul></div></div></section><section class="sec wrap" id="evidence"><div class="sh"><span class="n">04</span><h2>How I found it</h2><p>Point-of-sale revenue next to Google and Meta exports, salon by salon.</p></div><div class="charts"><div class="panel"><h3>Six months, six wins on last year</h3><div class="legend"><span><i style="background:var(--mute)"></i>2025</span><span><i style="background:var(--flow)"></i>2026</span></div><div class="chart" id="c-yoy"></div><p class="cap">Revenue, all salons, ₹ Cr. <span class="ev m">Measured</span></p></div><div class="panel"><h3>From the worst month in 20 to a ₹2.94 Cr August</h3><div class="chart" id="c-arc"></div><p class="cap">Monthly revenue, ₹ Cr. Shaded: my tenure. <span class="ev m">Measured</span></p></div><div class="panel wide"><h3>Revenue per ad rupee: 183× at the top, 5× at the bottom</h3><div class="chart" id="c-salon"></div><p class="cap">August 2026. Salon revenue ÷ ad spend for that salon. Dashed: median 54×. Koramangala 4th Block took 15% of ad money and returned 4.9×. <span class="ev c">Calculated</span></p></div><div class="panel"><h3>Where August&#x27;s extra ₹4.85 L went</h3><div class="chart" id="c-bridge"></div><p class="cap">Red bars are the waste. Meta scaled while its lead cost fell 37%. <span class="ev m">Measured</span></p></div><div class="panel"><h3>Google cost per click, 20 months</h3><div class="chart" id="c-cpc"></div><p class="cap">₹14.23 in Jan 2025 → ₹4.58 in Aug 2026. <span class="ev m">Measured</span></p></div></div></section><section class="sec wrap" id="proof"><div class="sh"><span class="n">05</span><h2>From rupee to revenue: what can be proved</h2><p>Solid boxes are measured. Dashed boxes are where the data stops. I don't fill them with guesses.</p></div><div class="chain"><div class="lk m"><small>Spend</small><b>₹25.36 L</b><span>Google, Mar–Aug</span></div><div class="lk m"><small>Reach</small><b>1.38 Cr</b><span>impressions</span></div><div class="lk m"><small>Leads</small><b>1,18,253</b><span>Google MQLs</span></div><div class="lk u"><small>Bookings</small><b>Not linked</b><span>no lead-to-chair data</span></div><div class="lk m"><small>Bills</small><b>60,027</b><span>+21.6%</span></div><div class="lk m"><small>Revenue</small><b>₹16.10 Cr</b><span>point of sale</span></div><div class="lk u"><small>Profit</small><b>Not shared</b><span>margin by service</span></div></div></section><section class="sec wrap" id="fails"><div class="sh"><span class="n">06</span><h2>What didn&#x27;t work</h2><p>Kept in on purpose. A case that only lists wins is a sales page.</p></div><div class="fails"><div class="fl"><h4>Demand Gen as prospecting</h4><div><span>Tried</span>Two Demand Gen campaigns, ₹1,36,752 in August.</div><div class="r"><span>Got</span>₹790 per conversion vs ₹33.71 for the account.</div><div class="l"><span>Learned</span>Switch off. Move the money to store PMax and Search.</div></div><div class="fl"><h4>Scaling Koramangala 4th Block</h4><div><span>Tried</span>PMax spend +89% for a salon under target.</div><div class="r"><span>Got</span>₹1,53,007 for ₹7,45,995 of billing: 4.9×.</div><div class="l"><span>Learned</span>Cap at ₹60,000. Rebuild the asset group.</div></div><div class="fl"><h4>132 Instagram boosts</h4><div><span>Tried</span>Boost organic posts for cheap reach per salon.</div><div class="r"><span>Got</span>59 never delivered. 51 optimised to profile visits.</div><div class="l"><span>Learned</span>Fix the scheduling handoff. Optimise for leads or WhatsApp.</div></div></div></section><section class="sec wrap" id="next"><div class="sh"><span class="n">07</span><h2>What I'd do next</h2></div><div class="next"><div class="nx"><small>Week 1</small><b>Settle 6–12 August</b><p>One hour in the conversions report. Until then ₹33.71 per lead isn&#x27;t a planning number.</p></div><div class="nx"><small>Week 2</small><b>Reallocate, don&#x27;t cut</b><p>Hold ₹10.3 L. Move ₹2.0 L to the eight salons under target. Model: ₹2.62 Cr vs ₹2.53 Cr in September.</p></div><div class="nx"><small>Month 2</small><b>5-minute callback</b><p>Every lead to the right salon&#x27;s WhatsApp in five minutes. Leads are at record volume.</p></div><div class="nx"><small>Ongoing</small><b>Average bill back to ₹2,983</b><p>Menu, packages, stylist conversation. Worth ₹17.78 L a month.</p></div></div><div class="src"><b>Sources</b><span>Google Ads exports Jan 2025–Aug 2026, Meta Ads Manager (26 campaigns, 132 boosts), salon point-of-sale sheets. Two salons opened in 2026, so part of the growth is new capacity; April–August alone still shows +16.0% revenue. Not causally attributed to media.</span><span>Full reports: <a href="https://dannygrowthmarketing.github.io/toniguy-final-report/">Final report</a> · <a href="https://dannygrowthmarketing.github.io/toniguy-august-2026-report/">August report</a> · <a href="https://dannygrowthmarketing.github.io/toniguy-july-2026-report/">July report</a> · <a href="https://dannygrowthmarketing.github.io/toniguy-june-2026-report/">June report</a></span></div></section><section class="wrap sec" style="padding-top:40px"><div class="pn"><a href="swift-restoration.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FEMA_-_44499_-_Liberty_Kentucky_water_damage.jpg/1280px-FEMA_-_44499_-_Liberty_Kentucky_water_damage.jpg" referrerpolicy="no-referrer" alt="" loading="lazy"><div><small>← Previous case</small><b>Swift Restoration</b><span>0 · service or location pages at audit</span></div></a><a href="mr-jewels.html"><img src="https://mrjewels.in/cdn/shop/collections/AA047E9E-EF71-4893-A7C2-3F530B47450A.jpg?width=800" referrerpolicy="no-referrer" alt="" loading="lazy"><div><small>Next case →</small><b>MR Jewels</b><span>−66% · showroom cost per click after one goal fix</span></div></a></div></section></main><section class="band ctab" id="contact"><div class="wrap"><div><p class="eyebrow">Work with me</p><h2>Seen a leak in your own numbers?</h2><p>Send me the symptom. I'll tell you which case is closest and what I'd check first. No deck, no retainer pitch.</p></div>
+<div class="acts"><span class="copybox"><span>danieldeepak3519@gmail.com</span><button type="button" data-copy="danieldeepak3519@gmail.com">Copy</button></span><a class="btn ghost" href="https://linkedin.com/in/danny-ai-marketing">LinkedIn</a><a class="btn ghost" href="check.html">Free 12-point check</a></div></div></section>
+<footer class="foot"><div class="wrap"><span>© 2026 Daniel Deepak · Bengaluru · Revenue growth consulting</span><span><a href="https://github.com/dannygrowthmarketing">GitHub</a> · <a href="llms.txt">llms.txt</a> · <a href="cases.json">cases.json</a> · Updated 2026-10-04</span></div></footer><script>window.CASES={"leaks": [{"id": "measurement", "name": "Miscounted conversions", "one": "The ad platform reports sales the till never saw. Bidding chases fiction.", "signal": "Platform conversions above real orders. Value per conversion far from average order.", "fix": "Read conversion actions, not goal cards. Reconcile to the till weekly. Stop rule at 60%."}, {"id": "allocation", "name": "Money on the wrong intent", "one": "Budget sits where it is easy to spend, not where buyers convert.", "signal": "Share of spend and share of results don't match. One ad group starves the rest.", "fix": "Rank spend by revenue per rupee at the unit that bills. Cap, kill or fund."}, {"id": "postclick", "name": "Post-click friction", "one": "The ad works. The page, form or checkout after it doesn't.", "signal": "Healthy CTR, poor conversion. Results move while spend and CPC stay flat.", "fix": "Book it yourself on a phone. Cut steps, fix speed, price and phone above the fold."}, {"id": "visibility", "name": "Invisible where buyers look", "one": "Missing from the map pack, directories, page one, even brand search.", "signal": "Competitors with fewer reviews rank above you. Your own name shows someone else.", "fix": "Profile, listings, service and location pages. Defend the brand term."}, {"id": "pricing", "name": "Price and channel leakage", "one": "Your own stock sold cheaper elsewhere, with commission on top.", "signal": "Google Hotels or marketplaces list third parties below your direct price.", "fix": "One rate card, one owner, weekly parity check, best-rate-direct promise."}, {"id": "speed", "name": "Lead-to-booking gap", "one": "Leads arrive at record volume. Nobody converts them fast enough.", "signal": "Leads up, bookings flat or down. Calls fall while direction requests rise.", "fix": "Every lead to the right person's WhatsApp in five minutes. Mystery-shop peak hours."}, {"id": "postsale", "name": "Post-sale leakage", "one": "The sale happens. The money doesn't stay or doesn't come back.", "signal": "High returns, falling ticket size, one-time buyers.", "fix": "Returns report by SKU and checkout. Ticket-size work on the floor. Lifecycle triggers."}, {"id": "notmarketing", "name": "Not a marketing problem", "one": "Sometimes the biggest number isn't mine to fix. Saying so early saves months.", "signal": "The same complaint in reviews. A gap no ad change moves.", "fix": "Name the owner: ops, product, pricing or the shop floor. Put a rupee value on it."}], "cases": [{"id": "toni-and-guy", "url": "toni-and-guy.html", "name": "TONI&GUY Bangalore", "leakIds": ["allocation", "measurement", "speed", "postsale", "notmarketing"]}, {"id": "mr-jewels", "url": "mr-jewels.html", "name": "MR Jewels", "leakIds": ["measurement", "allocation", "postclick", "postsale", "notmarketing"]}, {"id": "elites-dental", "url": "elites-dental.html", "name": "Elites Dental Care", "leakIds": ["postclick", "allocation", "visibility", "measurement"]}, {"id": "resort", "url": "resort.html", "name": "Gold Coins Club & Resort", "leakIds": ["speed", "measurement", "allocation", "pricing", "postclick", "visibility", "notmarketing"]}, {"id": "foremost-pa", "url": "foremost-pa.html", "name": "Foremost Public Adjusters", "leakIds": ["postclick", "visibility", "allocation"]}, {"id": "everywatch", "url": "everywatch.html", "name": "EveryWatch", "leakIds": ["postsale", "measurement"]}, {"id": "swift-restoration", "url": "swift-restoration.html", "name": "Swift Restoration", "leakIds": ["visibility", "postclick"]}]};</script><script>/* Casebook chart + component kit. Plain SVG, theme tokens only. */
 (function(){
 const NS='http://www.w3.org/2000/svg';
-const C={flow:'var(--flow)',leak:'var(--leak)',ink:'var(--ink-2)',mute:'var(--rule)',muted:'var(--ink-3)',est:'var(--est)'};
+const C={flow:'var(--flow)',leak:'var(--leak)',move:'var(--move)',ink:'var(--ink-2)',mute:'var(--mute)',muted:'var(--ink-3)',est:'var(--est)'};
 const col=c=>C[c]||c||C.flow;
 function el(t,a,txt){const e=document.createElementNS(NS,t);for(const k in a){if(k==='style')e.setAttribute('style',a[k]);else e.setAttribute(k,a[k]);}if(txt!=null)e.textContent=txt;return e;}
 let tip;
@@ -401,7 +410,7 @@ const narrow=W=>W<520;
 /* Line chart: one axis. opts {labels, series:[{name,values,color,dash}], yfmt, shade:[a,b], shadeLabel, height, ymax, mark:[{i,label}]} */
 K.line=function(id,o){
   const host=document.getElementById(id);if(!host)return;
-  const W=fitW(host,o),H=o.height||300,L=52,R=Math.min(o.right||64,W*0.14),T=18,B=34;
+  const W=fitW(host,o),H=o.height||280,L=52,R=Math.min(o.right||64,W*0.14),T=18,B=34;
   const all=o.series.flatMap(s=>s.values.filter(v=>v!=null));
   const sc=scale(o.ymax||Math.max(...all)*1.04,o.ymin||0);const ymax=sc.max,ymin=sc.min;
   const n=o.labels.length;const x=i=>L+(W-L-R)*(n===1?0.5:i/(n-1));const y=v=>T+(H-T-B)*(1-(v-ymin)/(ymax-ymin));
@@ -502,26 +511,6 @@ K.split=function(id,o){
   host.appendChild(svg);
 };
 
-/* Journey: steps [{st,tp,mt,state:'ok'|'leak'|'unk',drip}] */
-K.journey=function(id,steps){
-  const host=document.getElementById(id);if(!host)return;
-  const t=document.createElement('div');t.className='jtrack';
-  steps.forEach(s=>{const d=document.createElement('div');d.className='jstep '+(s.state==='leak'?'leak':s.state==='unk'?'unk':'');
-    d.innerHTML=`<div class="st"></div><div class="tp"></div><div class="mt"></div>`+(s.drip?`<div class="drip"></div>`:'');
-    d.querySelector('.st').textContent=s.st;d.querySelector('.tp').textContent=s.tp||'';d.querySelector('.mt').innerHTML=s.mt||'';
-    if(s.drip)d.querySelector('.drip').textContent=s.drip;t.appendChild(d);});
-  host.appendChild(t);
-};
-
-/* Measurement ladder: [{k, v (html), ev:'m'|'c'|'e'|'u'}] */
-K.ladder=function(id,rungs){
-  const host=document.getElementById(id);if(!host)return;
-  const names={m:'Measured',c:'Calculated',e:'Estimate',u:'Data unavailable'};
-  rungs.forEach((r,i)=>{const d=document.createElement('div');d.className='rung'+(r.ev==='u'?' gap':'');
-    d.innerHTML=`<span class="i">${String(i+1).padStart(2,'0')}</span><span class="k"></span><span class="v">${r.v}</span><span class="ev ${r.ev}">${names[r.ev]}</span>`;
-    d.querySelector('.k').textContent=r.k;host.appendChild(d);});
-};
-
 /* copy buttons */
 document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const txt=b.getAttribute('data-copy');const done=()=>{const o=b.textContent;b.textContent='Copied';setTimeout(()=>b.textContent=o,1300);};
   try{navigator.clipboard.writeText(txt).then(done,()=>sel(b));}catch(err){sel(b);} });
@@ -529,39 +518,17 @@ function sel(b){const t=b.previousElementSibling;if(!t)return;const r=document.c
 K.fmt={cr:v=>'₹'+v.toFixed(2)+' Cr',L:v=>'₹'+v.toFixed(2)+' L',inr:v=>'₹'+Math.round(v).toLocaleString('en-IN'),n:v=>Math.round(v).toLocaleString('en-IN'),k:v=>v>=1000?(v/1000).toFixed(v>=10000?0:1)+'k':String(Math.round(v)),usd:v=>'$'+(Math.round(v*100)/100).toLocaleString('en-US'),pct:v=>v.toFixed(1)+'%'};
 window.K=K;
 })();
-</script>
-<script>
-const F=K.fmt;
+
+(function(){if(!('IntersectionObserver' in window))return;const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.sec').forEach(s=>{const r=s.getBoundingClientRect();if(r.top>innerHeight){s.classList.add('reveal');io.observe(s);}});})();
+</script><script>
 const M=["Jan '25","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan '26","Feb","Mar","Apr","May","Jun","Jul","Aug '26"];
 const rev=[2.08,1.84,2.17,2.09,2.38,2.29,2.36,2.75,2.21,2.43,2.65,2.70,2.06,1.91,2.33,2.65,2.97,2.53,2.68,2.94];
-const mql=[5200,4504,5191,6687,6162,8159,8302,10124,10399,17665,18335,16820,4140,13600,19000,19300,18700,18900,19821,22532];
 const cpc=[14.23,14.17,13.42,12.13,11.98,10.76,10.69,10.08,9.81,13.19,10.00,8.37,10.62,8.63,5.74,4.69,2.64,4.08,4.70,4.58];
-K.journey('j',[
- {st:'Get found',tp:'Google Search, PMax, Maps, Meta, Instagram',mt:'6,00,752 clicks Mar–Aug',state:'ok'},
- {st:'Visit site / profile',tp:'Store pages, Business Profile',mt:'CTR 0.94% → 4.35%',state:'ok'},
- {st:'Enquire',tp:'Lead form, WhatsApp, call',mt:'28,144 leads in Aug',state:'ok'},
- {st:'Book',tp:'Salon calls back, books chair',mt:'Unknown',state:'unk',drip:'No callback SLA; CRM call log not connected'},
- {st:'Visit & service',tp:'Walk-in or booked',mt:'10,459 bills in Aug',state:'ok'},
- {st:'Revenue',tp:'Point of sale',mt:'ABV ₹2,813',state:'leak',drip:'ABV 5.7% below last August'},
- {st:'Repeat & review',tp:'Rebooking, Google reviews',mt:'Not supplied',state:'unk',drip:'No repeat-visit data'}
-]);
-K.paired('c-yoy',{labels:['Mar','Apr','May','Jun','Jul','Aug'],a:{name:'2025',values:rev.slice(2,8),color:'muted'},b:{name:'2026',values:rev.slice(14,20),color:'flow'},yfmt:v=>v.toFixed(1),vfmt:F.cr,delta:true,W:600});
-K.line('c-arc',{labels:M,series:[{name:'Revenue',values:rev,color:'flow'}],yfmt:v=>'₹'+v.toFixed(1),shade:[14,19],shadeLabel:'Tenure',ymin:1.5,ymax:3.25,xEvery:4,W:600,mark:[{i:13,label:'₹1.91 Cr',below:true,color:'leak'}]});
-K.bars('c-mql',{labels:M,values:mql,colors:i=>i>=14?'flow':'mute',yfmt:F.k,vfmt:F.n,labelEvery:4,shade:[14,19],W:600});
-K.line('c-cpc',{labels:M,series:[{name:'CPC',values:cpc,color:'flow'}],yfmt:v=>'₹'+v.toFixed(0),ymax:16,xEvery:4,shade:[14,19],W:600});
+K.paired('c-yoy',{labels:['Mar','Apr','May','Jun','Jul','Aug'],a:{name:'2025',values:rev.slice(2,8),color:'mute'},b:{name:'2026',values:rev.slice(14,20),color:'flow'},yfmt:v=>v.toFixed(1),vfmt:K.fmt.cr,delta:true,W:600});
+K.line('c-arc',{labels:M,series:[{name:'Revenue',values:rev,color:'flow'}],yfmt:v=>'₹'+v.toFixed(1),shade:[14,19],shadeLabel:'Danny',ymin:1.5,ymax:3.25,xEvery:4,W:600,mark:[{i:13,label:'₹1.91 Cr',below:true,color:'leak'}]});
 const sal=[['Phoenix Mall Of Asia',183],['Lulu Mall',147],['Nexus Shantiniketan',108],['Phoenix MarketCity',88],['Nexus Koramangala',75],['JP Nagar',68],['HRBR Kalyan Nagar',63],['Nexus Whitefield',54],['VR Bengaluru',42],['Mantri Square',38],['Marathahalli ORR',38],['Sadashivanagar',20],['Nexus Vega City',15],['Hennur',11],['Koramangala 4th Block',5]];
-K.hbar('c-salon',{rows:sal.map(([l,v])=>({label:l,value:v,color:v>=54?'flow':v<25?'leak':'ink'})),vfmt:v=>v+'×',labelW:190,marker:{value:54,label:'median 54×'},rowH:26});
-K.hbar('c-bridge',{rows:[{label:'Meta scaled',value:1.60,color:'flow',note:'lead cost down 37%'},{label:'Demand Gen added',value:1.33,color:'leak',note:'₹790 per conversion'},{label:'Everything else',value:1.32,color:'ink'},{label:'Koramangala 4th PMax',value:0.60,color:'leak',note:'4.9× revenue per rupee'}],vfmt:v=>'+₹'+v.toFixed(2)+' L',labelW:190});
-K.ladder('ladder',[
- {k:'Investment',v:'Google <b>₹25.36 L</b> Mar–Aug (+74%). August all-in <b>₹10.32 L</b> incl. Meta and boosts',ev:'m'},
- {k:'Visibility',v:'<b>1.38 Cr</b> impressions, <b>6,00,752</b> clicks; CTR 4.35%',ev:'m'},
- {k:'Leads',v:'<b>1,18,253</b> Google MQLs; Meta <b>5,612</b> results in August',ev:'m'},
- {k:'Bookings',v:'No link between a lead and a booked chair',ev:'u'},
- {k:'Bills',v:'<b>60,027</b> bills (+21.6%), all salons, all channels',ev:'m'},
- {k:'Revenue',v:'<b>₹16.10 Cr</b> (+14.7%), point of sale',ev:'m'},
- {k:'Gross profit',v:'Margin by service not shared',ev:'u'},
- {k:'Return',v:'<b>19.1×</b> = ₹2.06 Cr extra revenue ÷ ₹10.81 L extra Google spend. Assumes all growth came from media; not a causal result',ev:'c'}
-]);
-</script>
-</body>
-</html>
+K.hbar('c-salon',{rows:sal.map(([l,v])=>({label:l,value:v,color:v>=54?'flow':v<25?'leak':'ink'})),vfmt:v=>v+'×',labelW:190,marker:{value:54,label:'median 54×'},rowH:26,W:1100});
+K.hbar('c-bridge',{rows:[{label:'Meta scaled',value:1.60,color:'flow',note:'lead cost down 37%'},{label:'Demand Gen added',value:1.33,color:'leak',note:'₹790 per conversion'},{label:'Everything else',value:1.32,color:'ink'},{label:'Koramangala 4th PMax',value:0.60,color:'leak',note:'4.9× revenue per rupee'}],vfmt:v=>'+₹'+v.toFixed(2)+' L',labelW:170,W:600});
+K.line('c-cpc',{labels:M,series:[{name:'CPC',values:cpc,color:'move'}],yfmt:v=>'₹'+v.toFixed(0),ymax:16,xEvery:4,shade:[14,19],W:600});
+</script></body></html>

@@ -1,485 +1,654 @@
 {
-  "updated": "2026-10-04",
-  "consultant": {
-    "name": "Daniel Deepak (Danny)",
-    "base": "Bengaluru, India",
-    "email": "danieldeepak3519@gmail.com",
-    "linkedin": "https://linkedin.com/in/danny-ai-marketing",
-    "github": "https://github.com/dannygrowthmarketing",
-    "positioning": "Before I spend a rupee, I find where the last one leaked."
+ "updated": "2026-10-04",
+ "consultant": {
+  "name": "Daniel Deepak",
+  "base": "Bengaluru, India",
+  "email": "danieldeepak3519@gmail.com",
+  "linkedin": "https://linkedin.com/in/danny-ai-marketing",
+  "github": "https://github.com/dannygrowthmarketing",
+  "line": "Before I spend a rupee, I find where the last one leaked."
+ },
+ "stages": [
+  {
+   "id": "visibility",
+   "name": "Get found"
   },
-  "stages": [
+  {
+   "id": "click",
+   "name": "Click"
+  },
+  {
+   "id": "enquiry",
+   "name": "Enquiry / cart"
+  },
+  {
+   "id": "booking",
+   "name": "Booking / order"
+  },
+  {
+   "id": "revenue",
+   "name": "Revenue"
+  },
+  {
+   "id": "repeat",
+   "name": "Repeat"
+  },
+  {
+   "id": "measurement",
+   "name": "Measurement"
+  }
+ ],
+ "leaks": [
+  {
+   "id": "measurement",
+   "name": "Miscounted conversions",
+   "one": "The ad platform reports sales the till never saw. Bidding chases fiction.",
+   "signal": "Platform conversions above real orders. Value per conversion far from average order.",
+   "fix": "Read conversion actions, not goal cards. Reconcile to the till weekly. Stop rule at 60%."
+  },
+  {
+   "id": "allocation",
+   "name": "Money on the wrong intent",
+   "one": "Budget sits where it is easy to spend, not where buyers convert.",
+   "signal": "Share of spend and share of results don't match. One ad group starves the rest.",
+   "fix": "Rank spend by revenue per rupee at the unit that bills. Cap, kill or fund."
+  },
+  {
+   "id": "postclick",
+   "name": "Post-click friction",
+   "one": "The ad works. The page, form or checkout after it doesn't.",
+   "signal": "Healthy CTR, poor conversion. Results move while spend and CPC stay flat.",
+   "fix": "Book it yourself on a phone. Cut steps, fix speed, price and phone above the fold."
+  },
+  {
+   "id": "visibility",
+   "name": "Invisible where buyers look",
+   "one": "Missing from the map pack, directories, page one, even brand search.",
+   "signal": "Competitors with fewer reviews rank above you. Your own name shows someone else.",
+   "fix": "Profile, listings, service and location pages. Defend the brand term."
+  },
+  {
+   "id": "pricing",
+   "name": "Price and channel leakage",
+   "one": "Your own stock sold cheaper elsewhere, with commission on top.",
+   "signal": "Google Hotels or marketplaces list third parties below your direct price.",
+   "fix": "One rate card, one owner, weekly parity check, best-rate-direct promise."
+  },
+  {
+   "id": "speed",
+   "name": "Lead-to-booking gap",
+   "one": "Leads arrive at record volume. Nobody converts them fast enough.",
+   "signal": "Leads up, bookings flat or down. Calls fall while direction requests rise.",
+   "fix": "Every lead to the right person's WhatsApp in five minutes. Mystery-shop peak hours."
+  },
+  {
+   "id": "postsale",
+   "name": "Post-sale leakage",
+   "one": "The sale happens. The money doesn't stay or doesn't come back.",
+   "signal": "High returns, falling ticket size, one-time buyers.",
+   "fix": "Returns report by SKU and checkout. Ticket-size work on the floor. Lifecycle triggers."
+  },
+  {
+   "id": "notmarketing",
+   "name": "Not a marketing problem",
+   "one": "Sometimes the biggest number isn't mine to fix. Saying so early saves months.",
+   "signal": "The same complaint in reviews. A gap no ad change moves.",
+   "fix": "Name the owner: ops, product, pricing or the shop floor. Put a rupee value on it."
+  }
+ ],
+ "cases": [
+  {
+   "id": "toni-and-guy",
+   "url": "toni-and-guy.html",
+   "name": "TONI&GUY Bangalore",
+   "industry": "Premium salon",
+   "model": "16 salons · multi-location",
+   "city": "Bengaluru",
+   "market": "India",
+   "status": "Closed",
+   "period": "28 Feb – 16 Sep 2026",
+   "role": "Growth consultant: Google, Meta, web, booking app, reporting",
+   "grade": "A",
+   "gradeNote": "Ad exports joined to point-of-sale revenue by salon",
+   "leak": "Leads hit record volume; ticket size fell and no callback loop existed",
+   "kpiBig": "+14.7%",
+   "kpiText": "salon revenue vs same months of 2025",
+   "big": "+14.7%",
+   "bigLabel": "salon revenue, Mar–Aug 2026 vs 2025 (₹14.04 → ₹16.10 Cr)",
+   "leakIds": [
+    "allocation",
+    "measurement",
+    "speed",
+    "postsale",
+    "notmarketing"
+   ],
+   "stages": {
+    "visibility": "o",
+    "click": "n",
+    "enquiry": "o",
+    "booking": "l",
+    "revenue": "l",
+    "repeat": "n",
+    "measurement": "l"
+   },
+   "journey": [
     {
-      "id": "visibility",
-      "name": "Get found",
-      "hint": "Search, Maps, directories, social, ads"
+     "st": "Get found",
+     "saw": "CPC ₹11.34, CTR 0.94% in 2025. No store-level campaigns.",
+     "s": "leak",
+     "did": "25 Google campaigns, one per salon + network. 26 Meta campaigns per salon.",
+     "now": "CPC ₹4.22, CTR 4.35%"
     },
     {
-      "id": "click",
-      "name": "Click to site",
-      "hint": "Landing page, speed, message match"
+     "st": "Enquire",
+     "saw": "44,625 Google leads, Mar–Aug 2025",
+     "s": "ok",
+     "did": "Lead forms, click-to-WhatsApp and click-to-call for every salon",
+     "now": "1,18,253 leads (+165%)"
     },
     {
-      "id": "enquiry",
-      "name": "Site to enquiry / cart",
-      "hint": "CTA, form, booking widget, cart"
+     "st": "Book a chair",
+     "saw": "No callback SLA. CRM call log not connected.",
+     "s": "leak",
+     "did": "Built an Android booking app. Specced a 5-minute WhatsApp callback.",
+     "now": "App in closed testing. Not measured."
     },
     {
-      "id": "booking",
-      "name": "Enquiry to booking / order",
-      "hint": "Callback, checkout, confirmation"
+     "st": "Visit & bill",
+     "saw": "49,368 bills, Mar–Aug 2025",
+     "s": "ok",
+     "did": "First salon-by-salon P&L joining ad spend to the till",
+     "now": "60,027 bills (+21.6%)"
     },
     {
-      "id": "revenue",
-      "name": "Booking to revenue",
-      "hint": "Visit, bill, returns, ticket size"
+     "st": "Revenue",
+     "saw": "Feb 2026: ₹1.91 Cr, lowest of 20 months",
+     "s": "leak",
+     "did": "Moved money to salons under target; flagged two wasteful campaigns",
+     "now": "₹16.10 Cr in six months (+14.7%)"
     },
     {
-      "id": "repeat",
-      "name": "Revenue to repeat",
-      "hint": "Reviews, retention, rebooking"
+     "st": "Ticket size",
+     "saw": "Average bill ₹2,813 vs ₹2,983 last year",
+     "s": "leak",
+     "did": "Valued it: ₹17.78 L a month. Handed to the salon floor.",
+     "now": "Open. Not a media lever."
     },
     {
-      "id": "measurement",
-      "name": "Measurement",
-      "hint": "Can the business see which rupee worked?"
+     "st": "Measurement",
+     "saw": "19.3% conversion rate for 7 days, 1.7% for 24",
+     "s": "leak",
+     "did": "Flagged first. 19-item gap register.",
+     "now": "Unresolved at exit"
     }
-  ],
-  "leaks": [
+   ]
+  },
+  {
+   "id": "mr-jewels",
+   "url": "mr-jewels.html",
+   "name": "MR Jewels",
+   "industry": "Jewellery D2C",
+   "model": "Online store + Indiranagar showroom",
+   "city": "Bengaluru",
+   "market": "India",
+   "status": "Closed",
+   "period": "1 Aug – 3 Sep 2026",
+   "role": "Google Ads lead + full business review",
+   "grade": "A",
+   "gradeNote": "Google exports reconciled to Shopify orders and billing",
+   "leak": "Google claimed 11.8× real revenue; the losses sat in the cart and returns",
+   "kpiBig": "−66%",
+   "kpiText": "showroom cost per click after one goal fix",
+   "big": "−66%",
+   "bigLabel": "showroom cost per click after one conversion-goal fix (₹38.60 → ₹13.13)",
+   "leakIds": [
+    "measurement",
+    "allocation",
+    "postclick",
+    "postsale",
+    "notmarketing"
+   ],
+   "stages": {
+    "visibility": "l",
+    "click": "o",
+    "enquiry": "o",
+    "booking": "l",
+    "revenue": "l",
+    "repeat": "l",
+    "measurement": "l"
+   },
+   "journey": [
     {
-      "id": "measurement",
-      "name": "Miscounted conversions",
-      "short": "The ad platform reports results the till never saw"
+     "st": "See the ad",
+     "saw": "80.9% of 25 months' spend on Shopping at ₹1,146 per conversion. 66% of the feed never shown.",
+     "s": "leak",
+     "did": "Brand search, 3 new PMax asset groups, negatives from 13.7 lakh search terms",
+     "now": "New groups ₹20–29 per conversion vs ₹287–367 inherited"
     },
     {
-      "id": "allocation",
-      "name": "Money on the wrong intent",
-      "short": "Budget sits where it is easiest to spend, not where buyers convert"
+     "st": "Visit the showroom",
+     "saw": "Showroom campaign read zero for 17 days. CPC ₹38.60.",
+     "s": "leak",
+     "did": "Fixed the conversion goal, 21–25 Aug",
+     "now": "CPC ₹13.13 (−66%). 1,356 actions in August."
     },
     {
-      "id": "postclick",
-      "name": "Post-click friction",
-      "short": "Slow pages, long forms, broken booking paths"
+     "st": "Browse to cart",
+     "saw": "Session → cart 5.45%, steady",
+     "s": "ok",
+     "did": "",
+     "now": "Holding"
     },
     {
-      "id": "visibility",
-      "name": "Invisible where buyers look",
-      "short": "Missing from Maps, directories, brand search or page one"
+     "st": "Checkout",
+     "saw": "85 of 100 carts never buy. Cart → order 13.5%.",
+     "s": "leak",
+     "did": "Cart remarketing launched",
+     "now": "₹11,971 spent, 0 purchases. Failed."
     },
     {
-      "id": "pricing",
-      "name": "Price and distribution leakage",
-      "short": "Your own inventory sold cheaper elsewhere"
+     "st": "Delivery & returns",
+     "saw": "19.8% of gross reversed. One checkout reverses at 3.6× the native one.",
+     "s": "leak",
+     "did": "Flagged ₹1.19 L of ads on SKUs with 30%+ returns",
+     "now": "Handed to ops"
     },
     {
-      "id": "speed",
-      "name": "Lead-to-booking gap",
-      "short": "Leads arrive; nobody converts them fast enough"
+     "st": "Buy again",
+     "saw": "79.6% of buyers are new. Month-1 repeat 12.6%.",
+     "s": "leak",
+     "did": "",
+     "now": "Not addressed in 37 days"
     },
     {
-      "id": "postsale",
-      "name": "Post-sale leakage",
-      "short": "Returns, falling ticket size, no repeat"
-    },
-    {
-      "id": "notmarketing",
-      "name": "Not a marketing problem",
-      "short": "The fix sits with ops, product or the shop floor"
+     "st": "Measurement",
+     "saw": "₹12.56 Cr reported vs ₹1.07 Cr real. Purchase counted twice.",
+     "s": "leak",
+     "did": "Tracking-repair spec + weekly Google-vs-Shopify check",
+     "now": "Spec handed over, not built"
     }
-  ],
-  "cases": [
+   ]
+  },
+  {
+   "id": "elites-dental",
+   "url": "elites-dental.html",
+   "name": "Elites Dental Care",
+   "industry": "Dental clinic",
+   "model": "Single clinic, five specialists",
+   "city": "TC Palya, Bengaluru",
+   "market": "India",
+   "status": "Active",
+   "period": "Audit 18 Sep 2026 · rebuild from 27 Sep",
+   "role": "Audit, Business Profile rebuild, Search rebuild",
+   "grade": "B",
+   "gradeNote": "Google Ads, GA4, Search Console and Business Profile data; no clinic revenue yet",
+   "leak": "₹3,140 per booking: the clicks were fine, everything after the click was broken",
+   "kpiBig": "₹3,140",
+   "kpiText": "per booking, before the rebuild",
+   "big": "₹3,140",
+   "bigLabel": "per booking before the rebuild: ₹25,122 for 8 bookings",
+   "leakIds": [
+    "postclick",
+    "allocation",
+    "visibility",
+    "measurement"
+   ],
+   "stages": {
+    "visibility": "l",
+    "click": "l",
+    "enquiry": "l",
+    "booking": "l",
+    "revenue": "n",
+    "repeat": "o",
+    "measurement": "l"
+   },
+   "journey": [
     {
-      "id": "toni-and-guy",
-      "url": "toni-and-guy.html",
-      "name": "TONI&GUY Bangalore",
-      "industry": "Salon",
-      "model": "Multi-location B2C services",
-      "geo": "Bengaluru, India",
-      "geoGroup": "India",
-      "status": "Closed",
-      "statusClass": "done",
-      "period": "28 Feb – 16 Sep 2026",
-      "role": "Growth consultant: Google, Meta, GBP, web, reporting, booking app",
-      "grade": "A",
-      "gradeNote": "Ad exports joined to point-of-sale revenue by salon",
-      "leak": "Leads hit record volume while ticket size fell and no callback loop existed",
-      "kpiBig": "+14.7%",
-      "kpiText": "salon revenue, Mar–Aug 2026 vs same six months of 2025 (₹16.10 Cr vs ₹14.04 Cr)",
-      "kpiEv": "m",
-      "leakIds": [
-        "allocation",
-        "measurement",
-        "speed",
-        "postsale",
-        "notmarketing"
-      ],
-      "objective": "Store visits and bills",
-      "stages": {
-        "visibility": {
-          "s": "o",
-          "t": "CPC ₹11.34 → ₹4.22; 22.11% impression share, #1 in auction"
-        },
-        "click": {
-          "s": "n",
-          "t": "Site speed not assessed"
-        },
-        "enquiry": {
-          "s": "o",
-          "t": "1,18,253 Google MQLs Mar–Aug (+165% YoY)"
-        },
-        "booking": {
-          "s": "l",
-          "t": "No lead-to-booking view; callback automation proposed, not built"
-        },
-        "revenue": {
-          "s": "l",
-          "t": "Average bill ₹2,813 vs ₹2,983 a year earlier"
-        },
-        "repeat": {
-          "s": "n",
-          "t": "Repeat-visit data not supplied"
-        },
-        "measurement": {
-          "s": "l",
-          "t": "Conversion rate 19.3% for 7 days, 1.7% for 24"
-        }
-      }
+     "st": "Search & Maps",
+     "saw": "Not on page one for \"dental clinic tc palya\". Not on Practo.",
+     "s": "leak",
+     "did": "Business Profile rebuilt: 300 services → 121, right locality, tracked booking link",
+     "now": "Live 27 Sep. Ranking not re-measured yet."
     },
     {
-      "id": "mr-jewels",
-      "url": "mr-jewels.html",
-      "name": "MR Jewels",
-      "industry": "Jewellery e-commerce",
-      "model": "D2C e-commerce with one showroom",
-      "geo": "Bengaluru, India (ships nationally)",
-      "geoGroup": "India",
-      "status": "Closed",
-      "statusClass": "done",
-      "period": "1 Aug – 3 Sep 2026",
-      "role": "Google Ads lead + business review across Shopify, Meta and Google",
-      "grade": "A",
-      "gradeNote": "Google exports reconciled to Shopify orders and billing",
-      "leak": "Google claimed 11.8× the company's monthly revenue; the real losses sat in the cart and in returns",
-      "kpiBig": "−66%",
-      "kpiText": "showroom campaign CPC after one conversion-goal fix (₹38.60 → ₹13.13)",
-      "kpiEv": "m",
-      "leakIds": [
-        "measurement",
-        "allocation",
-        "postclick",
-        "postsale",
-        "notmarketing"
-      ],
-      "objective": "Online orders and showroom visits",
-      "stages": {
-        "visibility": {
-          "s": "l",
-          "t": "66% of 8,396 feed SKUs never shown; 80.9% of spend on Shopping"
-        },
-        "click": {
-          "s": "o",
-          "t": "CTR 1.57%, CPC ₹5.07 in August"
-        },
-        "enquiry": {
-          "s": "o",
-          "t": "Session→cart 5.45%, steady"
-        },
-        "booking": {
-          "s": "l",
-          "t": "Cart→order 13.5%: 85 of 100 carts never buy"
-        },
-        "revenue": {
-          "s": "l",
-          "t": "19.8% of gross reversed: ₹2.41 Cr in 12 months"
-        },
-        "repeat": {
-          "s": "l",
-          "t": "79.6% of customers new; month-1 repeat 12.6%"
-        },
-        "measurement": {
-          "s": "l",
-          "t": "₹12.56 Cr conversion value vs ₹1.07 Cr real sales"
-        }
-      }
+     "st": "Ad click",
+     "saw": "469 clicks at 6.86% CTR. 76% of spend on generic \"near me\".",
+     "s": "ok",
+     "did": "Rebuilt: 7 ad groups, 76 keywords, morning-weighted, ₹85 CPC cap",
+     "now": "Relaunch 1 Oct. Results pending."
     },
     {
-      "id": "elites-dental",
-      "url": "elites-dental.html",
-      "name": "Elites Dental Care",
-      "industry": "Dental clinic",
-      "model": "Single-location healthcare",
-      "geo": "Bengaluru, India",
-      "geoGroup": "India",
-      "status": "Active",
-      "statusClass": "live",
-      "period": "Audit 18 Sep 2026 · rebuild from 27 Sep",
-      "role": "Audit, Business Profile rebuild, Search campaign rebuild",
-      "grade": "B",
-      "gradeNote": "Google Ads, GA4, Search Console and GBP data; no clinic revenue yet",
-      "leak": "₹3,140 per booking: the clicks were fine, everything after the click was broken",
-      "kpiBig": "₹3,140",
-      "kpiText": "cost per booking before the rebuild (₹25,122 for 8 bookings)",
-      "kpiEv": "m",
-      "leakIds": [
-        "postclick",
-        "allocation",
-        "visibility",
-        "measurement"
-      ],
-      "objective": "Booked appointments by treatment value",
-      "stages": {
-        "visibility": {
-          "s": "l",
-          "t": "Not on page one for 'dental clinic tc palya'; no Practo listing"
-        },
-        "click": {
-          "s": "l",
-          "t": "2.6 s server response; 96% of spend on mobile"
-        },
-        "enquiry": {
-          "s": "l",
-          "t": "4-step booking; widget blank after an expired SSL certificate"
-        },
-        "booking": {
-          "s": "l",
-          "t": "8 bookings from 469 clicks (1.71%)"
-        },
-        "revenue": {
-          "s": "n",
-          "t": "Attendance and treatment value not yet shared"
-        },
-        "repeat": {
-          "s": "o",
-          "t": "4.9★ from 271 reviews, owner replies to all"
-        },
-        "measurement": {
-          "s": "l",
-          "t": "Every booking valued at ₹1; GA4 sees ~1 in 6 ad clicks"
-        }
-      }
+     "st": "Website",
+     "saw": "2.6 s server response. GA4 saw ~1 in 6 ad clicks.",
+     "s": "leak",
+     "did": "Fix list: caching, CDN, GA4 key events, schema, junk URLs",
+     "now": "With the clinic"
     },
     {
-      "id": "resort",
-      "url": "resort.html",
-      "name": "Resort & events venue",
-      "anon": true,
-      "industry": "Hospitality",
-      "model": "Resort: rooms, day-outs, weddings, corporate",
-      "geo": "Electronic City, Bengaluru",
-      "geoGroup": "India",
-      "status": "Active",
-      "statusClass": "live",
-      "period": "Audit 25–26 Sep 2026 · engagement from 28 Sep",
-      "role": "Revenue audit, Business Profile management, marketing and sales dashboard",
-      "grade": "B",
-      "gradeNote": "Sales CRM, Meta, Google Ads, GA4 and Business Profile data; bookings not yet tied to channels",
-      "leak": "Ad spend rose 3.2× in a quarter and bookings fell 13%: the leak sits between the enquiry and the booking",
-      "kpiBig": "24% → 14%",
-      "kpiText": "enquiry-to-booking conversion, Q2 to Q3 2026, while enquiries grew 46%",
-      "kpiEv": "m",
-      "leakIds": [
-        "speed",
-        "measurement",
-        "allocation",
-        "pricing",
-        "postclick",
-        "visibility",
-        "notmarketing"
-      ],
-      "objective": "Direct bookings and paid day-out tickets",
-      "stages": {
-        "visibility": {
-          "s": "l",
-          "t": "Top 10 on 2 of 14 target searches"
-        },
-        "click": {
-          "s": "l",
-          "t": "Mobile LCP 7.6 s (lab)"
-        },
-        "enquiry": {
-          "s": "o",
-          "t": "5,621 enquiries Jan–1 Oct; Q3 up 46% on Q2"
-        },
-        "booking": {
-          "s": "l",
-          "t": "788 booked (14%); conversion 24% → 14% Q2→Q3"
-        },
-        "revenue": {
-          "s": "l",
-          "t": "Own rooms on Yatra at ₹1,780 vs ₹3,999 direct"
-        },
-        "repeat": {
-          "s": "l",
-          "t": "3.9★ on 5,406 reviews vs 4.6★ category leader"
-        },
-        "measurement": {
-          "s": "l",
-          "t": "82% of enquiries logged only as 'IVR'; 0 bookings tied to an ad"
-        }
-      }
+     "st": "Book",
+     "saw": "4-step widget. Blank after an expired SSL certificate.",
+     "s": "leak",
+     "did": "Flagged to vendor. Booking link moved to https + UTM.",
+     "now": "Pending vendor"
     },
     {
-      "id": "foremost-pa",
-      "url": "foremost-pa.html",
-      "name": "Foremost Public Adjusters",
-      "industry": "Insurance claims (public adjuster)",
-      "model": "Local lead generation, contingency fee",
-      "geo": "South Florida, USA",
-      "geoGroup": "USA",
-      "status": "Closed",
-      "statusClass": "done",
-      "period": "Jan – Jul 2026",
-      "role": "Paid search audit, SEO fixes, campaign build, brand investigation",
-      "grade": "B",
-      "gradeNote": "Google Ads and Search Console exports; no claim or fee data",
-      "leak": "Lead cost swung on post-click conversion, not budget, and the firm had stopped appearing for its own name",
-      "kpiBig": "0 / 247",
-      "kpiText": "live keywords that were branded: the brand campaign had been paused in a restructure",
-      "kpiEv": "m",
-      "leakIds": [
-        "postclick",
-        "visibility",
-        "allocation"
-      ],
-      "objective": "Qualified claim leads",
-      "stages": {
-        "visibility": {
-          "s": "l",
-          "t": "23% impression share; 0 of 247 live keywords branded"
-        },
-        "click": {
-          "s": "l",
-          "t": "88 paid clicks landed on the homepage"
-        },
-        "enquiry": {
-          "s": "l",
-          "t": "Desktop CPL $398 vs mobile $93; May CVR fell on flat spend"
-        },
-        "booking": {
-          "s": "n",
-          "t": "Lead-to-signed-claim rate not supplied"
-        },
-        "revenue": {
-          "s": "n",
-          "t": "Fees per settled claim not supplied"
-        },
-        "repeat": {
-          "s": "n",
-          "t": "Not applicable / not assessed"
-        },
-        "measurement": {
-          "s": "o",
-          "t": "Lead tracking in place; two exports disagree (56 vs 48 leads)"
-        }
-      }
+     "st": "Treatment value",
+     "saw": "Every booking worth ₹1 to the bidder. Implants got 3.6% of spend.",
+     "s": "leak",
+     "did": "Value-based conversions and treatment ad groups specced",
+     "now": "Needs clinic values"
     },
     {
-      "id": "everywatch",
-      "url": "everywatch.html",
-      "name": "EveryWatch",
-      "industry": "Luxury-watch marketplace",
-      "model": "Two-sided marketplace, subscription",
-      "geo": "Global (remote)",
-      "geoGroup": "Global",
-      "status": "In-house role",
-      "statusClass": "done",
-      "period": "2024 – 2025",
-      "role": "Growth & performance lead (in-house)",
-      "grade": "C",
-      "gradeNote": "Monthly series reconstructed in an earlier case study; raw exports not in the repo",
-      "leak": "Acquisition scaled; returning users stayed near one in ten",
-      "kpiBig": "20×",
-      "kpiText": "monthly new users, Jan 2024 (9,113) to May 2025 (182,782), GA4",
-      "kpiEv": "m",
-      "leakIds": [
-        "postsale",
-        "measurement"
-      ],
-      "objective": "Collector sign-ups and subscriptions",
-      "stages": {
-        "visibility": {
-          "s": "o",
-          "t": "Organic impressions 0.10M → 5.5M a month"
-        },
-        "click": {
-          "s": "n",
-          "t": "Not assessed"
-        },
-        "enquiry": {
-          "s": "o",
-          "t": "Paid leads at sub-$1 cost"
-        },
-        "booking": {
-          "s": "n",
-          "t": "Lead-to-subscriber data not in the record"
-        },
-        "revenue": {
-          "s": "n",
-          "t": "'Revenue' was leads × ~$15 assumed value, not sales"
-        },
-        "repeat": {
-          "s": "l",
-          "t": "Returning users 10.2% of May 2025 users"
-        },
-        "measurement": {
-          "s": "l",
-          "t": "Reported CVR above 100% in peak months"
-        }
-      }
-    },
-    {
-      "id": "swift-restoration",
-      "url": "swift-restoration.html",
-      "name": "Swift Restoration",
-      "industry": "Emergency restoration",
-      "model": "Local services, 24/7 emergency",
-      "geo": "Central Iowa, USA",
-      "geoGroup": "USA",
-      "status": "Diagnostic",
-      "statusClass": "diag",
-      "period": "Jun 2026",
-      "role": "Audit and execution plan",
-      "grade": "D",
-      "gradeNote": "Site crawl, Ahrefs, SERP and ad checks; no lead or revenue data",
-      "leak": "A 5.0★ operator with no service pages, no location pages and no Local Services Ads",
-      "kpiBig": "0",
-      "kpiText": "service or location pages on the site at audit (service cards linked to '#')",
-      "kpiEv": "m",
-      "leakIds": [
-        "visibility",
-        "postclick"
-      ],
-      "objective": "Emergency calls",
-      "stages": {
-        "visibility": {
-          "s": "l",
-          "t": "Domain Rating 3.2; no Local Services Ads"
-        },
-        "click": {
-          "s": "l",
-          "t": "Homepage title is placeholder text"
-        },
-        "enquiry": {
-          "s": "n",
-          "t": "Call tracking not assessed"
-        },
-        "booking": {
-          "s": "n",
-          "t": "Not assessed"
-        },
-        "revenue": {
-          "s": "n",
-          "t": "Not assessed"
-        },
-        "repeat": {
-          "s": "o",
-          "t": "5.0★ on 15 Google reviews"
-        },
-        "measurement": {
-          "s": "n",
-          "t": "Not assessed"
-        }
-      }
+     "st": "Review & recall",
+     "saw": "4.9★, 271 reviews, every one answered",
+     "s": "ok",
+     "did": "Review prompts that name the treatment",
+     "now": "Strongest asset"
     }
-  ]
+   ]
+  },
+  {
+   "id": "resort",
+   "url": "resort.html",
+   "name": "Gold Coins Club & Resort",
+   "industry": "Resort & events",
+   "model": "Rooms, day-outs, weddings, corporate",
+   "city": "Electronic City, Bengaluru",
+   "market": "India",
+   "status": "Active",
+   "period": "Audit 25 Sep – 1 Oct 2026 · engagement from 28 Sep",
+   "role": "Revenue audit, Business Profile, marketing + sales dashboard",
+   "grade": "B",
+   "gradeNote": "Sales CRM, Meta, Google Ads, GA4 and Business Profile; bookings not yet tied to channels",
+   "leak": "Ad spend rose 3.2× in a quarter and bookings fell 13%: the leak sits between enquiry and booking",
+   "kpiBig": "24% → 14%",
+   "kpiText": "enquiry-to-booking conversion, Q2 to Q3",
+   "big": "24% → 14%",
+   "bigLabel": "enquiry-to-booking conversion, Q2 to Q3 2026",
+   "leakIds": [
+    "speed",
+    "measurement",
+    "allocation",
+    "pricing",
+    "postclick",
+    "visibility",
+    "notmarketing"
+   ],
+   "stages": {
+    "visibility": "l",
+    "click": "l",
+    "enquiry": "o",
+    "booking": "l",
+    "revenue": "l",
+    "repeat": "l",
+    "measurement": "l"
+   },
+   "journey": [
+    {
+     "st": "Discover",
+     "saw": "Top 10 on 2 of 14 target searches. 3.9★ vs 4.6★ leader.",
+     "s": "leak",
+     "did": "45 Business Profile changes: 4 categories, 17 priced services, 20 reviews answered",
+     "now": "Live 28 Sep"
+    },
+    {
+     "st": "Ads",
+     "saw": "Google counted 6,461 map taps as conversions: 3 real leads. Meta: 146 campaigns, 99 with no result.",
+     "s": "leak",
+     "did": "Plan: Meta to 4–5 always-on campaigns. Wedding Search only after the tracking fix.",
+     "now": "Pending"
+    },
+    {
+     "st": "Website",
+     "saw": "1,086 used the price calculator. 43 became leads. Mobile LCP 7.6 s.",
+     "s": "leak",
+     "did": "GA4 key events into Ads as primary conversions",
+     "now": "In progress"
+    },
+    {
+     "st": "Enquire",
+     "saw": "5,621 enquiries. 82% logged only as \"IVR\".",
+     "s": "leak",
+     "did": "One marketing + sales dashboard joining CRM, ads and web for the first time",
+     "now": "Dashboard live"
+    },
+    {
+     "st": "Book",
+     "saw": "Conversion 24% → 14%. One executive books 57% of wins.",
+     "s": "leak",
+     "did": "Executive-level conversion view. Pipeline plan.",
+     "now": "Baseline set"
+    },
+    {
+     "st": "Price",
+     "saw": "Own room ₹1,780 on Yatra vs ₹3,999 direct",
+     "s": "leak",
+     "did": "Parity flagged. One rate card proposed.",
+     "now": "With management"
+    },
+    {
+     "st": "Stay & review",
+     "saw": "720 one- and two-star reviews: bathrooms, pool, event food",
+     "s": "leak",
+     "did": "Named it: operations, not marketing",
+     "now": "Ops"
+    }
+   ]
+  },
+  {
+   "id": "foremost-pa",
+   "url": "foremost-pa.html",
+   "name": "Foremost Public Adjusters",
+   "industry": "Insurance claims",
+   "model": "Local lead gen, contingency fee",
+   "city": "South Florida",
+   "market": "USA",
+   "status": "Closed",
+   "period": "Jan – Jul 2026",
+   "role": "Paid search audit, SEO fixes, campaign build, brand investigation",
+   "grade": "B",
+   "gradeNote": "Google Ads and Search Console exports; no claim or fee data",
+   "leak": "Lead cost swung on post-click conversion, not budget, and the brand vanished",
+   "kpiBig": "0 / 247",
+   "kpiText": "live keywords that were branded",
+   "big": "0 / 247",
+   "bigLabel": "live keywords that were branded: the brand campaign was paused in a restructure",
+   "leakIds": [
+    "postclick",
+    "visibility",
+    "allocation"
+   ],
+   "stages": {
+    "visibility": "l",
+    "click": "l",
+    "enquiry": "l",
+    "booking": "n",
+    "revenue": "n",
+    "repeat": "n",
+    "measurement": "o"
+   },
+   "journey": [
+    {
+     "st": "Damage event",
+     "saw": "Storm, pipe burst, roof leak. Peak Jun–Nov.",
+     "s": "ok",
+     "did": "",
+     "now": ""
+    },
+    {
+     "st": "Search",
+     "saw": "23% impression share. 0 of 247 live keywords branded.",
+     "s": "leak",
+     "did": "Brand-defence rebuild, all-services campaign, 140-keyword map",
+     "now": "All-services: $48 per lead, on 3 leads"
+    },
+    {
+     "st": "Landing page",
+     "saw": "88 paid clicks to the homepage. www / non-www split 23 URLs.",
+     "s": "leak",
+     "did": "19 crawl issues fixed. 24 pages rewritten for claim intent.",
+     "now": "Done"
+    },
+    {
+     "st": "Lead",
+     "saw": "Desktop $398 per lead vs mobile $93. May fell on flat spend.",
+     "s": "leak",
+     "did": "Plan: desktop bids −35%, 3-field mobile form, click-to-call",
+     "now": "Not shipped before close"
+    },
+    {
+     "st": "Signed claim",
+     "saw": "Not shared",
+     "s": "unk",
+     "did": "Offline claim import specced",
+     "now": ""
+    },
+    {
+     "st": "Fee",
+     "saw": "10–20% of recovery. Not shared.",
+     "s": "unk",
+     "did": "Left as a model input, not assumed",
+     "now": ""
+    }
+   ]
+  },
+  {
+   "id": "everywatch",
+   "url": "everywatch.html",
+   "name": "EveryWatch",
+   "industry": "Luxury-watch marketplace",
+   "model": "Two-sided marketplace",
+   "city": "Global, remote",
+   "market": "Global",
+   "status": "Past role",
+   "period": "2024 – 2025",
+   "role": "Growth & performance lead (in-house)",
+   "grade": "C",
+   "gradeNote": "Monthly series from an earlier case study; raw exports not re-checked",
+   "leak": "Acquisition scaled; returning users stayed near one in ten",
+   "kpiBig": "20×",
+   "kpiText": "monthly new users in 17 months",
+   "big": "20×",
+   "bigLabel": "monthly new users, Jan 2024 (9,113) → May 2025 (182,782), GA4",
+   "leakIds": [
+    "postsale",
+    "measurement"
+   ],
+   "stages": {
+    "visibility": "o",
+    "click": "n",
+    "enquiry": "o",
+    "booking": "n",
+    "revenue": "n",
+    "repeat": "l",
+    "measurement": "l"
+   },
+   "journey": [
+    {
+     "st": "Search",
+     "saw": "Near invisible: ~0.10M impressions a month",
+     "s": "leak",
+     "did": "Structured, indexable reference-level pages",
+     "now": "5.5M impressions a month"
+    },
+    {
+     "st": "Reference page",
+     "saw": "Opaque category: price, provenance, availability",
+     "s": "ok",
+     "did": "Model pages, prices, comparisons",
+     "now": "CTR held 1.7–2.5%"
+    },
+    {
+     "st": "Sign-up",
+     "saw": "Conversion rate above 100% in peak months",
+     "s": "leak",
+     "did": "Held paid near $1.5k a month. Cut when quality fell.",
+     "now": "Lead counts inflated"
+    },
+    {
+     "st": "Subscribe",
+     "saw": "\"Revenue\" was leads × ~$15",
+     "s": "unk",
+     "did": "Audited and retired the figure",
+     "now": "Not in the record"
+    },
+    {
+     "st": "Come back",
+     "saw": "Returning users ~5% of monthly users",
+     "s": "leak",
+     "did": "",
+     "now": "10.2% while users grew 20×"
+    }
+   ]
+  },
+  {
+   "id": "swift-restoration",
+   "url": "swift-restoration.html",
+   "name": "Swift Restoration",
+   "industry": "Emergency restoration",
+   "model": "Local services, 24/7",
+   "city": "Boone, Iowa",
+   "market": "USA",
+   "status": "Diagnostic",
+   "period": "June 2026",
+   "role": "Audit and execution plan",
+   "grade": "D",
+   "gradeNote": "Site crawl, Ahrefs, SERP and ad checks; no lead or revenue data",
+   "leak": "A 5.0★ operator with no service pages, no location pages and no Local Services Ads",
+   "kpiBig": "0",
+   "kpiText": "service or location pages at audit",
+   "big": "0",
+   "bigLabel": "service or location pages on the site. Service cards linked to \"#\".",
+   "leakIds": [
+    "visibility",
+    "postclick"
+   ],
+   "stages": {
+    "visibility": "l",
+    "click": "l",
+    "enquiry": "n",
+    "booking": "n",
+    "revenue": "n",
+    "repeat": "o",
+    "measurement": "n"
+   },
+   "journey": [
+    {
+     "st": "Emergency search",
+     "saw": "No Local Services Ads. Franchises own the top.",
+     "s": "leak",
+     "did": "LSA + emergency-intent Search plan",
+     "now": "Plan only"
+    },
+    {
+     "st": "Map pack",
+     "saw": "5.0★ on 15 reviews",
+     "s": "ok",
+     "did": "Profile and review plan. Boone and Ames first.",
+     "now": "Plan only"
+    },
+    {
+     "st": "Website",
+     "saw": "0 service pages. Homepage title is placeholder text.",
+     "s": "leak",
+     "did": "Service + county architecture, keyword map, migration-safe",
+     "now": "Plan only"
+    },
+    {
+     "st": "Call",
+     "saw": "Not tracked",
+     "s": "unk",
+     "did": "Call-tracking baseline in the plan",
+     "now": ""
+    },
+    {
+     "st": "Job & claim",
+     "saw": "Not shared",
+     "s": "unk",
+     "did": "",
+     "now": ""
+    }
+   ]
+  }
+ ]
 }
