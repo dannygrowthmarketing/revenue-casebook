@@ -373,7 +373,272 @@ select.sel{font:500 15px var(--body);padding:11px 14px;border:0;border-radius:12
 .ares p{color:var(--on-night-2);font-size:14.5px}
 .ares ul{margin:4px 0 0;padding-left:18px;color:var(--on-night-2);font-size:13px;display:grid;gap:4px}
 .ares .ev{background:rgba(255,255,255,.08);color:#F6C35A;justify-self:start}
-</style></head><body><header class="top"><div class="wrap"><a class="brand" href="index.html"><i></i>Danny Deepak</a><nav class="nav" aria-label="Main"><a class="" href="index.html#cases">Cases</a><a class="" href="leaks.html" aria-current="page">Leaks</a><a class="hide-sm" href="check.html">Free check</a><a class="cta" href="#contact">Contact</a></nav></div></header><main><section class="band chero" style="padding-bottom:48px"><div class="wrap"><p class="eyebrow">Pattern library · 7 businesses · 8 leaks</p><h1 style="margin-top:14px;max-width:14ch">Eight ways revenue leaks between search and till.</h1><p class="q">Different industries. The same eight failures. Find your symptom, then read the case where I found it.</p></div></section><section class="sec wrap"><div class="leakgrid"><article class="lc" id="measurement"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></svg></span><div><small>LEAK 01</small><h3>Miscounted conversions</h3></div></div>
+/* builds, business angles, stack */
+.blds{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(196px,100%),1fr));gap:14px}
+.bld{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;display:grid;gap:10px;align-content:start;border-top:3px solid var(--move)}
+.bld .bt{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.bld .bt b{font:700 16px/1.25 var(--display);color:var(--ink);min-width:0}
+.bld p{font-size:13.5px;line-height:1.45;color:var(--ink-2);display:grid;gap:3px}
+.bld p.imp{color:var(--ink)}
+.bld .k{font:600 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.bld p.imp .k{color:var(--flow)}
+.chip.est{background:var(--surface-2);color:var(--est)}
+.angs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:14px}
+.angs>div{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;display:grid;gap:8px;align-content:start}
+.angs b{font:700 clamp(22px,2.4vw,28px)/1.05 var(--display);letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
+.angs b.flow{color:var(--flow)}.angs b.leak{color:var(--leak)}.angs b.move{color:var(--move)}
+.angs span{font-size:13.5px;color:var(--ink-3);line-height:1.4}
+.angs>div>:last-child{justify-self:start}
+.stack{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
+.stack>div{background:var(--surface);border-radius:var(--r);padding:16px;display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 10px;align-items:start;box-shadow:var(--shadow)}
+.stack svg{width:22px;height:22px;color:var(--move);grid-row:span 2}
+.stack b{font:700 15px/1.2 var(--display);color:var(--ink)}
+.stack span{font-size:13px;color:var(--ink-3);line-height:1.35}
+.glance a{color:var(--move);font-weight:600}
+/* digital journey */
+.djf{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px;position:relative}
+.dc{display:grid;gap:10px;align-content:start;position:relative}
+.dc+.dc::before{content:"→";position:absolute;left:-18px;top:2px;color:var(--ink-3);font:700 16px var(--body)}
+.dc:nth-child(2)::before{content:"+"}
+.dh{display:flex;align-items:center;gap:8px;color:var(--move)}
+.dh svg{width:18px;height:18px}
+.dh small{font:600 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.dn{background:var(--surface);border-radius:12px;box-shadow:var(--shadow);padding:12px;display:grid;gap:4px;border-left:3px solid var(--flow)}
+.dn.test{border-left-color:var(--move)}.dn.build,.dn.spec{border-left-color:var(--est)}
+.dn b{font:700 14px/1.25 var(--display);color:var(--ink)}
+.dn span{font-size:12.5px;line-height:1.4;color:var(--ink-3)}
+.dn em{font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:var(--flow)}
+.dn.test em{color:var(--move)}.dn.build em,.dn.spec em{color:var(--est)}
+.djr{margin-top:18px;padding:14px;border:1.5px dashed var(--move);border-radius:var(--r);display:grid;gap:10px}
+.djrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+@media(max-width:1000px){.djf{grid-template-columns:repeat(3,minmax(0,1fr))}.dc:nth-child(4)::before{content:none}}
+@media(max-width:560px){.djf{grid-template-columns:minmax(0,1fr)}.dc+.dc::before{content:"↓";left:0;top:-20px}.dc:nth-child(2)::before{content:"+"}.djf{gap:28px}}
+
+/* ===== v3: deep evidence system ===== */
+.ev.a{color:var(--ink-2);background:var(--surface-2);outline:1px dashed var(--mute)}
+.chip.nm{background:var(--surface-2);color:var(--ink-2)}
+.chip.spec{background:var(--surface-2);color:var(--ink-3)}
+.chip.ink{background:var(--surface-2);color:var(--ink)}
+.chip.est{background:var(--est-bg);color:var(--est)}
+.sx{display:block;font:500 11px/1.4 var(--mono);color:var(--ink-3);margin-top:6px;letter-spacing:.01em;overflow-wrap:anywhere}
+.dna{display:inline-block;font:600 12.5px/1.2 var(--mono);color:var(--ink-3);border:1.5px dashed var(--mute);border-radius:8px;padding:6px 9px;text-transform:uppercase;letter-spacing:.05em}
+.mv{font-weight:600;color:var(--ink)}
+.none{color:var(--ink-3)}
+/* sticky section nav */
+.subnav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:15;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.subnav .sn{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.subnav .sn::-webkit-scrollbar{display:none}
+.subnav a{flex:none;font:600 13px/1 var(--body);color:var(--ink-2);text-decoration:none;padding:8px 12px;border-radius:999px}
+.subnav a:hover{background:var(--surface-2);color:var(--ink)}
+.subnav a[aria-current]{background:var(--ink);color:var(--bg)}
+section[id]{scroll-margin-top:120px}
+details[id]{scroll-margin-top:130px}
+/* levels */
+.lvl{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:22px}
+.lvl h2{font-size:clamp(26px,3.6vw,40px);font-weight:750}
+.lvl .hint{color:var(--ink-3);font-size:15px;flex-basis:100%}
+.lv1,.lv2,.lv3{font:700 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:6px;align-self:center}
+.lv1{background:var(--glow);color:#1a1200}.lv2{background:var(--move);color:#fff}.lv3{background:var(--ink);color:var(--bg)}
+.l3h{padding-bottom:0}
+.l3h .lvl{border-top:2px solid var(--ink);padding-top:28px;margin-bottom:0}
+/* L1 story */
+.s60b{padding-block:44px 48px}
+.s60b .lvl .hint{color:var(--on-night-2)}
+.s60s{list-style:none;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;counter-reset:s}
+.s60{background:var(--night-2);padding:16px 14px 18px;display:grid;gap:8px;align-content:start;position:relative;min-width:0}
+.s60:first-child{border-radius:14px 0 0 14px}.s60:last-child{border-radius:0 14px 14px 0}
+.s60 .n{font:700 12px/1 var(--mono);color:var(--on-night-2)}
+.s60 small{font:600 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--glow)}
+.s60 p{font-size:14.5px;line-height:1.45;color:var(--on-night)}
+.s60.s-leak small{color:#FF8A8D}.s60.s-did small{color:#A9A7FF}.s60.s-changed small{color:#5BE0A6}
+.s60.s-changed{background:var(--night-3)}
+@media(max-width:1100px){.s60s{grid-template-columns:repeat(4,minmax(0,1fr))}.s60:first-child,.s60:last-child{border-radius:0}.s60s{border-radius:14px;overflow:hidden}}
+@media(max-width:640px){.s60s{grid-template-columns:minmax(0,1fr)}.s60{grid-template-columns:28px minmax(0,1fr);column-gap:10px}.s60 .n{grid-row:span 2;padding-top:2px}}
+/* profile */
+.prof{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px}
+.pdl{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px}
+.pdl dt{font:600 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:5px}
+.pdl dd{margin:0;font-size:15px;line-height:1.45;color:var(--ink)}
+.pside{align-content:start;gap:18px}
+.routes{padding-left:0;list-style:none;display:grid;gap:7px;margin-top:8px}
+.routes li{font-size:14.5px;line-height:1.4;padding-left:18px;position:relative}
+.routes li::before{content:"→";position:absolute;left:0;color:var(--move);font-weight:700}
+.pmeta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border-top:1px solid var(--rule);padding-top:14px}
+.pmeta span{display:block;font-size:14px;margin-top:4px}
+.pmeta a{color:var(--move);font-weight:600}
+@media(max-width:860px){.prof{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.pdl,.pmeta{grid-template-columns:minmax(0,1fr)}}
+/* journey track */
+.jtrack{display:flex;gap:0;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.jn{flex:1 0 150px;scroll-snap-align:start;text-decoration:none;display:grid;gap:6px;align-content:start;padding:14px 14px 14px 16px;background:var(--surface);border:1.5px solid var(--rule);position:relative;margin-right:14px;border-radius:14px;min-height:118px;transition:transform .15s}
+.jn:hover{transform:translateY(-2px)}
+.jn:not(:last-child)::after{content:"";position:absolute;right:-13px;top:50%;width:12px;height:2px;background:var(--mute)}
+.jn .jx{font:700 11px/1 var(--mono);color:var(--ink-3)}
+.jn b{font:700 15px/1.2 var(--display);letter-spacing:-.01em}
+.jn em{font:600 11.5px/1 var(--body);font-style:normal;margin-top:auto}
+.jn.leak{border-color:var(--leak);background:var(--leak-bg)}.jn.leak em{color:var(--leak)}
+.jn.move{border-color:var(--move);background:var(--move-bg)}.jn.move em{color:var(--move)}
+.jn.flow{border-color:var(--flow);background:var(--flow-bg)}.jn.flow em{color:var(--flow)}
+.jn.nm{border-style:dashed;border-color:var(--ink-3)}.jn.nm em{color:var(--ink-2)}
+.jn.ok em{color:var(--ink-3)}
+.jf{margin:6px 0 14px}
+.lkcs{display:grid;gap:10px}
+.lkc{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);border-left:4px solid var(--mute)}
+.lkc.leak{border-left-color:var(--leak)}.lkc.move{border-left-color:var(--move)}.lkc.flow{border-left-color:var(--flow)}.lkc.nm{border-left-color:var(--ink-3)}
+.lkc summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:16px 18px}
+.lkc summary::-webkit-details-marker{display:none}
+.lkc summary .jx{font:700 12px/1 var(--mono);color:var(--ink-3)}
+.lkc summary b{font:700 17px/1.25 var(--display)}
+.lkc summary .w1{grid-column:2/4;color:var(--ink-2);font-size:14.5px;line-height:1.45}
+.lkc[open] summary .w1{display:none}
+.lkc summary::after{content:"+";grid-column:3;grid-row:1;justify-self:end;font:600 20px/1 var(--body);color:var(--ink-3);display:none}
+.lkb{padding:0 18px 18px;display:grid;gap:12px}
+.jm{font-size:14px;color:var(--ink-2)}.jm>small{display:block;font:600 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:4px}
+.five{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;border-radius:12px;overflow:hidden}
+.five li{background:var(--surface-2);padding:14px;display:grid;gap:6px;align-content:start;min-width:0}
+.five li>small{font:700 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.five li:nth-child(1)>small{color:var(--leak)}.five li:nth-child(4)>small{color:var(--move)}.five li.aft>small{color:var(--flow)}
+.five li p{font-size:14px;line-height:1.45}
+@media(max-width:900px){.five{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.lkc summary .chip{grid-column:2;justify-self:start}.jn{flex-basis:140px}}
+/* bridge */
+.bridge{display:flex;align-items:stretch;overflow-x:auto;padding-bottom:10px;gap:0}
+.bn{flex:1 0 170px;background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:16px;display:grid;gap:8px;align-content:start;border-top:4px solid var(--flow);min-width:0}
+.bn.c{border-top-color:var(--move)}.bn.e{border-top-color:var(--est)}.bn.a{border-top-color:var(--ink-3)}
+.bn.u{background:transparent;box-shadow:none;border:2px dashed var(--mute);border-top-width:2px}
+.bn small{font:600 11.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+.bn b{font:700 16px/1.3 var(--display);overflow-wrap:anywhere}
+.bn.u b{color:var(--ink-3);font-family:var(--mono);font-size:13px;text-transform:uppercase}
+.bn .ev{justify-self:start}
+.bl{flex:0 0 26px;display:flex;align-items:center;justify-content:center}
+.bl .ar{width:100%;height:2px;background:var(--flow);position:relative}
+.bl .ar::after{content:"";position:absolute;right:0;top:-4px;border:5px solid transparent;border-left:7px solid var(--flow);border-right:0}
+.bl.brk .ar{background:repeating-linear-gradient(90deg,var(--leak) 0 4px,transparent 4px 8px)}
+.bl.brk .ar::after{border-left-color:var(--leak)}
+@media(max-width:760px){.bridge{flex-direction:column}.bn{flex-basis:auto}.bl{flex-basis:22px}.bl .ar{width:2px;height:100%}.bl .ar::after{right:-4px;top:auto;bottom:0;border:5px solid transparent;border-top:7px solid var(--flow);border-bottom:0}.bl.brk .ar{background:repeating-linear-gradient(180deg,var(--leak) 0 4px,transparent 4px 8px)}.bl.brk .ar::after{border-top-color:var(--leak)}}
+/* before / found / action / after */
+.babs{display:grid;gap:8px}
+.babh,.bab{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr);gap:2px}
+.babh span{font:700 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);padding:0 14px 4px}
+.bab{border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.bab>div{background:var(--surface);padding:14px;font-size:14px;line-height:1.45;min-width:0}
+.bab>div>small{display:none;font:700 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;color:var(--ink-3)}
+.bab .bm{font:700 15px/1.3 var(--display);background:var(--surface-2)}
+.bab .bb{border-top:3px solid var(--leak)}.bab .bf{border-top:3px solid var(--ink-3)}.bab .ba2{border-top:3px solid var(--move)}.bab .bz{border-top:3px solid var(--flow)}
+.bab .mv.a{color:var(--ink)}
+@media(max-width:900px){.babh{display:none}.bab{grid-template-columns:minmax(0,1fr)}.bab>div>small{display:block}}
+/* discoveries */
+.discs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px}
+.disc{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.disc .chip{justify-self:start}
+.disc h3{font-size:19px;line-height:1.2}
+.disc p{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.disc details summary{cursor:pointer;font:600 13px var(--body);color:var(--move)}
+.disc .nums{font:500 12.5px/1.55 var(--mono);color:var(--ink-2);background:var(--surface-2);padding:10px 12px;border-radius:10px;margin-top:8px;overflow-wrap:anywhere}
+.disc .imp{color:var(--ink);border-top:1px solid var(--rule);padding-top:10px}
+.disc .imp>small{display:block;font:700 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:4px}
+/* gaps */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.nmh{display:flex;gap:12px;align-items:flex-start}
+.nmh .ic{flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--surface-2);color:var(--ink)}
+.nmh .ic svg{width:20px;height:20px}
+.nmh h3{font-size:20px}.nmh p{color:var(--ink-3);font-size:14px;margin-top:3px}
+.nmk ul,.miss ul{padding-left:18px;display:grid;gap:8px}
+.nmk li,.miss li{font-size:14px;line-height:1.45;color:var(--ink-2)}
+.miss{background:transparent;box-shadow:none;border:2px dashed var(--mute)}
+.miss li::marker{color:var(--ink-3)}
+/* actions */
+.ags{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;align-items:start}
+.ag h3{font-size:18px;display:flex;align-items:center;gap:8px}
+.ag h3 small{font:600 12px var(--mono);color:var(--ink-3)}
+.ag ul{list-style:none;padding:0;display:grid;gap:12px}
+.ag li{display:grid;gap:5px;border-top:1px solid var(--rule);padding-top:10px}
+.ag li .chip{justify-self:start}
+.ag li p{font-size:14.5px;line-height:1.45}
+.stated{margin-top:14px;border:2px dashed var(--est);border-radius:var(--r);padding:18px;display:grid;gap:12px}
+.sth{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.sth p{color:var(--ink-2);font-size:14px}
+.stated ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.stated li{display:grid;gap:3px;font-size:14px}.stated li span{color:var(--ink-2)}
+/* tests */
+.tsts{display:grid;gap:12px}
+.tst ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.tst li{background:var(--surface);padding:14px;display:grid;gap:6px;align-content:start;min-width:0}
+.tst li>small{font:700 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.tst li:nth-child(1){background:var(--surface-2)}
+.tst li:nth-child(3)>small{color:var(--leak)}.tst li:nth-child(4)>small{color:var(--move)}.tst li.nx2>small{color:var(--flow)}
+.tst li p{font-size:14px;line-height:1.45}
+@media(max-width:900px){.tst ol{grid-template-columns:minmax(0,1fr)}}
+/* timeline */
+.tf{margin-bottom:14px}
+.tl{list-style:none;padding:0;position:relative;display:grid;gap:0}
+.tl::before{content:"";position:absolute;left:118px;top:6px;bottom:6px;width:2px;background:var(--rule)}
+.te{display:grid;grid-template-columns:104px minmax(0,1fr);gap:28px;padding:10px 0;position:relative}
+.te::before{content:"";position:absolute;left:113px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--ink-3);box-shadow:0 0 0 3px var(--bg)}
+.te.move::before{background:var(--move)}.te.flow::before{background:var(--flow)}.te.est::before{background:var(--est)}
+.te time{font:600 13px/1.3 var(--mono);color:var(--ink-2);text-align:right;padding-top:2px}
+.te .who{font:700 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-right:8px}
+.te.move .who{color:var(--move)}.te.flow .who{color:var(--flow)}.te.est .who{color:var(--est)}
+.te p{font-size:14.5px;line-height:1.45;margin-top:4px}
+.te.join{margin-top:10px;padding-top:18px;border-top:2px solid var(--move)}
+.te.join::before{width:16px;height:16px;left:111px;top:22px}
+.jtag{font:700 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;background:var(--move);color:#fff;padding:4px 7px;border-radius:5px}
+@media(max-width:640px){.tl::before{left:6px}.te{grid-template-columns:minmax(0,1fr);gap:2px;padding-left:26px}.te::before{left:1px}.te.join::before{left:-1px}.te time{text-align:left}}
+/* report viewer */
+.rvs{margin-top:18px;display:grid;gap:10px}
+.rvs h3{font-size:20px}
+.rv{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.rv summary{cursor:pointer;padding:14px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.rv summary span{color:var(--move);font-weight:600;font-size:14px}
+.rv iframe{width:100%;height:min(70vh,640px);border:0;border-top:1px solid var(--rule);background:#fff;display:block}
+.rv a{display:block;padding:10px 18px;font-weight:600;color:var(--move);font-size:14px}
+
+.jn.est{border-color:var(--est);background:var(--est-bg)}.jn.est em{color:var(--est)}
+.lkc.est{border-left-color:var(--est)}
+.five li:nth-child(1){background:color-mix(in srgb,var(--leak-bg) 70%,var(--surface-2))}
+/* hub v3 */
+.chainv{list-style:none;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;counter-reset:c}
+.ch{position:relative;background:var(--surface);border-radius:12px;padding:12px 12px 14px;font:700 14.5px/1.25 var(--display);box-shadow:var(--shadow);border-top:4px solid var(--ink-3);min-width:0}
+.ch span{display:block;font:600 11px/1 var(--mono);color:var(--ink-3);margin-bottom:8px}
+.ch.c0{border-top-color:var(--ink)}.ch.c1{border-top-color:var(--leak)}.ch.c2{border-top-color:var(--est)}.ch.c3{border-top-color:var(--move)}.ch.c4{border-top-color:var(--flow)}
+@media(max-width:900px){.chainv{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:520px){.chainv{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.evkey{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--ink-2);font-size:14px}
+.finder{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;gap:10px;align-items:end;background:var(--surface);padding:14px;border-radius:var(--r);box-shadow:var(--shadow)}
+.fsel{display:grid;gap:5px;min-width:0}
+.fsel span{font:600 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
+.fsel select{font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);min-width:0;width:100%}
+.freset{font:600 14px var(--body);padding:10px 14px;border-radius:10px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer}
+@media(max-width:900px){.finder{grid-template-columns:repeat(2,minmax(0,1fr))}.freset{grid-column:1/-1}}
+.fcount{margin:14px 0 10px;color:var(--ink-2);font-size:14px}
+.c60s{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:16px}
+.c60{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.c60i{position:relative;display:block;aspect-ratio:16/8;overflow:hidden;background:var(--surface-2)}
+.c60i img{width:100%;height:100%;object-fit:cover}
+.c60i .chip{position:absolute;top:12px;left:12px;background:rgba(6,9,19,.72);color:#fff}
+.c60i .chip.live{color:#5BE0A6}
+.c60b{padding:18px;display:grid;gap:12px;align-content:start}
+.c60h h3{font-size:22px}.c60h h3 a{text-decoration:none}.c60h .meta{font-size:13px;color:var(--ink-3)}
+.c60 dl{display:grid;gap:10px;margin:0}
+.c60 dt{font:700 10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--leak);margin-bottom:4px}
+.c60 dl div:nth-child(2) dt{color:var(--move)}.c60 dl div.ok dt{color:var(--flow)}
+.c60 dd{margin:0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.c60k{display:flex;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:12px}
+.c60k b{font:800 26px/1 var(--display)}.c60k b.flow{color:var(--flow)}.c60k b.leak{color:var(--leak)}.c60k span{font-size:13px;color:var(--ink-3)}
+.c60 .go{font-weight:600;color:var(--move);text-decoration:none;font-size:14px}
+.fempty{padding:20px;text-align:center;color:var(--ink-3)}
+.pats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}
+.pat{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;display:grid;gap:10px;align-content:start;border-top:4px solid var(--ink-3);min-width:0}
+.pat.leak{border-top-color:var(--leak)}.pat.move{border-top-color:var(--move)}.pat.est{border-top-color:var(--est)}.pat.flow{border-top-color:var(--flow)}
+.pat .pn{font:700 12px/1 var(--mono);color:var(--ink-3)}
+.pat h3{font-size:21px}.pat p{color:var(--ink-2);font-size:14.5px}
+.pat ul{padding-left:18px;display:grid;gap:6px;font-size:14px}
+.pat a{color:var(--move);font-weight:600}
+.pmat{margin-top:16px}
+.pm{display:inline-block;width:14px;height:14px;border-radius:4px;border:1.5px solid var(--mute)}
+.pm.on{background:var(--leak);border-color:var(--leak)}
+@media(min-width:1100px){.c60s{grid-template-columns:repeat(3,minmax(0,1fr))}.c60:first-child,.c60:last-child{grid-column:span 2;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr}.c60:first-child .c60i,.c60:last-child .c60i{aspect-ratio:auto;height:100%}}
+</style></head><body><header class="top"><div class="wrap"><a class="brand" href="index.html"><i></i>Danny Deepak</a><nav class="nav" aria-label="Main"><a class="" href="index.html#cases">Cases</a><a class="" href="leaks.html" aria-current="page">Playbook</a><a class="hide-sm" href="check.html">Free check</a><a class="cta" href="#contact">Contact</a></nav></div></header><main><section class="band chero" style="padding-bottom:48px"><div class="wrap"><p class="eyebrow">Pattern library · 7 businesses · 8 leaks</p><h1 style="margin-top:14px;max-width:14ch">Eight ways revenue leaks between search and till.</h1><p class="q">Different industries. The same eight failures. Find your symptom, then read the case where I found it.</p></div></section><section class="sec wrap"><div class="leakgrid"><article class="lc" id="measurement"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></svg></span><div><small>LEAK 01</small><h3>Miscounted conversions</h3></div></div>
 <p class="one">The ad platform reports sales the till never saw. Bidding chases fiction.</p><div class="row2"><div class="sig"><small>The signal</small>Platform conversions above real orders. Value per conversion far from average order.</div><div class="fix"><small>The fix</small>Read conversion actions, not goal cards. Reconcile to the till weekly. Stop rule at 60%.</div></div><div class="seen"><a class="chip" href="toni-and-guy.html">TONI&amp;GUY</a><a class="chip" href="mr-jewels.html">MR Jewels</a><a class="chip" href="elites-dental.html">Elites Dental</a><a class="chip" href="resort.html">Gold Coins Resort</a><a class="chip" href="everywatch.html">EveryWatch</a></div></article><article class="lc" id="allocation"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><small>LEAK 02</small><h3>Money on the wrong intent</h3></div></div>
 <p class="one">Budget sits where it is easy to spend, not where buyers convert.</p><div class="row2"><div class="sig"><small>The signal</small>Share of spend and share of results don&#x27;t match. One ad group starves the rest.</div><div class="fix"><small>The fix</small>Rank spend by revenue per rupee at the unit that bills. Cap, kill or fund.</div></div><div class="seen"><a class="chip" href="toni-and-guy.html">TONI&amp;GUY</a><a class="chip" href="mr-jewels.html">MR Jewels</a><a class="chip" href="elites-dental.html">Elites Dental</a><a class="chip" href="resort.html">Gold Coins Resort</a><a class="chip" href="foremost-pa.html">Foremost PA</a></div></article><article class="lc" id="postclick"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v3M3 9h3M4.6 4.6l2.1 2.1M12 10l8 3-3.5 1.5L15 18z"/></svg></span><div><small>LEAK 03</small><h3>Post-click friction</h3></div></div>
 <p class="one">The ad works. The page, form or checkout after it doesn&#x27;t.</p><div class="row2"><div class="sig"><small>The signal</small>Healthy CTR, poor conversion. Results move while spend and CPC stay flat.</div><div class="fix"><small>The fix</small>Book it yourself on a phone. Cut steps, fix speed, price and phone above the fold.</div></div><div class="seen"><a class="chip" href="mr-jewels.html">MR Jewels</a><a class="chip" href="elites-dental.html">Elites Dental</a><a class="chip" href="resort.html">Gold Coins Resort</a><a class="chip" href="foremost-pa.html">Foremost PA</a><a class="chip" href="swift-restoration.html">Swift Restoration</a></div></article><article class="lc" id="visibility"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><small>LEAK 04</small><h3>Invisible where buyers look</h3></div></div>
@@ -383,7 +648,7 @@ select.sel{font:500 15px var(--body);padding:11px 14px;border:0;border-radius:12
 <p class="one">The sale happens. The money doesn&#x27;t stay or doesn&#x27;t come back.</p><div class="row2"><div class="sig"><small>The signal</small>High returns, falling ticket size, one-time buyers.</div><div class="fix"><small>The fix</small>Returns report by SKU and checkout. Ticket-size work on the floor. Lifecycle triggers.</div></div><div class="seen"><a class="chip" href="toni-and-guy.html">TONI&amp;GUY</a><a class="chip" href="mr-jewels.html">MR Jewels</a><a class="chip" href="everywatch.html">EveryWatch</a></div></article><article class="lc" id="notmarketing"><div class="hd"><span class="ic"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 0-5-5l2.5 2.5-1.5 1.5z"/></svg></span><div><small>LEAK 08</small><h3>Not a marketing problem</h3></div></div>
 <p class="one">Sometimes the biggest number isn&#x27;t mine to fix. Saying so early saves months.</p><div class="row2"><div class="sig"><small>The signal</small>The same complaint in reviews. A gap no ad change moves.</div><div class="fix"><small>The fix</small>Name the owner: ops, product, pricing or the shop floor. Put a rupee value on it.</div></div><div class="seen"><a class="chip" href="toni-and-guy.html">TONI&amp;GUY</a><a class="chip" href="mr-jewels.html">MR Jewels</a><a class="chip" href="resort.html">Gold Coins Resort</a></div></article></div></section><section class="sec wrap"><div class="panel"><h3>How often each leak showed up</h3><div class="chart" id="c-freq"></div><p class="cap">Cases where the leak was backed by evidence.</p></div></section></main><section class="band ctab" id="contact"><div class="wrap"><div><p class="eyebrow">Work with me</p><h2>Seen a leak in your own numbers?</h2><p>Send me the symptom. I'll tell you which case is closest and what I'd check first. No deck, no retainer pitch.</p></div>
 <div class="acts"><span class="copybox"><span>danieldeepak3519@gmail.com</span><button type="button" data-copy="danieldeepak3519@gmail.com">Copy</button></span><a class="btn ghost" href="https://linkedin.com/in/danny-ai-marketing">LinkedIn</a><a class="btn ghost" href="check.html">Free 12-point check</a></div></div></section>
-<footer class="foot"><div class="wrap"><span>© 2026 Daniel Deepak · Bengaluru · Revenue growth consulting</span><span><a href="https://github.com/dannygrowthmarketing">GitHub</a> · <a href="llms.txt">llms.txt</a> · <a href="cases.json">cases.json</a> · Updated 2026-10-04</span></div></footer><script>window.CASES={"leaks": [{"id": "measurement", "name": "Miscounted conversions", "one": "The ad platform reports sales the till never saw. Bidding chases fiction.", "signal": "Platform conversions above real orders. Value per conversion far from average order.", "fix": "Read conversion actions, not goal cards. Reconcile to the till weekly. Stop rule at 60%."}, {"id": "allocation", "name": "Money on the wrong intent", "one": "Budget sits where it is easy to spend, not where buyers convert.", "signal": "Share of spend and share of results don't match. One ad group starves the rest.", "fix": "Rank spend by revenue per rupee at the unit that bills. Cap, kill or fund."}, {"id": "postclick", "name": "Post-click friction", "one": "The ad works. The page, form or checkout after it doesn't.", "signal": "Healthy CTR, poor conversion. Results move while spend and CPC stay flat.", "fix": "Book it yourself on a phone. Cut steps, fix speed, price and phone above the fold."}, {"id": "visibility", "name": "Invisible where buyers look", "one": "Missing from the map pack, directories, page one, even brand search.", "signal": "Competitors with fewer reviews rank above you. Your own name shows someone else.", "fix": "Profile, listings, service and location pages. Defend the brand term."}, {"id": "pricing", "name": "Price and channel leakage", "one": "Your own stock sold cheaper elsewhere, with commission on top.", "signal": "Google Hotels or marketplaces list third parties below your direct price.", "fix": "One rate card, one owner, weekly parity check, best-rate-direct promise."}, {"id": "speed", "name": "Lead-to-booking gap", "one": "Leads arrive at record volume. Nobody converts them fast enough.", "signal": "Leads up, bookings flat or down. Calls fall while direction requests rise.", "fix": "Every lead to the right person's WhatsApp in five minutes. Mystery-shop peak hours."}, {"id": "postsale", "name": "Post-sale leakage", "one": "The sale happens. The money doesn't stay or doesn't come back.", "signal": "High returns, falling ticket size, one-time buyers.", "fix": "Returns report by SKU and checkout. Ticket-size work on the floor. Lifecycle triggers."}, {"id": "notmarketing", "name": "Not a marketing problem", "one": "Sometimes the biggest number isn't mine to fix. Saying so early saves months.", "signal": "The same complaint in reviews. A gap no ad change moves.", "fix": "Name the owner: ops, product, pricing or the shop floor. Put a rupee value on it."}], "cases": [{"id": "toni-and-guy", "url": "toni-and-guy.html", "name": "TONI&GUY Bangalore", "leakIds": ["allocation", "measurement", "speed", "postsale", "notmarketing"]}, {"id": "mr-jewels", "url": "mr-jewels.html", "name": "MR Jewels", "leakIds": ["measurement", "allocation", "postclick", "postsale", "notmarketing"]}, {"id": "elites-dental", "url": "elites-dental.html", "name": "Elites Dental Care", "leakIds": ["postclick", "allocation", "visibility", "measurement"]}, {"id": "resort", "url": "resort.html", "name": "Gold Coins Club & Resort", "leakIds": ["speed", "measurement", "allocation", "pricing", "postclick", "visibility", "notmarketing"]}, {"id": "foremost-pa", "url": "foremost-pa.html", "name": "Foremost Public Adjusters", "leakIds": ["postclick", "visibility", "allocation"]}, {"id": "everywatch", "url": "everywatch.html", "name": "EveryWatch", "leakIds": ["postsale", "measurement"]}, {"id": "swift-restoration", "url": "swift-restoration.html", "name": "Swift Restoration", "leakIds": ["visibility", "postclick"]}]};</script><script>/* Casebook chart + component kit. Plain SVG, theme tokens only. */
+<footer class="foot"><div class="wrap"><span>© 2026 Daniel Deepak · Bengaluru · Revenue growth consulting</span><span><a href="https://github.com/dannygrowthmarketing">GitHub</a> · <a href="llms.txt">llms.txt</a> · <a href="cases.json">cases.json</a> · Updated 2026-10-05</span></div></footer><script>window.CASES={"leaks": [{"id": "measurement", "name": "Miscounted conversions", "one": "The ad platform reports sales the till never saw. Bidding chases fiction.", "signal": "Platform conversions above real orders. Value per conversion far from average order.", "fix": "Read conversion actions, not goal cards. Reconcile to the till weekly. Stop rule at 60%."}, {"id": "allocation", "name": "Money on the wrong intent", "one": "Budget sits where it is easy to spend, not where buyers convert.", "signal": "Share of spend and share of results don't match. One ad group starves the rest.", "fix": "Rank spend by revenue per rupee at the unit that bills. Cap, kill or fund."}, {"id": "postclick", "name": "Post-click friction", "one": "The ad works. The page, form or checkout after it doesn't.", "signal": "Healthy CTR, poor conversion. Results move while spend and CPC stay flat.", "fix": "Book it yourself on a phone. Cut steps, fix speed, price and phone above the fold."}, {"id": "visibility", "name": "Invisible where buyers look", "one": "Missing from the map pack, directories, page one, even brand search.", "signal": "Competitors with fewer reviews rank above you. Your own name shows someone else.", "fix": "Profile, listings, service and location pages. Defend the brand term."}, {"id": "pricing", "name": "Price and channel leakage", "one": "Your own stock sold cheaper elsewhere, with commission on top.", "signal": "Google Hotels or marketplaces list third parties below your direct price.", "fix": "One rate card, one owner, weekly parity check, best-rate-direct promise."}, {"id": "speed", "name": "Lead-to-booking gap", "one": "Leads arrive at record volume. Nobody converts them fast enough.", "signal": "Leads up, bookings flat or down. Calls fall while direction requests rise.", "fix": "Every lead to the right person's WhatsApp in five minutes. Mystery-shop peak hours."}, {"id": "postsale", "name": "Post-sale leakage", "one": "The sale happens. The money doesn't stay or doesn't come back.", "signal": "High returns, falling ticket size, one-time buyers.", "fix": "Returns report by SKU and checkout. Ticket-size work on the floor. Lifecycle triggers."}, {"id": "notmarketing", "name": "Not a marketing problem", "one": "Sometimes the biggest number isn't mine to fix. Saying so early saves months.", "signal": "The same complaint in reviews. A gap no ad change moves.", "fix": "Name the owner: ops, product, pricing or the shop floor. Put a rupee value on it."}], "cases": [{"id": "toni-and-guy", "url": "toni-and-guy.html", "name": "TONI&GUY Bangalore", "leakIds": ["allocation", "measurement", "speed", "postsale", "notmarketing"]}, {"id": "mr-jewels", "url": "mr-jewels.html", "name": "MR Jewels", "leakIds": ["measurement", "allocation", "postclick", "postsale", "notmarketing"]}, {"id": "elites-dental", "url": "elites-dental.html", "name": "Elites Dental Care", "leakIds": ["postclick", "allocation", "visibility", "measurement"]}, {"id": "resort", "url": "resort.html", "name": "Gold Coins Club & Resort", "leakIds": ["speed", "measurement", "allocation", "pricing", "postclick", "visibility", "notmarketing"]}, {"id": "foremost-pa", "url": "foremost-pa.html", "name": "Foremost Public Adjusters", "leakIds": ["postclick", "visibility", "allocation"]}, {"id": "everywatch", "url": "everywatch.html", "name": "EveryWatch", "leakIds": ["postsale", "measurement"]}, {"id": "swift-restoration", "url": "swift-restoration.html", "name": "Swift Restoration", "leakIds": ["visibility", "postclick"]}]};</script><script>/* Casebook chart + component kit. Plain SVG, theme tokens only. */
 (function(){
 const NS='http://www.w3.org/2000/svg';
 const C={flow:'var(--flow)',leak:'var(--leak)',move:'var(--move)',ink:'var(--ink-2)',mute:'var(--mute)',muted:'var(--ink-3)',est:'var(--est)'};
