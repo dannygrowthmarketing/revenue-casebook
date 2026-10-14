@@ -49,6 +49,30 @@
  },
  {
   "group": "res",
+  "id": "chart-elites-dental-c-daily",
+  "tag": "data",
+  "title": "Elites Dental \u00b7 Every day of spend before the rebuild",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/chart-elites-dental-c-daily.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-elites-dental-c-gbp",
+  "tag": "data",
+  "title": "Elites Dental \u00b7 Calls from the profile fell 42 \u2192 18",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/chart-elites-dental-c-gbp.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-elites-dental-c-rev",
+  "tag": "data",
+  "title": "Elites Dental \u00b7 Rating isn't the gap. Pages and listings are.",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/chart-elites-dental-c-rev.jpg"
+ },
+ {
+  "group": "res",
   "id": "chart-elites-dental-c-slot",
   "tag": "data",
   "title": "Elites Dental \u00b7 Sunday mornings booked five. Evenings booked three.",
@@ -62,6 +86,22 @@
   "title": "Elites Dental \u00b7 76% on \"near me\". \u20b9908 on the cases worth \u20b935k+",
   "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
   "src": "img/gallery/chart-elites-dental-c-theme.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-everywatch-c-org",
+  "tag": "data",
+  "title": "EveryWatch \u00b7 Organic impressions, millions a month",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/everywatch.html",
+  "src": "img/gallery/chart-everywatch-c-org.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-everywatch-c-paid",
+  "tag": "data",
+  "title": "EveryWatch \u00b7 Tripling paid budget didn't triple leads",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/everywatch.html",
+  "src": "img/gallery/chart-everywatch-c-paid.jpg"
  },
  {
   "group": "res",
@@ -81,6 +121,38 @@
  },
  {
   "group": "res",
+  "id": "chart-foremost-pa-c-cpl",
+  "tag": "data",
+  "title": "Foremost PA \u00b7 Cost per lead swung on flat spend",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html",
+  "src": "img/gallery/chart-foremost-pa-c-cpl.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-foremost-pa-c-cvr",
+  "tag": "data",
+  "title": "Foremost PA \u00b7 Conversion rate: the mirror image",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html",
+  "src": "img/gallery/chart-foremost-pa-c-cvr.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-foremost-pa-c-dev",
+  "tag": "data",
+  "title": "Foremost PA \u00b7 43 of 48 leads came from phones",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html",
+  "src": "img/gallery/chart-foremost-pa-c-dev.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-foremost-pa-c-geo",
+  "tag": "data",
+  "title": "Foremost PA \u00b7 Miami-Dade: the volume and the cost",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html",
+  "src": "img/gallery/chart-foremost-pa-c-geo.jpg"
+ },
+ {
+  "group": "res",
   "id": "chart-leaks-c-freq",
   "tag": "data",
   "title": "Pattern library \u00b7 How often each leak showed up",
@@ -89,11 +161,27 @@
  },
  {
   "group": "res",
+  "id": "chart-mr-jewels-c-gross",
+  "tag": "data",
+  "title": "MR Jewels \u00b7 August: \u20b91.07 Cr, above the 12-month average",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/chart-mr-jewels-c-gross.jpg"
+ },
+ {
+  "group": "res",
   "id": "chart-mr-jewels-c-hmer",
   "tag": "data",
   "title": "MR Jewels \u00b7 \u2026while each ad rupee returned less",
   "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
   "src": "img/gallery/chart-mr-jewels-c-hmer.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-mr-jewels-c-hmix",
+  "tag": "data",
+  "title": "MR Jewels \u00b7 Paid mix, 24 months: Meta carried the spend",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/chart-mr-jewels-c-hmix.jpg"
  },
  {
   "group": "res",
@@ -110,6 +198,14 @@
   "title": "MR Jewels \u00b7 The \u20b912.56 Cr that never existed",
   "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
   "src": "img/gallery/chart-mr-jewels-c-phantom.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-mr-jewels-c-scale",
+  "tag": "data",
+  "title": "MR Jewels \u00b7 Spend +143%. Orders +16%.",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/chart-mr-jewels-c-scale.jpg"
  },
  {
   "group": "res",
@@ -145,6 +241,22 @@
  },
  {
   "group": "res",
+  "id": "chart-resort-c-henq",
+  "tag": "data",
+  "title": "Gold Coins Resort \u00b7 Nine months of enquiries",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/chart-resort-c-henq.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-resort-c-hspend",
+  "tag": "data",
+  "title": "Gold Coins Resort \u00b7 Ad spend by month",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/chart-resort-c-hspend.jpg"
+ },
+ {
+  "group": "res",
   "id": "chart-resort-c-price",
   "tag": "data",
   "title": "Gold Coins Resort \u00b7 The same room, cheaper on an OTA",
@@ -166,6 +278,14 @@
   "title": "Gold Coins Resort \u00b7 One executive books 57% of all wins",
   "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
   "src": "img/gallery/chart-resort-c-team.jpg"
+ },
+ {
+  "group": "res",
+  "id": "chart-swift-restoration-c-dr",
+  "tag": "data",
+  "title": "Swift Restoration \u00b7 Can't out-link franchises. Can out-local them.",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/swift-restoration.html",
+  "src": "img/gallery/chart-swift-restoration-c-dr.jpg"
  },
  {
   "group": "res",
@@ -398,5 +518,285 @@
   "title": "Cover \u00b7 Free 12-point check",
   "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/check.html",
   "src": "img/gallery/cover-check.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-overview",
+  "tag": "live",
+  "title": "Campaigns running right now",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-overview.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-kpis",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 rebuilt Search campaign, first 13 days",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-kpis.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-adgroups",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 spend by ad group",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-adgroups.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-searchterms",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 what patients typed",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-searchterms.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-services",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 demand by treatment",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-services.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-ads",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 live search ads",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-ads.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-dental-structure",
+  "tag": "live",
+  "title": "Elites Dental \u00b7 from service names to search intent",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/live-dental-structure.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-resort-map",
+  "tag": "frame",
+  "title": "Gold Coins \u00b7 one resort, four buyers",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/live-meta-resort-map.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-resort-corporate",
+  "tag": "livead",
+  "title": "Gold Coins \u00b7 corporate day out (B2B)",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/live-meta-resort-corporate.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-resort-wedding",
+  "tag": "livead",
+  "title": "Gold Coins \u00b7 weddings (B2C)",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/live-meta-resort-wedding.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-resort-birthday",
+  "tag": "livead",
+  "title": "Gold Coins \u00b7 birthday parties (B2C)",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/live-meta-resort-birthday.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-586610",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Brooches",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-586610.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-534801",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Uncut Polki studs",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-534801.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-193700",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 New chokers &amp; necklaces",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-193700.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-575431",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Wedding &amp; festive season",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-575431.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-557927",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Which earrings are you today?",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-557927.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-669940",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 First store, Indiranagar",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-669940.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-288182",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Bridal collection",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-288182.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-000700",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Gifting &amp; bulk orders",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-000700.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-586637",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 10,000+ women trust MRJewels",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-586637.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-801424",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 Meta ad \u00b7 Festive edit \u00b7 Devi Shakti",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-801424.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-copytest",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 one image, three messages",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-copytest.jpg"
+ },
+ {
+  "group": "live",
+  "id": "live-meta-mr-funnel",
+  "tag": "livead",
+  "title": "MR Jewels \u00b7 every buyer stage covered by an ad",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/live-meta-mr-funnel.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-toni-and-guy",
+  "tag": "data",
+  "title": "Case profile \u00b7 TONI&amp;GUY \u00b7 premium salons, B2C",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/toni-and-guy.html",
+  "src": "img/gallery/case-toni-and-guy.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-mr-jewels",
+  "tag": "data",
+  "title": "Case profile \u00b7 MR Jewels \u00b7 jewellery, D2C",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/case-mr-jewels.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-elites-dental",
+  "tag": "data",
+  "title": "Case profile \u00b7 Elites Dental \u00b7 clinic, B2C",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/elites-dental.html",
+  "src": "img/gallery/case-elites-dental.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-resort",
+  "tag": "data",
+  "title": "Case profile \u00b7 Gold Coins \u00b7 resort, B2C + B2B",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/case-resort.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-foremost-pa",
+  "tag": "data",
+  "title": "Case profile \u00b7 Foremost PA \u00b7 insurance claims, US",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/foremost-pa.html",
+  "src": "img/gallery/case-foremost-pa.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-everywatch",
+  "tag": "data",
+  "title": "Case profile \u00b7 EveryWatch \u00b7 marketplace",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/everywatch.html",
+  "src": "img/gallery/case-everywatch.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "case-swift-restoration",
+  "tag": "data",
+  "title": "Case profile \u00b7 Swift Restoration \u00b7 local services, US",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/swift-restoration.html",
+  "src": "img/gallery/case-swift-restoration.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "industries-map",
+  "tag": "frame",
+  "title": "Seven industries, one method",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/",
+  "src": "img/gallery/industries-map.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "services-matrix",
+  "tag": "data",
+  "title": "Services by client",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/",
+  "src": "img/gallery/services-matrix.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "mvr-toni-and-guy",
+  "tag": "data",
+  "title": "TONI&amp;GUY \u00b7 marketing data vs revenue data",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/toni-and-guy.html",
+  "src": "img/gallery/mvr-toni-and-guy.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "mvr-mr-jewels",
+  "tag": "data",
+  "title": "MR Jewels \u00b7 marketing data vs revenue data",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/mr-jewels.html",
+  "src": "img/gallery/mvr-mr-jewels.jpg"
+ },
+ {
+  "group": "ind",
+  "id": "mvr-resort",
+  "tag": "data",
+  "title": "Gold Coins \u00b7 marketing data vs revenue data",
+  "from_url": "https://dannygrowthmarketing.github.io/revenue-casebook/resort.html",
+  "src": "img/gallery/mvr-resort.jpg"
  }
 ]
