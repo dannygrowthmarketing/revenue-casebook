@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Elites Dental · Live Dashboard · Danny Deepak</title>
+<meta name="description" content="Elites Dental Care, TC Palya, Bengaluru: Google Business Profile calls and directions, and the October Search rebuild, read live from both accounts.">
+<meta property="og:image" content="https://dannygrowthmarketing.github.io/revenue-casebook/img/gallery/live-dental-kpis.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070B16;--bg2:#0D1324;--card:#111A30;--rule:#1F2A47;--ink:#F3F1EC;--ink2:#B7BED0;--mute:#7C86A2;--dir:#3987e5;--call:#d95926;--web:#199e70;--chat:#c98500;--good:#3BE09A;--bad:#FF7376;--gold:#F5B94A;--violet:#9085e9;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(7,11,22,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:58px}
+.top b{font:800 16px 'Bricolage Grotesque',sans-serif}.top .sp{flex:1}
+.top a.lk{font-size:13px;color:var(--ink2);text-decoration:none;padding:7px 12px;border:1px solid var(--rule);border-radius:99px}
+.top a.lk:hover{border-color:var(--ink2);color:var(--ink)}
+.mono{font:500 11px/1.3 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-wrap:balance}
+h1{font-size:clamp(38px,6.4vw,78px);line-height:.98;font-weight:800}
+h2{font-size:clamp(28px,3.6vw,44px);line-height:1.05;font-weight:800}
+h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#FF7376,#F5B94A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--ink2);font-size:18px;max-width:62ch;margin-top:18px}
+.ev{display:inline-flex;align-items:center;gap:6px;font:500 10.5px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:rgba(59,224,154,.12);color:var(--good);vertical-align:middle}
+.ev::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ev.c{background:rgba(144,133,233,.15);color:var(--violet)}.ev.u{background:rgba(255,115,118,.12);color:var(--bad)}
+/* hero */
+.hero{padding-block:64px 40px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(closest-side,rgba(57,135,229,.28),transparent);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+.stage{perspective:1400px;min-height:440px;position:relative}
+.dev{position:absolute;border-radius:28px;background:#05080F;border:1px solid #2A3658;box-shadow:0 40px 80px -20px rgba(0,0,0,.7),0 0 0 6px #0B1122;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.dev.ph{width:270px;height:470px;left:6%;top:0;transform:rotateY(18deg) rotateX(6deg) rotateZ(-2deg);padding:16px 12px}
+.dev.tb{width:330px;left:42%;top:70px;transform:rotateY(-16deg) rotateX(8deg) rotateZ(2deg) translateZ(40px);padding:14px}
+.stage:hover .dev.ph{transform:rotateY(8deg) rotateX(2deg)}.stage:hover .dev.tb{transform:rotateY(-6deg) rotateX(2deg) translateZ(40px)}
+.scr{background:#fff;color:#202124;border-radius:16px;height:100%;overflow:hidden;font:13px/1.4 Arial,sans-serif}
+.dev.tb .scr{height:auto}
+.gq{display:flex;align-items:center;gap:8px;margin:12px;padding:9px 14px;border-radius:99px;box-shadow:0 1px 6px rgba(32,33,36,.28);font-size:14px}
+.gq i{width:14px;height:14px;border:2px solid #9aa0a6;border-radius:50%;flex:none}
+.ad{padding:6px 14px 12px}
+.ad small{font-weight:700;color:#202124;font-size:12px}.ad .u{color:#4d5156;font-size:12px}
+.ad b{display:block;color:#1a0dab;font-size:17px;font-weight:400;line-height:1.3;margin:4px 0}
+.ad p{color:#4d5156;font-size:13px}
+.ad .sl{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.ad .sl span{font-size:12px;color:#1a0dab;border:1px solid #dadce0;border-radius:99px;padding:3px 9px}
+.gbp{padding:12px 14px}
+.gbp .mp{height:84px;border-radius:10px;background:repeating-linear-gradient(45deg,#e8eef3 0 10px,#dfe7ee 10px 20px);position:relative;margin-bottom:10px}
+.gbp .mp::after{content:"";position:absolute;left:50%;top:38%;width:16px;height:16px;border-radius:50% 50% 50% 0;background:#ea4335;transform:translate(-50%,-50%) rotate(-45deg)}
+.gbp b{font-size:17px}.gbp .r{color:#70757a;font-size:12.5px;margin:2px 0 10px}
+.gbp .bt{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center;font-size:11px;color:#1a73e8}
+.gbp .bt div{border:1px solid #dadce0;border-radius:12px;padding:6px 2px;position:relative}
+.gbp .bt em{position:absolute;top:-9px;right:-6px;font-style:normal;background:var(--gold);color:#111;font:700 10px Inter;border-radius:99px;padding:1px 6px}
+.flt{position:absolute;right:0;bottom:6px;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px 16px;transform:translateZ(80px);box-shadow:0 20px 40px -10px rgba(0,0,0,.6)}
+.flt b{font:800 30px 'Bricolage Grotesque';color:var(--good)}.flt span{display:block;font-size:12px;color:var(--ink2)}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:20px;overflow:hidden;margin-top:8px}
+.tile{background:var(--bg2);padding:20px 18px 18px}
+.tile .n{font:800 clamp(28px,3.4vw,40px)/1 'Bricolage Grotesque';letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .l{color:var(--ink2);font-size:13.5px;margin-top:8px}
+.tile .d{font:600 12px Inter;margin-top:8px}.d.up{color:var(--good)}.d.dn{color:var(--bad)}.d.nu{color:var(--mute)}
+section.blk{padding-block:56px;border-top:1px solid var(--rule)}
+.sh{display:flex;gap:16px;align-items:baseline;margin-bottom:22px;flex-wrap:wrap}
+.sh .num{font:500 12px 'JetBrains Mono';color:var(--gold)}
+.sh p{color:var(--ink2);max-width:60ch;flex-basis:100%}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:20px;padding:22px;min-width:0}
+.card h3{font-size:19px;margin-bottom:4px}.card .cap{color:var(--mute);font-size:13px;margin-top:10px}
+.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--ink2);margin:6px 0 10px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg text{font-family:Inter,sans-serif}
+.chart{width:100%;overflow-x:auto}
+.hb{display:grid;gap:10px}.hb .row{display:grid;grid-template-columns:minmax(0,190px) 1fr auto;gap:12px;align-items:center;font-size:13.5px}
+.hb .lbl{color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb .bar{height:12px;border-radius:0 4px 4px 0;background:var(--dir);min-width:2px}
+.hb .val{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;white-space:nowrap}
+.hb .row:hover .bar{filter:brightness(1.25)}
+.fun{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:end}
+.fun div{background:linear-gradient(180deg,rgba(57,135,229,.35),rgba(57,135,229,.08));border:1px solid var(--rule);border-radius:14px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end}
+.fun b{font:800 30px 'Bricolage Grotesque'}.fun span{color:var(--ink2);font-size:13px}
+.fun .brk{background:repeating-linear-gradient(45deg,rgba(255,115,118,.14) 0 8px,transparent 8px 16px);border:1px dashed var(--bad)}
+.fun .brk b{color:var(--bad)}
+.plays{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.play{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.play .tg{font:500 10.5px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase}
+.play .tg.call{color:var(--call)}.play .tg.dir{color:var(--dir)}.play .tg.ads{color:var(--gold)}.play .tg.trk{color:var(--violet)}
+.play b{font-size:16px}.play p{color:var(--ink2);font-size:14px}.play .k{margin-top:auto;font-size:12.5px;color:var(--mute);border-top:1px solid var(--rule);padding-top:8px}
+.alert{display:flex;gap:14px;align-items:flex-start;background:rgba(255,115,118,.08);border:1px solid rgba(255,115,118,.4);border-radius:16px;padding:16px 18px;margin-top:22px}
+.alert b{color:var(--bad)}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;perspective:1200px}
+.shots a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--rule);transform:rotateX(6deg) rotateY(-4deg);transition:transform .5s,box-shadow .5s;box-shadow:0 30px 50px -25px rgba(0,0,0,.8)}
+.shots a:hover{transform:none;box-shadow:0 30px 60px -20px rgba(57,135,229,.4)}
+.shots img{width:100%;display:block}
+.shots figcaption{font-size:12.5px;color:var(--mute);margin-top:8px}
+.src{color:var(--mute);font-size:13px;padding-block:36px 60px;border-top:1px solid var(--rule)}
+.tip{position:fixed;pointer-events:none;background:#fff;color:#111;font:600 12px Inter;padding:6px 9px;border-radius:8px;white-space:pre;opacity:0;transition:opacity .12s;z-index:20}
+@media (max-width:960px){.hgrid{grid-template-columns:1fr}.stage{min-height:480px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.plays,.shots{grid-template-columns:1fr}.fun{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.wrap{padding-inline:16px}.dev.ph{left:0;transform:none;width:250px}.dev.tb{left:auto;right:0;top:230px;width:260px;transform:none}.flt{display:none}.hb .row{grid-template-columns:minmax(0,120px) 1fr auto}}
+</style></head><body>
+<header class="top"><div class="wrap"><b>Danny Deepak</b><span class="mono">Live dashboard</span><span class="sp"></span><a class="lk" href="elites-dental.html">The case study</a><a class="lk" href="index.html">All cases</a></div></header>
+<main>
+<section class="hero"><div class="wrap hgrid">
+ <div>
+  <div class="mono">Elites Dental Care · TC Palya, Bengaluru · read live 19 Oct 2026</div>
+  <h1 style="margin-top:14px">₹79 a click became <em>₹21.</em> Now the clicks must turn into calls.</h1>
+  <p class="lede">The October Search rebuild cut the price of a click by 73% and multiplied reach 22×. The Business Profile still sends 7 direction requests for every 2 calls, and only 1 booking was tracked. This page reads both accounts side by side and says what to fix next.</p>
+  <p style="margin-top:16px"><span class="ev">Measured</span> <span class="ev c">Calculated</span> <span class="ev u">Data not available</span></p>
+ </div>
+ <div class="stage" aria-label="The live ad and the Business Profile, as a patient sees them">
+  <div class="dev ph"><div class="scr">
+   <div class="gq"><i></i>dental clinic near me</div>
+   <div class="ad"><small>Sponsored</small><div class="u">elitesdental.com</div><b>Elites Dental Care, TC Palya – Official Site – Book Online</b><p>4.9 rated on Google. Sunday appointments. MDS specialist dentists. Open 7 days a week. Kids-friendly dentists.</p><div class="sl"><span>Directions &amp; Timings</span><span>Book an Appointment</span><span>Dental Implants</span><span>Braces &amp; Aligners</span></div></div>
+   <div class="ad" style="border-top:1px solid #eee"><div class="u">elitesdental.com</div><b style="font-size:15px">Elites Dental Care: Dental Clinic in TC Palya</b><p>Family dental clinic on TC Palya Main Road since 2006.</p></div>
+  </div></div>
+  <div class="dev tb"><div class="scr gbp">
+   <div class="mp"></div><b>Elites Dental Care</b><div class="r">4.9 ★★★★★ (322) · Dental clinic</div>
+   <div class="bt"><div>Call<em>219</em></div><div>Directions<em>711</em></div><div>Website<em>72</em></div><div>Book<em>0</em></div></div>
+   <div class="r" style="margin-top:10px">Gold badges: taps on each button, May–Oct 2026</div>
+  </div></div>
+  <div class="flt"><b>−73%</b><span>cost per click, Oct 1–16 vs the 16 days before</span></div>
+ </div>
+</div></section>
+
+<div class="wrap">
+ <div class="tiles">
+  <div class="tile"><div class="n">680</div><div class="l">Search clicks, 1–16 Oct</div><div class="d up">▲ from about 36 in the 16 days before <span class="ev c">Calc.</span></div></div>
+  <div class="tile"><div class="n">₹21.20</div><div class="l">Average cost per click</div><div class="d up">▼ ₹58.25 vs ₹79.45 before</div></div>
+  <div class="tile"><div class="n">7.90%</div><div class="l">Click-through rate on 8,612 impressions</div><div class="d nu">● 397 impressions before</div></div>
+  <div class="tile"><div class="n" style="color:var(--bad)">1</div><div class="l">Tracked conversion for ₹14,414</div><div class="d dn">● calls and bookings not counted yet</div></div>
+  <div class="tile"><div class="n">1,018</div><div class="l">Business Profile actions, May–Oct</div><div class="d nu">● 9,878 profile views</div></div>
+  <div class="tile"><div class="n">711</div><div class="l">Direction requests</div><div class="d nu">● 70% of all profile actions</div></div>
+  <div class="tile"><div class="n">219</div><div class="l">Calls from the profile</div><div class="d dn">▼ 45 a month (Jun–Jul) to 30 in Sep</div></div>
+  <div class="tile"><div class="n">4.9★</div><div class="l">322 Google reviews</div><div class="d up">▲ from 271 when the audit began</div></div>
+ </div>
+</div>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">01</span><h2>What patients do on the profile</h2><p>Every call, direction request, website click and chat from the Business Profile, by month. October is the month so far. <span class="ev">Measured</span></p></div>
+ <div class="grid2">
+  <div class="card"><h3>Actions per month</h3><div class="lg"><span><i style="background:var(--dir)"></i>Directions</span><span><i style="background:var(--call)"></i>Calls</span><span><i style="background:var(--web)"></i>Website</span><span><i style="background:var(--chat)"></i>Chat</span></div><div class="chart" id="cStack"></div><p class="cap">August peaked at 221 actions. Bookings from the profile: 0 in every month.</p></div>
+  <div class="card"><h3>Calls against directions</h3><div class="lg"><span><i style="background:var(--dir)"></i>Directions</span><span><i style="background:var(--call)"></i>Calls</span></div><div class="chart" id="cLines"></div><p class="cap">Calls held at 40–45 a month to August, then fell to 30 in September while directions stayed 110–155. People are deciding on the map, not on the phone.</p></div>
+ </div>
+ <div class="grid2" style="margin-top:18px">
+  <div class="card"><h3>How a profile view turns into an action</h3><div class="hb" id="hbRate"></div><p class="cap">Per 100 profile views, May–Oct. <span class="ev c">Calculated</span> from 9,878 views.</p></div>
+  <div class="card"><h3>Where the profile sends people</h3><div class="hb" id="hbShare"></div><p class="cap">Website clicks rose from 4 in May to 21 in August, but bookings from the profile stayed at 0 in every month.</p></div>
+ </div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">02</span><h2>The Search rebuild, first 16 days</h2><p>Campaign "EDC | Search | TC Palya 5km | Oct-26", ₹1,100 a day, Maximise clicks. The old ₹700-a-day conversions campaign is paused. <span class="ev">Measured</span></p></div>
+ <div class="grid2">
+  <div class="card"><h3>Spend by ad group</h3><div class="hb" id="hbAg"></div><p class="cap">"Near me" carries 72% of spend at ₹17.67 a click. Brand clicks cost ₹53.05, three times more. Check auction insights for rivals bidding on the clinic's name.</p></div>
+  <div class="card"><h3>What patients typed</h3><div class="hb" id="hbSt"></div><p class="cap">Problem searches ("fix my smile", "smile correction", "root canal") click at 18–39%, against 4% for "dental clinic near me". Bar = clicks; label = CTR · cost per click.</p></div>
+ </div>
+ <div class="card" style="margin-top:18px"><h3>From impression to booking</h3><p class="cap" style="margin:0 0 14px">The chain breaks after the click: Google sees 1 conversion because website calls, WhatsApp and the booking form are not sent back to Ads.</p>
+  <div class="fun"><div style="min-height:200px"><b>8,612</b><span>impressions</span></div><div style="min-height:150px"><b>680</b><span>clicks · 7.90%</span></div><div class="brk" style="min-height:110px"><b>1</b><span>tracked conversion</span></div><div class="brk" style="min-height:80px"><b>?</b><span>bookings · data not available</span></div></div>
+ </div>
+ <div class="alert"><span style="font-size:22px">⚠</span><div><b>Ads paused: the account balance has run out.</b> Google shows the campaign as eligible but "Your account balance has run out" on 19 Oct. Nothing serves until the clinic tops up the prepaid balance.</div></div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">03</span><h2>Turn directions and clicks into <em>calls and bookings</em></h2><p>Nine moves, ranked. Each names the number it should change.</p></div>
+ <div class="plays">
+  <div class="play"><span class="tg ads">Ads · today</span><b>Top up the prepaid balance</b><p>The rebuilt campaign is eligible but not serving. Every day off loses about 42 clicks at today's rate.</p><div class="k">KPI: clicks per day back to 40+</div></div>
+  <div class="play"><span class="tg trk">Tracking · week 1</span><b>Count calls from ads and the site</b><p>Google forwarding number on the call asset, calls over 60 seconds as the main conversion, and a website call-click event.</p><div class="k">KPI: tracked conversions per ₹1,000</div></div>
+  <div class="play"><span class="tg trk">Tracking · week 1</span><b>Send the booking form and WhatsApp back to Ads</b><p>Only 1 of 680 clicks was counted. Without this, Maximise conversions has nothing to learn from.</p><div class="k">KPI: cost per tracked lead</div></div>
+  <div class="play"><span class="tg call">Calls · profile</span><b>Make the call the obvious next step</b><p>Calls fell to 30 in September. Add "Call for a same-day slot" posts, the call button in every post, and hours that show Sunday clearly.</p><div class="k">KPI: calls per 100 views, from 2.2</div></div>
+  <div class="play"><span class="tg call">Calls · clinic</span><b>Check who answers</b><p>Ring the profile number at 10 am, 2 pm and 7 pm on a weekday and a Sunday. A missed first call is a lost patient.</p><div class="k">KPI: answered within 3 rings</div></div>
+  <div class="play"><span class="tg dir">Directions · profile</span><b>Help the 711 who asked for directions</b><p>Photos of the CMS Towers entrance and first-floor sign, a landmark in the description, and parking in the attributes.</p><div class="k">KPI: share of directions that become visits</div></div>
+  <div class="play"><span class="tg dir">Directions · ads</span><b>Show the address in every ad</b><p>Link the profile as a location asset so ads carry distance and a directions button for "near me" searches.</p><div class="k">KPI: directions from ads</div></div>
+  <div class="play"><span class="tg call">Bookings · profile</span><b>Add a booking link Google accepts</b><p>0 bookings in six months. Point the profile's appointment link at the site's booking page, with UTM tags.</p><div class="k">KPI: bookings from the profile, from 0</div></div>
+  <div class="play"><span class="tg ads">Ads · structure</span><b>Shift money to problem searches</b><p>Root canal, smile correction and kids' dentistry click 4–9× better than "dental clinic near me". Give them their own ad groups and pages.</p><div class="k">KPI: CTR and cost per call by ad group</div></div>
+ </div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">04</span><h2>The work on screen</h2><p>Captured from the live accounts on 14 Oct 2026.</p></div>
+ <div class="shots">
+  <figure><a href="img/gallery/live-dental-ads.jpg"><img src="img/gallery/live-dental-ads.jpg" alt="The four live Elites Dental search ads, copied from the account" loading="lazy"></a><figcaption>Four live ads, one per intent</figcaption></figure>
+  <figure><a href="img/gallery/live-dental-searchterms.jpg"><img src="img/gallery/live-dental-searchterms.jpg" alt="Top search terms by clicks, 1–13 Oct" loading="lazy"></a><figcaption>Patients search the problem, not the clinic</figcaption></figure>
+  <figure><a href="img/gallery/live-dental-adgroups.jpg"><img src="img/gallery/live-dental-adgroups.jpg" alt="Spend by ad group" loading="lazy"></a><figcaption>Where the money went, by ad group</figcaption></figure>
+ </div>
+</div></section>
+
+<div class="wrap src"><b style="color:var(--ink2)">Sources.</b> Google Ads account, campaign and search-term reports, 1–16 Oct 2026 with Google's comparison to the previous 16 days (read 19 Oct). Business Profile Performance page, May–Oct 2026, October partial (read 19 Oct). Review count from the live profile panel. Earlier baseline (₹3,140 per booking, Aug–Sep) is in the <a href="elites-dental.html">case study</a>. Phone mock-ups show layout with the live ad text; Google mixes headlines per search.</div>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const M=['May','Jun','Jul','Aug','Sep','Oct*'];
+const D={dir:[138,121,110,155,131,56],call:[40,45,45,42,30,17],web:[4,9,19,21,16,3],chat:[0,5,4,3,2,2]};
+const C={dir:'#3987e5',call:'#d95926',web:'#199e70',chat:'#c98500'},N={dir:'Directions',call:'Calls',web:'Website',chat:'Chat'};
+const tip=document.getElementById('tip');
+document.addEventListener('pointermove',e=>{const t=e.target.closest&&e.target.closest('[data-tip]');if(t){tip.textContent=t.dataset.tip;tip.style.opacity=1;let x=e.clientX+14,y=e.clientY-40;if(x+tip.offsetWidth>innerWidth-8)x=e.clientX-tip.offsetWidth-14;tip.style.left=x+'px';tip.style.top=Math.max(8,y)+'px'}else tip.style.opacity=0});
+function stack(){const W=520,H=250,p={l:34,r:8,t:12,b:26},iw=(W-p.l-p.r)/6,bw=iw*.56,mx=240,ph=H-p.t-p.b;let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Stacked profile actions per month">`;
+for(let g=0;g<=240;g+=60){const y=H-p.b-ph*g/mx;s+=`<line x1="${p.l}" x2="${W-p.r}" y1="${y}" y2="${y}" stroke="#1F2A47"/><text x="${p.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#7C86A2">${g}</text>`}
+M.forEach((m,i)=>{let acc=0;const x=p.l+iw*i+(iw-bw)/2;const tot=Object.keys(D).reduce((a,k)=>a+D[k][i],0);['dir','call','web','chat'].forEach((k,j)=>{const v=D[k][i];if(!v)return;const h=ph*v/mx;const y=H-p.b-ph*(acc+v)/mx;s+=`<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(0,h-2)}" rx="${j==3||k=='chat'?4:0}" fill="${C[k]}" data-tip="${m}: ${N[k]} ${v}"/>`;acc+=v});s+=`<text x="${x+bw/2}" y="${H-p.b-ph*tot/mx-6}" text-anchor="middle" font-size="11" font-weight="600" fill="#F3F1EC">${tot}</text><text x="${x+bw/2}" y="${H-8}" text-anchor="middle" font-size="11" fill="#B7BED0">${m}</text><rect x="${p.l+iw*i}" y="${p.t}" width="${iw}" height="${ph}" fill="transparent" data-tip="${m}${i==5?' (month to date)':''}\nDirections ${D.dir[i]} · Calls ${D.call[i]}\nWebsite ${D.web[i]} · Chat ${D.chat[i]}"/>`});
+document.getElementById('cStack').innerHTML=s+'</svg>'}
+function lines(){const W=520,H=250,p={l:34,r:70,t:14,b:26},iw=(W-p.l-p.r)/5,mx=160,ph=H-p.t-p.b;let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Calls and directions per month">`;
+for(let g=0;g<=160;g+=40){const y=H-p.b-ph*g/mx;s+=`<line x1="${p.l}" x2="${W-p.r}" y1="${y}" y2="${y}" stroke="#1F2A47"/><text x="${p.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#7C86A2">${g}</text>`}
+['dir','call'].forEach(k=>{const pts=D[k].slice(0,5).map((v,i)=>[p.l+iw*i,H-p.b-ph*v/mx]);s+=`<path d="M${pts.map(q=>q.join(',')).join('L')}" fill="none" stroke="${C[k]}" stroke-width="2.5"/>`;pts.forEach((q,i)=>s+=`<circle cx="${q[0]}" cy="${q[1]}" r="5" fill="${C[k]}" stroke="#111A30" stroke-width="2" data-tip="${M[i]}: ${N[k]} ${D[k][i]}"/>`);const l=pts[4];s+=`<text x="${l[0]+10}" y="${l[1]+4}" font-size="12" font-weight="600" fill="#F3F1EC">${N[k]} ${D[k][4]}</text>`});
+M.slice(0,5).forEach((m,i)=>s+=`<text x="${p.l+iw*i}" y="${H-8}" text-anchor="middle" font-size="11" fill="#B7BED0">${m}</text>`);
+document.getElementById('cLines').innerHTML=s+'</svg><p class="cap" style="margin-top:4px">May–Sep, full months.</p>'}
+function hb(id,rows,max){document.getElementById(id).innerHTML=rows.map(r=>`<div class="row" data-tip="${r.t||r.l}"><span class="lbl">${r.l}</span><span><span class="bar" style="display:block;width:${Math.max(1,r.v/max*100)}%;background:${r.c||'#3987e5'}"></span></span><span class="val">${r.s}</span></div>`).join('')}
+stack();lines();
+hb('hbRate',[{l:'Direction requests',v:7.2,s:'7.2',c:C.dir},{l:'Calls',v:2.2,s:'2.2',c:C.call},{l:'Website clicks',v:.73,s:'0.7',c:C.web},{l:'Chat clicks',v:.16,s:'0.2',c:C.chat},{l:'Bookings',v:0,s:'0',c:'#FF7376'}],8);
+hb('hbShare',[{l:'Directions',v:711,s:'711 · 70%',c:C.dir},{l:'Calls',v:219,s:'219 · 22%',c:C.call},{l:'Website',v:72,s:'72 · 7%',c:C.web},{l:'Chat',v:16,s:'16 · 2%',c:C.chat},{l:'Bookings',v:0,s:'0',c:'#FF7376'}],711);
+hb('hbAg',[{l:'AG01 Near Me · Exact',v:10427,s:'₹10,427 · 590 clicks',t:'CTR 8.55% · CPC ₹17.67 · 1 conversion'},{l:'AG07 Brand',v:3077,s:'₹3,077 · 58 clicks',t:'CTR 5.81% · CPC ₹53.05'},{l:'AG02 TC Palya + nearby',v:630,s:'₹630 · 21',t:'CTR 5.21% · CPC ₹29.99'},{l:'AG10 Kids dentist',v:132,s:'₹132 · 4',t:'CTR 8.16% · CPC ₹33.08'},{l:'AG08 Near me + brand',v:82,s:'₹82 · 4',t:'CTR 4.17% · CPC ₹20.59'},{l:'AG09 TC Palya + nearby (phrase)',v:65,s:'₹65 · 3',t:'CTR 1.94% · CPC ₹21.82'}],10427);
+hb('hbSt',[{l:'dental clinic near me',v:48,s:'48 · 4.3% · ₹26',c:'#3987e5'},{l:'fix my smile near me',v:29,s:'29 · 36% · ₹9',c:'#199e70'},{l:'best root canal treatment near me',v:26,s:'26 · 18% · ₹6',c:'#199e70'},{l:'smile correction near me',v:26,s:'26 · 39% · ₹9',c:'#199e70'},{l:'dental centre',v:23,s:'23 · 31% · ₹7',c:'#3987e5'},{l:'dentist near me',v:16,s:'16 · 3.9% · ₹25',c:'#3987e5'},{l:'dental scan near me',v:13,s:'13 · 62% · ₹8',c:'#199e70'},{l:'rct for 3 year old',v:12,s:'12 · 41% · ₹10',c:'#199e70'}],48);
+</script>
+</body></html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TONI&amp;GUY Bengaluru · Stage One · Danny Deepak</title>
+<meta name="description" content="Two new TONI&GUY franchise salons in Thanisandra and Varthur, built from zero: the competitor map, the 355-page website and the launch plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070B16;--bg2:#0D1324;--card:#111A30;--rule:#1F2A47;--ink:#F3F1EC;--ink2:#B7BED0;--mute:#7C86A2;--c1:#3987e5;--c2:#d95926;--c3:#199e70;--good:#3BE09A;--bad:#FF7376;--gold:#F5B94A;--violet:#9085e9;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(7,11,22,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:58px}.top b{font:800 16px 'Bricolage Grotesque',sans-serif}.top .sp{flex:1}
+.top a.lk{font-size:13px;color:var(--ink2);text-decoration:none;padding:7px 12px;border:1px solid var(--rule);border-radius:99px}
+.mono{font:500 11px/1.3 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;text-wrap:balance}
+h1{font-size:clamp(40px,6.6vw,84px);line-height:.96;font-weight:800}h2{font-size:clamp(28px,3.6vw,44px);line-height:1.05;font-weight:800}
+h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#FF7376,#F5B94A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--ink2);font-size:18px;max-width:60ch;margin-top:18px}
+.ev{display:inline-flex;align-items:center;gap:6px;font:500 10.5px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:rgba(59,224,154,.12);color:var(--good);vertical-align:middle;white-space:nowrap}
+.ev::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}.ev.s{background:rgba(245,185,74,.14);color:var(--gold)}.ev.c{background:rgba(144,133,233,.15);color:var(--violet)}
+.chip{display:inline-block;font:600 12px Inter;padding:5px 10px;border-radius:99px;border:1px solid var(--rule);color:var(--ink2);margin:0 6px 6px 0}
+.hero{padding-block:60px 30px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-200px;top:-200px;width:760px;height:760px;background:radial-gradient(closest-side,rgba(217,89,38,.22),transparent);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;position:relative}
+.stage{perspective:1600px;height:520px;position:relative}
+.lap{position:absolute;left:0;right:0;top:20px;margin:auto;width:min(560px,100%);transform:rotateY(-18deg) rotateX(10deg) rotateZ(1deg);transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.stage:hover .lap{transform:rotateY(-6deg) rotateX(4deg)}
+.lid{background:#05080F;border:1px solid #2A3658;border-radius:18px 18px 6px 6px;padding:12px;box-shadow:0 50px 90px -30px rgba(0,0,0,.85)}
+.scr{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#0b0b0b}
+.scr iframe{position:absolute;left:0;top:0;width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0;background:#fff}
+.base{height:16px;margin:0 -28px;background:linear-gradient(#2A3658,#141C33);border-radius:0 0 18px 18px;transform:rotateX(70deg);transform-origin:top}
+.poster{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#141414,#2b2219);color:#fff;padding:20px;cursor:pointer}
+.poster b{font:800 28px 'Bricolage Grotesque';letter-spacing:.04em}.poster span{display:block;font-size:13px;color:#cfc6b8;margin-top:6px}
+.poster button{margin-top:16px;font:600 13px Inter;background:#fff;color:#111;border:0;border-radius:99px;padding:10px 16px;cursor:pointer}
+.pcard{position:absolute;bottom:0;right:4%;width:220px;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px;transform:translateZ(60px);box-shadow:0 24px 40px -12px rgba(0,0,0,.6)}
+.pcard b{font:800 34px 'Bricolage Grotesque'}.pcard span{display:block;color:var(--ink2);font-size:12.5px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:20px;overflow:hidden}
+.tile{background:var(--bg2);padding:20px 18px}.tile .n{font:800 clamp(28px,3.4vw,42px)/1 'Bricolage Grotesque';font-variant-numeric:tabular-nums}.tile .l{color:var(--ink2);font-size:13.5px;margin-top:8px}
+section.blk{padding-block:56px;border-top:1px solid var(--rule)}
+.sh{display:flex;gap:16px;align-items:baseline;margin-bottom:22px;flex-wrap:wrap}.sh .num{font:500 12px 'JetBrains Mono';color:var(--gold)}.sh p{color:var(--ink2);max-width:62ch;flex-basis:100%}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:20px;padding:22px;min-width:0}.card h3{font-size:19px;margin-bottom:4px}.cap{color:var(--mute);font-size:13px;margin-top:10px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--ink2);margin:6px 0 8px}.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.mapw{perspective:1200px}.map3d{transform:rotateX(28deg);transform-origin:50% 70%;transition:transform .8s}.mapw:hover .map3d{transform:none}
+svg text{font-family:Inter,sans-serif}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:16px;position:relative}
+.step.now{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset,0 20px 40px -20px rgba(245,185,74,.5)}
+.step .k{font:500 10.5px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}.step.now .k{color:var(--gold)}
+.step b{display:block;margin:6px 0 4px;font-size:15.5px}.step p{color:var(--ink2);font-size:13.5px}
+.tree{display:flex;flex-wrap:wrap;gap:6px}
+.tree div{border-radius:10px;padding:10px 12px;min-height:64px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;cursor:default;transition:transform .2s}
+.tree div:hover{transform:translateY(-3px)}
+.tree b{font:800 22px 'Bricolage Grotesque'}.tree span{font-size:12px;opacity:.9}
+.aeo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.q{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:16px}
+.q .ask{font-size:13px;color:var(--mute)}.q .ans{margin-top:6px;font-size:14.5px}.q .ans b{color:var(--gold)}
+.lst{display:grid;gap:8px;margin-top:6px}.lst li{list-style:none;padding:10px 12px;background:var(--bg2);border:1px solid var(--rule);border-radius:12px;font-size:14px;color:var(--ink2)}
+.lst li b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--rule)}th{color:var(--mute);font-weight:500;font-size:12px}td.n{text-align:right;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+.tip{position:fixed;pointer-events:none;background:#fff;color:#111;font:600 12px Inter;padding:6px 9px;border-radius:8px;white-space:pre;opacity:0;transition:opacity .12s;z-index:20}
+.src{color:var(--mute);font-size:13px;padding-block:36px 60px;border-top:1px solid var(--rule)}
+@media (max-width:960px){.hgrid,.grid2,.aeo{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.stage{height:420px}}
+@media (max-width:520px){.wrap{padding-inline:16px}.steps{grid-template-columns:1fr}.lap{transform:none}.pcard{display:none}.stage{height:auto;min-height:260px}.lap{position:relative;top:0}}
+</style></head><body>
+<header class="top"><div class="wrap"><b>Danny Deepak</b><span class="mono">New case · Stage one</span><span class="sp"></span><a class="lk" href="index.html">All cases</a></div></header>
+<main>
+<section class="hero"><div class="wrap hgrid">
+ <div>
+  <div class="mono">TONI&amp;GUY franchise · Thanisandra + Varthur, Bengaluru · started Oct 2026</div>
+  <h1 style="margin-top:14px">Two salons. <em>No digital footprint.</em> Day one.</h1>
+  <p class="lede">A franchisee is opening two TONI&amp;GUY salons, Sobha Arcadia in Thanisandra and Prestige Tech Forest in Varthur. Neither has a website, a Google listing or a review yet. This is the record from zero: who they compete with, what was built first, and what launches next.</p>
+  <p style="margin-top:18px"><span class="chip">Stage 1 of 5</span><span class="chip">Website: preview build</span><span class="chip">Google profiles: not yet on Maps</span></p>
+ </div>
+ <div class="stage">
+  <div class="lap"><div class="lid"><div class="scr" id="scr"><div class="poster" id="poster"><div><b>TONI&amp;GUY · BENGALURU</b><span>The live preview build, 355 pages</span><button type="button">Load the site here</button></div></div></div></div><div class="base"></div></div>
+  <div class="pcard"><b>355</b><span>pages built before opening day: services, areas, guides, comparisons, journal</span></div>
+ </div>
+</div></section>
+
+<div class="wrap"><div class="tiles">
+ <div class="tile"><div class="n">69</div><div class="l">salons on the first Maps page around the two sites <span class="ev">Measured</span></div></div>
+ <div class="tile"><div class="n">0</div><div class="l">Google listings for either new salon (19 Oct)</div></div>
+ <div class="tile"><div class="n">6</div><div class="l">TONI&amp;GUY or Essensuals listings already on Maps near Thanisandra</div></div>
+ <div class="tile"><div class="n">355</div><div class="l">website pages, mapped and written before launch</div></div>
+</div></div>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">01</span><h2>Where the work starts</h2><p>Five stages from invisible to fully booked. This case is at stage one.</p></div>
+ <div class="steps">
+  <div class="step now"><span class="k">Stage 1 · now</span><b>Market and website</b><p>Competitor audit around both salons. 355-page site in preview, built for search and AI answers.</p></div>
+  <div class="step"><span class="k">Stage 2</span><b>Google Business Profiles</b><p>Two verified listings with services, prices, photos and the franchisor's booking link.</p></div>
+  <div class="step"><span class="k">Stage 3</span><b>First 100 reviews</b><p>A review ask after every visit, named stylists, replies to every review.</p></div>
+  <div class="step"><span class="k">Stage 4</span><b>Local ads</b><p>Search and Maps ads in a tight radius, with calls and bookings as the only conversions.</p></div>
+  <div class="step"><span class="k">Stage 5</span><b>Rebooking</b><p>WhatsApp reminders and a monthly report in bills and bookings.</p></div>
+ </div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">02</span><h2>Who the new salons are up against</h2><p>Every salon Google Maps shows on a "hair salon" search centred on each new site, plotted by distance. Dot size is the review count. Hover a dot. <span class="ev">Measured</span> Maps, 19 Oct 2026.</p></div>
+ <div class="lg"><span><i style="background:var(--c1)"></i>Other salon</span><span><i style="background:var(--c2)"></i>TONI&amp;GUY or Essensuals</span><span><i style="background:var(--c3)"></i>New salon</span></div>
+ <div class="grid2">
+  <div class="card mapw"><h3>Thanisandra · Sobha Arcadia</h3><div class="map3d" id="mTh"></div><p class="cap" id="capTh"></p></div>
+  <div class="card mapw"><h3>Varthur · Prestige Tech Forest</h3><div class="map3d" id="mVa"></div><p class="cap" id="capVa"></p></div>
+ </div>
+ <div class="grid2" style="margin-top:18px">
+  <div class="card"><h3>Reviews are the moat</h3><div id="rev"></div><p class="cap">Median reviews per competitor. Varthur's market is deeper: a typical rival has nearly twice the reviews of a Thanisandra rival.</p></div>
+  <div class="card"><h3>What the audit found</h3><ul class="lst">
+   <li><b>Distance decides.</b> 20 rivals sit within 3 km of Thanisandra and 13 within 3 km of Varthur, where the biggest names (Ethnix, Green Trends, Profile) are 3.5–4.2 km west.</li>
+   <li><b>Ratings don't separate anyone.</b> The median rival is 4.7★ at both sites, so the listing has to win on photos, prices and proof.</li>
+   <li><b>The brand is already on the map.</b> Other TONI&amp;GUY and Essensuals salons nearby will collect "toni and guy near me" searches unless each new listing is named and localised clearly.</li>
+   <li><b>The deeper audit.</b> Danny's audit of 35 rivals within 7–10 km covered their websites, content, offers, booking and calls to action, and shaped the page plan. <span class="ev s">Stated by Danny</span></li>
+  </ul></div>
+ </div>
+ <div class="card" style="margin-top:18px"><h3>The biggest names in each radius</h3><div class="tw"><table id="tbl"></table></div></div>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">03</span><h2>355 pages, <em>built for the search, not the brochure</em></h2><p>Every page type on the preview site, sized by count. Each page answers one question a client types before choosing a salon. <span class="ev">Measured</span> from the site map.</p></div>
+ <div class="tree" id="tree"></div>
+ <div class="aeo" style="margin-top:22px">
+  <div class="q"><div class="ask">"balayage vs highlights"</div><div class="ans">A <b>comparison page</b> gives the direct answer first, then a side-by-side table. 12 comparisons built.</div></div>
+  <div class="q"><div class="ask">"salon near hegde nagar"</div><div class="ans">A <b>neighbourhood page</b> says which salon is nearer and what the trip involves. 24 areas built.</div></div>
+  <div class="q"><div class="ask">"frizzy hair treatment bengaluru"</div><div class="ans">A <b>concern guide</b> starts from the problem, then the service. 20 concern guides built.</div></div>
+ </div>
+ <p class="cap" style="margin-top:14px">Answer-first pages are written so Google's AI answers and assistants can quote them (AEO), as well as rank them (SEO). Prices, phone numbers, hours and launch photos stay marked "To be confirmed" until the franchisee confirms them.</p>
+</div></section>
+
+<section class="blk"><div class="wrap">
+ <div class="sh"><span class="num">04</span><h2>What a client sees today, and on opening day</h2></div>
+ <div class="grid2">
+  <div class="card"><h3 style="color:var(--bad)">Today</h3><ul class="lst"><li>Searches "salon in Thanisandra": 36 salons on Maps, none of them this one.</li><li>Searches "TONI&amp;GUY near me": other branches and Essensuals salons appear first.</li><li>No public website yet (preview only), no prices, no way to book.</li></ul></div>
+  <div class="card"><h3 style="color:var(--good)">Opening day (planned)</h3><ul class="lst"><li>A verified listing per salon with services, prices, photos and booking.</li><li>355 pages that answer the questions clients ask, each with a booking call to action.</li><li>Reviews asked for after every visit, and every one answered.</li></ul></div>
+ </div>
+</div></section>
+
+<div class="wrap src"><b style="color:var(--ink2)">Sources.</b> Google Maps "hair salon" results centred on each salon's coordinates, read 19 Oct 2026; distances are straight-line. The preview site and its site map. Danny's own competitor audit of 35 salons within 7–10 km is <span class="ev s">Stated by Danny</span>; the numbers above are the public re-check. Results will be added as each stage goes live.</div>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const COMP={"th":{"rows":[{"n":"Glo Strands Family Salon RK Hegde Nagar","r":4.8,"v":1000,"d":0.42,"x":-0.02,"y":-0.42,"b":0},{"n":"TONI&GUY Essensuals, Chokkanahalli","r":4.8,"v":574,"d":0.85,"x":0.07,"y":0.84,"b":1},{"n":"hob-house of beauty Thanisandra","r":4.8,"v":506,"d":1.17,"x":-0.69,"y":-0.95,"b":0},{"n":"Trending Style Unisex salon","r":4.7,"v":449,"d":1.18,"x":-0.71,"y":-0.95,"b":0},{"n":"Spin Salon, Jakkuru","r":4.6,"v":2082,"d":1.31,"x":-0.96,"y":-0.89,"b":0},{"n":"Slique Unisex Salon","r":4.7,"v":587,"d":1.39,"x":0.15,"y":1.38,"b":0},{"n":"Sleek & Curly Unisex Salon","r":4.4,"v":328,"d":1.61,"x":0.17,"y":1.6,"b":0},{"n":"Agami Essence unisex salon","r":4.9,"v":93,"d":1.63,"x":-0.83,"y":-1.4,"b":0},{"n":"Naturals Salon Thanisandra","r":4.6,"v":2627,"d":1.65,"x":-0.09,"y":-1.65,"b":0},{"n":"A1 Hair Studio Unisex salon","r":4.6,"v":293,"d":1.81,"x":-0.09,"y":-1.81,"b":0},{"n":"OASIS BEAUTY AND HAIR STUDIO","r":4.7,"v":413,"d":1.84,"x":-1.72,"y":0.67,"b":0},{"n":"Oasis Beauty and Hair Studio","r":4.6,"v":375,"d":1.9,"x":-0.71,"y":-1.76,"b":0},{"n":"Swish Salon","r":4.5,"v":657,"d":2.08,"x":-1.14,"y":-1.75,"b":0},{"n":"Naturals Salon Kothanur","r":4.4,"v":1951,"d":2.27,"x":1.69,"y":-1.51,"b":0},{"n":"Trends Salon & Academy","r":4.6,"v":441,"d":2.31,"x":1.76,"y":-1.49,"b":0},{"n":"Spin Salon | Kothnur, Bengaluru","r":4.6,"v":1573,"d":2.38,"x":1.87,"y":-1.47,"b":0},{"n":"Stylish Men's Salon","r":4.9,"v":714,"d":2.41,"x":1.62,"y":-1.79,"b":0},{"n":"Jawed Habib Hair & Beauty Unisex Salon","r":4.7,"v":696,"d":2.73,"x":1.59,"y":-2.22,"b":0},{"n":"New Blue Trends Unisex Salon","r":4.9,"v":713,"d":2.77,"x":-0.29,"y":-2.75,"b":0},{"n":"Euphoria Premium Salon | Best Salon in Kothanur | Best Salon in Hennur Road","r":4.8,"v":943,"d":2.87,"x":1.34,"y":-2.54,"b":0},{"n":"STYLISH UNISEX SALON","r":4.7,"v":293,"d":3.21,"x":2.13,"y":-2.4,"b":0},{"n":"Oasis Beauty & Hair Studio","r":4.9,"v":493,"d":3.27,"x":-1.42,"y":2.95,"b":0},{"n":"D's Aqua Beauty Salon For Women","r":4.6,"v":310,"d":3.27,"x":1.29,"y":-3.0,"b":0},{"n":"Hair Glow Family Salon","r":4.7,"v":172,"d":3.31,"x":-3.27,"y":-0.49,"b":0},{"n":"Soul Salon","r":4.9,"v":253,"d":3.43,"x":-2.48,"y":-2.36,"b":0},{"n":"A1 HAIR STUDIO UNISEX SALON .. BRANCH OF .2","r":4.9,"v":128,"d":3.44,"x":1.24,"y":-3.21,"b":0},{"n":"Salon Elite","r":4.7,"v":584,"d":4.03,"x":-2.75,"y":-2.94,"b":0},{"n":"Signature Cutz Unisex Salon","r":4.5,"v":289,"d":4.17,"x":-3.21,"y":-2.65,"b":0},{"n":"Hair set unisex salon","r":5,"v":13,"d":4.17,"x":3.81,"y":-1.68,"b":0},{"n":"Spin Salon | Amruthahalli","r":4.6,"v":635,"d":4.25,"x":-4.08,"y":-1.17,"b":0},{"n":"Essensuals by Toni&Guy, Kempapura","r":4.8,"v":796,"d":4.46,"x":-3.73,"y":-2.44,"b":1},{"n":"NICK SALON UNISEX","r":4.6,"v":483,"d":4.47,"x":-3.89,"y":-2.21,"b":0},{"n":"Naturals Unisex Salon Kempapura","r":4.6,"v":1180,"d":4.54,"x":-3.31,"y":-3.11,"b":0},{"n":"Belle Salon & Spa","r":4.5,"v":1202,"d":4.7,"x":-4.1,"y":2.3,"b":0},{"n":"Bounce Salon & Spa Sahakar Nagar","r":4.6,"v":1779,"d":4.8,"x":-4.53,"y":-1.59,"b":0},{"n":"K1 UNISEX SALON","r":4.8,"v":318,"d":4.94,"x":-3.57,"y":-3.42,"b":0}],"stats":{"n":36,"med_r":4.7,"med_v":540.0,"total_v":25943,"max_d":4.94,"within3":20,"within5":36,"brand":2,"over1k":8}},"va":{"rows":[{"n":"Bounce Salon & Spa, Whitefield","r":4.6,"v":2362,"d":1.42,"x":0.25,"y":1.4,"b":0},{"n":"Jawed Habib - Whitefield Main Road","r":4.9,"v":660,"d":1.6,"x":0.3,"y":1.57,"b":0},{"n":"Toni & Guy Essensuals Whitefield","r":4.7,"v":533,"d":1.66,"x":0.32,"y":1.63,"b":1},{"n":"TONI&GUY Hairdressing, Whitefield Siddapura","r":4.4,"v":1041,"d":1.68,"x":-1.46,"y":0.83,"b":1},{"n":"STUDIO11 Family Salon & Spa Varthur","r":4.6,"v":689,"d":1.84,"x":-0.3,"y":-1.81,"b":0},{"n":"Transitions Hair Studio","r":4.5,"v":241,"d":1.94,"x":-1.55,"y":-1.16,"b":0},{"n":"Style Waves Unisex salon & Beauty Studio","r":4.7,"v":390,"d":2.09,"x":-0.48,"y":-2.03,"b":0},{"n":"Style Waves Unisex Salon & Beauty Studio","r":4.8,"v":1121,"d":2.12,"x":-0.0,"y":2.12,"b":0},{"n":"Sea unisex salon","r":4.9,"v":962,"d":2.44,"x":-1.11,"y":2.17,"b":0},{"n":"JS Hair Story Unisex Salon (Whitefield)","r":4.8,"v":404,"d":2.63,"x":-1.38,"y":2.24,"b":0},{"n":"Urban Serene Unisex Salon","r":4.4,"v":433,"d":2.77,"x":-2.54,"y":-1.09,"b":0},{"n":"Green Trends - Thubarahalli","r":4.7,"v":1430,"d":2.81,"x":-2.72,"y":0.69,"b":0},{"n":"Green Trends Unisex Hair & Style Salon","r":4.6,"v":2730,"d":2.91,"x":-2.67,"y":-1.14,"b":0},{"n":"Green Trends Unisex Hair & Style Salon","r":4.7,"v":2105,"d":3.03,"x":-0.97,"y":-2.87,"b":0},{"n":"Inventive Enrich Unisex Salon & Spa","r":4.5,"v":2050,"d":3.04,"x":0.58,"y":2.98,"b":0},{"n":"Spin Unisex Salon | Thubarahalli","r":4.8,"v":147,"d":3.07,"x":-3.06,"y":0.22,"b":0},{"n":"Salon 101","r":4.7,"v":617,"d":3.07,"x":-3.05,"y":0.38,"b":0},{"n":"Jawed Habib, Thubarahalli Whitefield","r":4.7,"v":1144,"d":3.1,"x":-3.06,"y":0.49,"b":0},{"n":"Flow Salon","r":4.8,"v":791,"d":3.13,"x":-3.12,"y":0.23,"b":0},{"n":"Snip and Style Unisex salon","r":4.7,"v":716,"d":3.14,"x":-2.97,"y":1.05,"b":0},{"n":"You Spark Family Salon","r":4.9,"v":2226,"d":3.24,"x":-3.24,"y":0.01,"b":0},{"n":"The Hair Styliste Salon - Munnekollal","r":4.8,"v":948,"d":3.25,"x":-3.25,"y":0.09,"b":0},{"n":"SJS Hair Field Unisex Salon","r":4.6,"v":209,"d":3.37,"x":-3.32,"y":0.56,"b":0},{"n":"Green Trends, Kundanahalli","r":4.5,"v":4678,"d":3.49,"x":-3.05,"y":1.7,"b":0},{"n":"Spin Unisex Salon, Brookfield","r":4.4,"v":1228,"d":3.65,"x":-3.24,"y":1.68,"b":0},{"n":"Essensuals by Toni and Guy, AECS Layout","r":4.5,"v":808,"d":3.65,"x":-3.46,"y":1.15,"b":1},{"n":"glam on unisex salon","r":4.4,"v":970,"d":3.89,"x":-3.45,"y":1.79,"b":0},{"n":"Bounce Unisex Salon Marathahalli","r":4.6,"v":941,"d":3.93,"x":-3.85,"y":0.77,"b":0},{"n":"Ethnix Premium Unisex Salon - AECS Layout","r":4.9,"v":6127,"d":4.04,"x":-3.7,"y":1.61,"b":0},{"n":"Profile The Chain of Salons","r":4.7,"v":3667,"d":4.18,"x":-3.89,"y":1.54,"b":0},{"n":"Xing Premium Unisex Salon - Brookfield","r":4.8,"v":1633,"d":4.25,"x":-3.95,"y":1.57,"b":0},{"n":"Beauty Life Salon & Spa","r":4.4,"v":807,"d":4.66,"x":-4.66,"y":-0.06,"b":0},{"n":"CUT&STYLE Salon - Kasavanahalli","r":4.9,"v":227,"d":9.17,"x":-7.52,"y":-5.26,"b":0}],"stats":{"n":33,"med_r":4.7,"med_v":948,"total_v":45035,"max_d":9.17,"within3":13,"within5":32,"brand":3,"over1k":14}}};
+const tip=document.getElementById('tip');
+document.addEventListener('pointermove',e=>{const t=e.target.closest&&e.target.closest('[data-tip]');if(t){tip.textContent=t.dataset.tip;tip.style.opacity=1;let x=e.clientX+14;if(x+tip.offsetWidth>innerWidth-8)x=e.clientX-tip.offsetWidth-14;tip.style.left=x+'px';tip.style.top=Math.max(8,e.clientY-50)+'px'}else tip.style.opacity=0});
+function map(id,k,R,rings){const d=COMP[k],S=440,c=S/2,sc=(S/2-24)/R;let s=`<svg viewBox="0 0 ${S} ${S}" width="100%" role="img" aria-label="Competitor map">`;
+s+=`<defs><radialGradient id="g${k}"><stop offset="0" stop-color="#199e70" stop-opacity=".35"/><stop offset="1" stop-color="#199e70" stop-opacity="0"/></radialGradient></defs><circle cx="${c}" cy="${c}" r="${S/2-10}" fill="#0D1324"/>`;
+rings.forEach(r=>{s+=`<circle cx="${c}" cy="${c}" r="${r*sc}" fill="none" stroke="#2A3658" stroke-dasharray="3 4"/><text x="${c+r*sc*.71+4}" y="${c-r*sc*.71}" font-size="10" fill="#7C86A2">${r} km</text>`});
+s+=`<circle cx="${c}" cy="${c}" r="60" fill="url(#g${k})"/>`;
+[...d.rows].sort((a,b)=>b.v-a.v).forEach(p=>{const x=c+p.x*sc,y=c-p.y*sc,r=3+Math.sqrt(p.v)/7;if(p.d>R+.3)return;s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${p.b?'#d95926':'#3987e5'}" fill-opacity=".8" stroke="#0D1324" stroke-width="2" data-tip="${p.n.replace(/"/g,'')}\n${p.r}★ · ${p.v.toLocaleString('en-IN')} reviews · ${p.d} km"/>`});
+s+=`<path d="M${c},${c-11} l3.2,7 7.6,.8 -5.7,5.1 1.6,7.5 -6.7,-3.9 -6.7,3.9 1.6,-7.5 -5.7,-5.1 7.6,-.8z" fill="#199e70" stroke="#fff" stroke-width="1.5" data-tip="New salon (opening soon)"/>`;
+document.getElementById(id).innerHTML=s+'</svg>';
+const st=d.stats;document.getElementById('cap'+id.slice(1)).textContent=`${st.n} salons, ${st.within3} within 3 km. Median ${st.med_r}★ and ${Math.round(st.med_v).toLocaleString('en-IN')} reviews. ${st.over1k} have 1,000+ reviews.`+(st.max_d>R?` Furthest ${st.max_d} km (off the map).`:'')}
+map('mTh','th',5,[1,3,5]);map('mVa','va',6,[1,3,5]);
+document.getElementById('rev').innerHTML=[['Thanisandra',COMP.th.stats.med_v,COMP.th.stats.total_v],['Varthur',COMP.va.stats.med_v,COMP.va.stats.total_v]].map(([n,m,t])=>`<div style="display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center;margin:12px 0" data-tip="${n}: ${t.toLocaleString('en-IN')} reviews across all rivals"><span style="color:var(--ink2);font-size:14px">${n}</span><span style="display:block;height:14px;border-radius:0 4px 4px 0;background:#3987e5;width:${m/1000*100}%"></span><b>${Math.round(m).toLocaleString('en-IN')}</b></div>`).join('')+`<div style="display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center"><span style="color:var(--ink2);font-size:14px">New salons</span><span style="display:block;height:14px;border-radius:0 4px 4px 0;background:#199e70;width:1%"></span><b>0</b></div>`;
+const topR=[...COMP.th.rows.map(r=>({...r,s:'Thanisandra'})),...COMP.va.rows.map(r=>({...r,s:'Varthur'}))].sort((a,b)=>b.v-a.v).slice(0,10);
+document.getElementById('tbl').innerHTML='<thead><tr><th>Salon</th><th>Near</th><th style="text-align:right">Rating</th><th style="text-align:right">Reviews</th><th style="text-align:right">Distance</th></tr></thead><tbody>'+topR.map(r=>`<tr><td>${r.n}</td><td>${r.s}</td><td class="n">${r.r}★</td><td class="n">${r.v.toLocaleString('en-IN')}</td><td class="n">${r.d} km</td></tr>`).join('')+'</tbody>';
+const T=[['Services',76,'#3987e5'],['Journal articles',61,'#6250d6'],['Gallery',49,'#c98500'],['Hair guides',45,'#199e70'],['Neighbourhoods',25,'#d95926'],['Occasions',16,'#d55181'],['Comparisons',12,'#3987e5'],['Aftercare',10,'#199e70'],['Policies + legal',10,'#4a5675'],['Brand + contact',10,'#4a5675'],['Colour families',9,'#c98500'],['FAQ',9,'#6250d6'],['Locations',8,'#d95926'],['Booking',7,'#199e70'],['First visit',5,'#3987e5'],['Pricing',3,'#d55181']];
+document.getElementById('tree').innerHTML=T.map(([n,v,c])=>`<div style="flex:${v} 1 ${Math.max(90,v*5)}px;background:${c}" data-tip="${n}: ${v} pages"><b>${v}</b><span>${n}</span></div>`).join('');
+document.getElementById('poster').addEventListener('click',()=>{document.getElementById('scr').innerHTML='<iframe src="../toniguy-bengaluru/toniguy-bengaluru-site.html#/" title="TONI&GUY Bengaluru preview site" loading="lazy"></iframe>'});
+</script>
+</body></html>
