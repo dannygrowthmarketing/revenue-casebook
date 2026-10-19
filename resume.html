@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daniel Deepak · Revenue Consultant · Resume</title>
+<meta name="description" content="Independent revenue consultant in Bengaluru. Live cases, ads and dashboards for every result.">
+<meta property="og:title" content="Daniel Deepak · Independent Revenue Consultant">
+<meta property="og:description" content="I start with the business problem, not the channel. Every result links to the live case.">
+<meta property="og:image" content="https://dannygrowthmarketing.github.io/revenue-casebook/img/gc-hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+:root{--bg:#F6F3ED;--surface:#FFFFFF;--surface-2:#EEEAE2;--ink:#0E1424;--ink-2:#3E4659;--ink-3:#7B8396;--rule:#E3DDD2;--leak:#E0454B;--move:#4B49D9;--move-bg:#ECECFD;--flow:#0E9F6A;--flow-bg:#E3F5EC;--est:#B97F00;--night:#0C1222;--on-night:#F3F1EC;--on-night-2:#A8B0C4;--glow:#FFB547;
+--display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--r:18px;--shadow:0 1px 2px rgba(14,20,36,.05),0 8px 28px -12px rgba(14,20,36,.18)}
+@media (prefers-color-scheme:dark){:root{--bg:#0A0E19;--surface:#121829;--surface-2:#1A2236;--ink:#F1EFEA;--ink-2:#BCC3D3;--ink-3:#8790A6;--rule:#262F47;--move:#8B89FF;--move-bg:#1F2147;--flow:#3BD39A;--flow-bg:#0F2A20;--leak:#FF7376;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);color-scheme:dark}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.nav b{font:700 16px var(--display)}
+.nav nav{display:flex;gap:18px;font-size:14px;font-weight:500}
+.nav nav a{text-decoration:none;color:var(--ink-2)}
+.nav nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--body);text-decoration:none;padding:12px 18px;border-radius:999px;background:var(--ink);color:var(--bg);border:1px solid var(--ink);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.sm{padding:8px 14px;font-size:13.5px}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+/* hero */
+.hero{background:var(--night);color:var(--on-night);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:120%;background:radial-gradient(closest-side,rgba(255,181,71,.18),transparent 70%);pointer-events:none}
+.hero .wrap{padding-block:64px 56px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:end;position:relative;z-index:1}
+.hero .eyebrow{color:var(--glow)}
+.hero h1{font:800 clamp(44px,7vw,84px)/.95 var(--display);letter-spacing:-.03em;margin:18px 0 14px}
+.hero .pos{font:600 clamp(20px,2.4vw,26px)/1.25 var(--display);max-width:22ch;text-wrap:balance}
+.hero .pos em{font-style:normal;color:var(--glow)}
+.hero p.lede{color:var(--on-night-2);max-width:56ch;margin-top:16px;font-size:16.5px}
+.hero .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .btn{background:var(--glow);color:#1a1205;border-color:var(--glow)}
+.hero .btn.ghost{background:transparent;color:var(--on-night);border-color:#3A4566}
+.card-me{background:#121A2E;border:1px solid #26314F;border-radius:var(--r);padding:20px}
+.card-me dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px 14px;font-size:14px}
+.card-me dt{font:600 11px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-night-2)}
+.card-me dd{color:var(--on-night);min-width:0;overflow-wrap:anywhere}
+.card-me a{color:var(--on-night)}
+.copy{font:600 12px var(--body);margin-left:6px;padding:3px 9px;border-radius:999px;border:1px solid #3A4566;background:transparent;color:var(--on-night-2);cursor:pointer}
+/* sections */
+.sec{padding-block:64px 8px}
+.sh{display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px;margin-bottom:26px}
+.sh .n{font:800 34px/1 var(--display);color:var(--move)}
+.sh h2{font:800 clamp(26px,3.4vw,38px)/1.1 var(--display);letter-spacing:-.02em;text-wrap:balance}
+.sh p{grid-column:2;color:var(--ink-2);max-width:62ch}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stat{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);transition:transform .2s}
+.stat:hover{transform:translateY(-3px)}
+.stat .v{white-space:nowrap;font:800 clamp(30px,3.4vw,42px)/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .v.g{color:var(--flow)}.stat .v.r{color:var(--leak)}
+.stat .l{color:var(--ink-2);font-size:14px;margin-top:10px}
+.stat .c{font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--move);margin-top:12px}
+/* proof links */
+.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.proof a{display:flex;flex-direction:column;gap:4px;text-decoration:none;padding:16px 18px;border-radius:14px;background:var(--move-bg);border:1px solid transparent}
+.proof a:hover{border-color:var(--move)}
+.proof b{font:700 16px var(--display);color:var(--move)}
+.proof span{font-size:13.5px;color:var(--ink-2)}
+/* cases */
+.cases{display:grid;gap:18px}
+.case{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.case .pic{position:relative;min-height:240px;background:var(--surface-2)}
+.case .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.case .pic .map{position:absolute;inset:0;display:grid;place-items:center;color:var(--ink);padding:14px}
+.case .pic .map svg{width:100%;height:auto}
+.case .pic .cap{position:absolute;left:12px;bottom:12px;right:12px;font:600 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.case .pic .map + .cap{color:var(--ink-3);text-shadow:none}
+.case .body{padding:22px 24px;min-width:0}
+.case .hd{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;align-items:baseline}
+.case h3{font:800 24px/1.15 var(--display);letter-spacing:-.01em}
+.case h3 a{text-decoration:none}
+.case h3 a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.case .meta{font-size:13.5px;color:var(--ink-3)}
+.chip{display:inline-flex;align-items:center;gap:6px;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--flow-bg);color:var(--flow);margin-left:8px;vertical-align:4px}
+.chip.s{background:#FBF1D6;color:var(--est)}
+.chip.p{background:var(--surface-2);color:var(--ink-3)}
+.chip i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.pfdr{display:grid;grid-template-columns:78px minmax(0,1fr);gap:8px 14px;margin-top:14px;font-size:15px}
+.pfdr dt{font:600 11px/1.9 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.pfdr dt.f{color:var(--leak)}.pfdr dt.r{color:var(--flow)}
+.pfdr dd b{font-weight:700}
+.lks{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.lks a{font:600 13.5px var(--body);text-decoration:none;padding:7px 13px;border-radius:999px;border:1px solid var(--rule);color:var(--ink)}
+.lks a:hover{border-color:var(--move);color:var(--move)}
+.lks a.hot{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.small{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.mini{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.mini img{height:130px;width:100%;object-fit:cover}
+.mini>div{padding:16px 18px}
+.mini b{font:700 18px var(--display)}
+.mini p{color:var(--ink-2);font-size:14px;margin-top:6px}
+.mini .k{font:800 26px var(--display);color:var(--flow);margin-top:8px}
+/* chain */
+.chain{display:flex;flex-wrap:wrap;gap:8px;counter-reset:c}
+.chain li{list-style:none;counter-increment:c;padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--rule);font-weight:600;font-size:14.5px}
+.chain li::before{content:counter(c,decimal-leading-zero);font:600 11px var(--mono);color:var(--ink-3);margin-right:8px}
+.chain li.ad{border-color:var(--move);color:var(--move)}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.skills{grid-template-columns:minmax(0,1fr)}}
+.skill{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:18px 20px}
+.skill:hover{border-color:var(--move)}
+.skill b{font:700 17px var(--display)}
+.skill p{color:var(--ink-2);font-size:14px;margin-top:6px}
+.skill span{display:block;font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--move);margin-top:10px}
+/* offer */
+.offer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.off{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:22px}
+.off i{font:600 11.5px var(--mono);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--leak)}
+.off b{display:block;font:800 22px var(--display);margin:8px 0 6px}
+.off p{color:var(--ink-2);font-size:14.5px}
+.free{margin-top:14px;background:var(--night);color:var(--on-night);border-radius:var(--r);padding:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.free b{font:800 22px/1.2 var(--display)}
+.free p{color:var(--on-night-2);font-size:14.5px;margin-top:4px}
+.free .btn{background:var(--glow);color:#1a1205;border-color:var(--glow)}
+/* timeline */
+.tl{border-left:2px solid var(--rule);margin-left:6px}
+.tl li{list-style:none;position:relative;padding:0 0 22px 22px}
+.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--move)}
+.tl time{font:600 12.5px var(--mono);color:var(--ink-3)}
+.tl b{display:block;font:700 17px var(--display);margin-top:2px}
+.tl p{color:var(--ink-2);font-size:14.5px;max-width:70ch}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px;margin-top:6px}
+.edu div{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:16px 18px;font-size:14.5px}
+.edu b{font-family:var(--display);font-size:16px}
+.foot{margin-top:64px;padding-block:28px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--ink-3)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.stats,.proof{grid-template-columns:repeat(2,minmax(0,1fr))}.case{grid-template-columns:minmax(0,1fr)}.case .pic{min-height:200px}.small,.offer{grid-template-columns:minmax(0,1fr)}.nav nav{display:none}}
+@media (max-width:480px){.stats,.proof{grid-template-columns:minmax(0,1fr)}.sh{grid-template-columns:minmax(0,1fr)}.sh p{grid-column:1}.pfdr{grid-template-columns:minmax(0,1fr);gap:2px}.pfdr dd{margin-bottom:8px}}
+@media print{.nav,.acts,.free .btn,.copy{display:none!important}.hero{background:#fff;color:#000}.hero .pos em,.hero .eyebrow{color:#B4232A}.hero p.lede,.card-me dd,.card-me dt,.card-me a{color:#333}.card-me{background:#fff;border-color:#ccc}.case,.stat,.mini,.off,.skill{box-shadow:none;break-inside:avoid}.free{background:#fff;color:#000;border:1px solid #ccc}.free p{color:#333}.sec{padding-block:24px 0}}
+</style></head><body>
+
+<header class="nav"><div class="wrap"><b>Daniel Deepak</b><nav><a href="#results">Results</a><a href="#now">Clients now</a><a href="#past">Past clients</a><a href="#work">Work with me</a><a href="index.html">Casebook</a></nav><button class="btn sm" type="button" onclick="window.print()">Save as PDF</button></div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Independent revenue consultant · Bengaluru · Remote</p>
+    <h1>Daniel Deepak</h1>
+    <p class="pos">I don't start with the marketing channel. <em>I start with the business problem.</em></p>
+    <p class="lede">I join sales, point-of-sale, CRM and ad data, find where money leaks between the click and the till, then fix it myself: ads, Business Profile, website, booking, CRM and reporting. Six years across retail, D2C, hospitality, healthcare, services and B2B SaaS.</p>
+    <div class="acts"><a class="btn" href="#work">Get three free fixes</a><a class="btn ghost" href="ads.html">See my live ads</a><a class="btn ghost" href="index.html">Open the casebook</a></div>
+  </div>
+  <div class="card-me"><dl>
+    <dt>Email</dt><dd><span>danieldeepak3519@gmail.com</span><button class="copy" type="button" data-copy="danieldeepak3519@gmail.com">Copy</button></dd>
+    <dt>Phone</dt><dd>+91 88614 99213</dd>
+    <dt>Base</dt><dd>Bengaluru · IST, UK/EU, US East</dd>
+    <dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/danny-ai-marketing">danny-ai-marketing</a></dd>
+    <dt>GitHub</dt><dd><a href="https://github.com/dannygrowthmarketing">dannygrowthmarketing</a></dd>
+    <dt>Now</dt><dd>3 live clients · open to 1 more</dd>
+  </dl></div>
+</div></section>
+
+<main class="wrap">
+<section class="sec" id="results">
+  <div class="sh"><span class="n">01</span><h2>Results you can click into</h2><p>Every number opens the case it came from, with its evidence label.</p></div>
+  <div class="stats">
+    <a class="stat" href="toni-and-guy.html"><div class="v g">+14.7%</div><div class="l">Salon revenue vs last year, Mar–Aug 2026. ₹14.04 → ₹16.10 Cr.</div><div class="c">TONI&amp;GUY · 16 salons →</div></a>
+    <a class="stat" href="elites-dental-dashboard.html"><div class="v g">₹79 → ₹21</div><div class="l">Cost per click after the Search rebuild, 1–16 Oct vs the 16 days before.</div><div class="c">Elites Dental →</div></a>
+    <a class="stat" href="mr-jewels.html"><div class="v g">−66%</div><div class="l">Showroom campaign CPC, ₹38.60 → ₹13.13, after one goal fix.</div><div class="c">MR Jewels →</div></a>
+    <a class="stat" href="resort.html"><div class="v r">52 of 55</div><div class="l">Google "conversions" that were map taps, not leads. Goals rebuilt 17 Oct.</div><div class="c">Gold Coins Resort →</div></a>
+  </div>
+  <div class="proof">
+    <a href="index.html"><b>Revenue Casebook →</b><span>7 client cases, every number labelled</span></a>
+    <a href="ads.html"><b>Ad Showroom →</b><span>23 live Google and Meta ads, phone and laptop</span></a>
+    <a href="elites-dental-dashboard.html"><b>Live dashboard →</b><span>Elites Dental calls, directions and ads</span></a>
+    <a href="check.html"><b>Free 12-point check →</b><span>Run it on your own business</span></a>
+  </div>
+</section>
+
+<section class="sec" id="now">
+  <div class="sh"><span class="n">02</span><h2>Clients now</h2><p>Live work, updated as it happens. Results are marked "not yet measured" until they are.</p></div>
+  <div class="cases">
+    <article class="case">
+      <div class="pic"><img src="img/gc-hero.webp" alt="Pool at Gold Coins Club &amp; Resort" loading="lazy"><span class="cap">Gold Coins Club &amp; Resort · Electronic City</span></div>
+      <div class="body">
+        <div class="hd"><h3><a href="resort.html">Gold Coins Club &amp; Resort</a><span class="chip"><i></i>Live</span></h3><span class="meta">Resort, day-outs and events · Sep 2026 – now</span></div>
+        <dl class="pfdr">
+          <dt>Problem</dt><dd>Ad spend rose 3.2× from Q2 to Q3. Enquiries rose 46%. Bookings fell 13%.</dd>
+          <dt class="f">Found</dt><dd>Enquiry-to-booking conversion fell from 24% to 14%: a follow-up problem, not an ad problem. <b>52 of 55</b> Google "conversions" were map taps.</dd>
+          <dt>Did</dt><dd>45 Business Profile changes. Sales dashboard across 6 sources. Search rebuilt to 10 ad groups and 49 negatives. Performance Max on calls, WhatsApp and forms only. Meta split by buyer: corporate, weddings, birthdays.</dd>
+          <dt class="r">Result</dt><dd>Review reply rate <b>80% → 100%</b>. Spend and bookings in one view. Booking impact measured against Jan–Sep.</dd>
+        </dl>
+        <div class="lks"><a class="hot" href="resort.html">Read the case →</a><a href="ads.html#gc-search">Search ads</a><a href="ads.html#gc-pmax">Performance Max</a><a href="ads.html#gc-meta">Meta ads</a><a href="resort.html#cview">Before / after</a></div>
+      </div>
+    </article>
+    <article class="case">
+      <div class="pic"><img src="img/ext/c713ea-photo-1629909613654.jpg" alt="Dental treatment room" loading="lazy"><span class="cap">Elites Dental Care · TC Palya</span></div>
+      <div class="body">
+        <div class="hd"><h3><a href="elites-dental.html">Elites Dental Care</a><span class="chip"><i></i>Live</span></h3><span class="meta">Dental clinic · Sep 2026 – now</span></div>
+        <dl class="pfdr">
+          <dt>Problem</dt><dd>₹25,122 of Google spend bought 8 bookings, ₹3,140 each, for a clinic rated 4.9.</dd>
+          <dt class="f">Found</dt><dd>Clicks were healthy. Money leaked after the click: slow page, 4-step booking widget, GA4 seeing 1 in 6 clicks, every booking valued at ₹1.</dd>
+          <dt>Did</dt><dd>Business Profile rebuilt, 300 stuffed services cut to 121. Search relaunched 1 Oct, one ad group per patient intent. Live dashboard of calls, directions and ads.</dd>
+          <dt class="r">Result</dt><dd>CPC <b>₹79.45 → ₹21.20</b>, CTR 7.90% on 680 clicks. Next fix: call and booking tracking.</dd>
+        </dl>
+        <div class="lks"><a class="hot" href="elites-dental.html">Read the case →</a><a href="elites-dental-dashboard.html">Live dashboard</a><a href="ads.html#ed-search">Search ads</a></div>
+      </div>
+    </article>
+    <article class="case">
+      <div class="pic"><div class="map"><svg viewBox="0 0 300 200" role="img" aria-label="36 rival salons around Thanisandra"><circle cx="150" cy="100" r="26" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 4"/><text x="171.72" y="81.28" font-size="8" fill="currentColor" fill-opacity=".5">1 km</text><circle cx="150" cy="100" r="52" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 4"/><text x="190.44" y="62.56" font-size="8" fill="currentColor" fill-opacity=".5">2 km</text><circle cx="150" cy="100" r="78" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 4"/><text x="209.16" y="43.84" font-size="8" fill="currentColor" fill-opacity=".5">3 km</text><circle cx="149.5" cy="89.1" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Glo Strands Family Salon RK Hegde Nagar · 4.8★ · 1000 reviews</title></circle><circle cx="151.8" cy="121.8" r="3.6" fill="#E0454B" stroke="var(--surface)" stroke-width="1.5"><title>TONI&amp;GUY Essensuals, Chokkanahalli · 4.8★ · 574 reviews</title></circle><circle cx="132.1" cy="75.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>hob-house of beauty Thanisandra · 4.8★ · 506 reviews</title></circle><circle cx="131.5" cy="75.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Trending Style Unisex salon · 4.7★ · 449 reviews</title></circle><circle cx="125.0" cy="76.9" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Spin Salon, Jakkuru · 4.6★ · 2082 reviews</title></circle><circle cx="153.9" cy="135.9" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Slique Unisex Salon · 4.7★ · 587 reviews</title></circle><circle cx="154.4" cy="141.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Sleek &amp; Curly Unisex Salon · 4.4★ · 328 reviews</title></circle><circle cx="128.4" cy="63.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Agami Essence unisex salon · 4.9★ · 93 reviews</title></circle><circle cx="147.7" cy="57.1" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Naturals Salon Thanisandra · 4.6★ · 2627 reviews</title></circle><circle cx="147.7" cy="52.9" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>A1 Hair Studio Unisex salon · 4.6★ · 293 reviews</title></circle><circle cx="105.3" cy="117.4" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>OASIS BEAUTY AND HAIR STUDIO · 4.7★ · 413 reviews</title></circle><circle cx="131.5" cy="54.2" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Oasis Beauty and Hair Studio · 4.6★ · 375 reviews</title></circle><circle cx="120.4" cy="54.5" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Swish Salon · 4.5★ · 657 reviews</title></circle><circle cx="193.9" cy="60.7" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Naturals Salon Kothanur · 4.4★ · 1951 reviews</title></circle><circle cx="195.8" cy="61.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Trends Salon &amp; Academy · 4.6★ · 441 reviews</title></circle><circle cx="198.6" cy="61.8" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Spin Salon | Kothnur, Bengaluru · 4.6★ · 1573 reviews</title></circle><circle cx="192.1" cy="53.5" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Stylish Men's Salon · 4.9★ · 714 reviews</title></circle><circle cx="191.3" cy="42.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Jawed Habib Hair &amp; Beauty Unisex Salon · 4.7★ · 696 reviews</title></circle><circle cx="142.5" cy="28.5" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>New Blue Trends Unisex Salon · 4.9★ · 713 reviews</title></circle><circle cx="184.8" cy="34.0" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Euphoria Premium Salon | Best Salon in Kothanur | Best Salon in Hennur Road · 4.8★ · 943 reviews</title></circle><circle cx="205.4" cy="37.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>STYLISH UNISEX SALON · 4.7★ · 293 reviews</title></circle><circle cx="113.1" cy="176.7" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Oasis Beauty &amp; Hair Studio · 4.9★ · 493 reviews</title></circle><circle cx="183.5" cy="22.0" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>D's Aqua Beauty Salon For Women · 4.6★ · 310 reviews</title></circle><circle cx="65.0" cy="87.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Hair Glow Family Salon · 4.7★ · 172 reviews</title></circle><circle cx="85.5" cy="38.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Soul Salon · 4.9★ · 253 reviews</title></circle><circle cx="182.2" cy="16.5" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>A1 HAIR STUDIO UNISEX SALON .. BRANCH OF .2 · 4.9★ · 128 reviews</title></circle><circle cx="78.5" cy="23.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Salon Elite · 4.7★ · 584 reviews</title></circle><circle cx="66.5" cy="31.1" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Signature Cutz Unisex Salon · 4.5★ · 289 reviews</title></circle><circle cx="249.1" cy="56.3" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Hair set unisex salon · 5★ · 13 reviews</title></circle><circle cx="43.9" cy="69.6" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Spin Salon | Amruthahalli · 4.6★ · 635 reviews</title></circle><circle cx="53.0" cy="36.6" r="3.6" fill="#E0454B" stroke="var(--surface)" stroke-width="1.5"><title>Essensuals by Toni&amp;Guy, Kempapura · 4.8★ · 796 reviews</title></circle><circle cx="48.9" cy="42.5" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>NICK SALON UNISEX · 4.6★ · 483 reviews</title></circle><circle cx="63.9" cy="19.1" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Naturals Unisex Salon Kempapura · 4.6★ · 1180 reviews</title></circle><circle cx="43.4" cy="159.8" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Belle Salon &amp; Spa · 4.5★ · 1202 reviews</title></circle><circle cx="32.2" cy="58.7" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>Bounce Salon &amp; Spa Sahakar Nagar · 4.6★ · 1779 reviews</title></circle><circle cx="57.2" cy="11.1" r="3.6" fill="#4B49D9" stroke="var(--surface)" stroke-width="1.5"><title>K1 UNISEX SALON · 4.8★ · 318 reviews</title></circle><circle cx="150" cy="100" r="6" fill="#0E9F6A" stroke="var(--surface)" stroke-width="2"/></svg></div><span class="cap">36 rival salons around Thanisandra · <span style="color:#E0454B">● TONI&amp;GUY / Essensuals</span> · Google Maps, 19 Oct</span></div>
+      <div class="body">
+        <div class="hd"><h3><a href="toniguy-bengaluru.html">TONI&amp;GUY Bengaluru franchise</a><span class="chip s"><i></i>Stage one</span></h3><span class="meta">Two new salons, Thanisandra and Varthur · Oct 2026 – now</span></div>
+        <dl class="pfdr">
+          <dt>Problem</dt><dd>Two salons opening with no website, no Google listing and no reviews, among established rivals.</dd>
+          <dt class="f">Found</dt><dd><b>69 rival salons</b> mapped (36 + 33). Six TONI&amp;GUY or Essensuals listings already sit near Thanisandra.</dd>
+          <dt>Did</dt><dd>Audited the 35 nearest rivals on SEO, AI-answer visibility, content and calls to action. Built a 355-page website before opening day.</dd>
+          <dt class="r">Result</dt><dd>Not yet measured. Site, listings and campaigns go live with the salons.</dd>
+        </dl>
+        <div class="lks"><a class="hot" href="toniguy-bengaluru.html">Read the case →</a><a href="https://dannygrowthmarketing.github.io/toniguy-bengaluru/toniguy-bengaluru-site.html#/">Website preview</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="past">
+  <div class="sh"><span class="n">03</span><h2>Past clients</h2><p>Closed engagements, with what moved and what didn't.</p></div>
+  <div class="cases">
+    <article class="case">
+      <div class="pic"><img src="img/ext/bfc499-2025-02-11.jpg" alt="A TONI&amp;GUY salon front in Bengaluru" loading="lazy"><span class="cap">TONI&amp;GUY Bangalore · 16 salons</span></div>
+      <div class="body">
+        <div class="hd"><h3><a href="toni-and-guy.html">TONI&amp;GUY Bangalore</a><span class="chip p"><i></i>Feb – Sep 2026</span></h3><span class="meta">Premium salon network · Retainer</span></div>
+        <dl class="pfdr">
+          <dt>Problem</dt><dd>Growth stalled at +1.3% on last year. Revenue per Google lead fell from ₹3,116 to ₹1,361.</dd>
+          <dt class="f">Found</dt><dd>20 months of till data joined to Google: bills up 17%, average bill down 13.5%. Ad money drifting to low-return salons.</dd>
+          <dt>Did</dt><dd>Google rebuilt salon by salon (25 campaigns), per-salon Meta (26 live), storefront on Netlify, Android booking app, monthly CEO report with salon P&amp;L.</dd>
+          <dt class="r">Result</dt><dd>Revenue <b>+14.7%</b>, bills <b>+21.6%</b> (Mar–Aug). Google CPC <b>₹8.63 → ₹4.58</b>. Part of the lift is seasonal, and the report says so.</dd>
+        </dl>
+        <div class="lks"><a class="hot" href="toni-and-guy.html">Read the case →</a></div>
+      </div>
+    </article>
+  </div>
+  <div class="small">
+    <a class="mini" href="mr-jewels.html"><img src="img/ext/28c751-hvdsc.jpg" alt="Model wearing an MR Jewels ear cuff" loading="lazy"><div><b>MR Jewels →</b><div class="k">−66%</div><p>Showroom CPC after one goal fix. Found Google claiming 11.8× the revenue Shopify booked. Aug – Sep 2026.</p></div></a>
+    <a class="mini" href="foremost-pa.html"><img src="img/ext/5275cd-photo-1564013799919.jpg" alt="Florida home" loading="lazy"><div><b>Foremost Public Adjusters →</b><div class="k">19 → 0</div><p>Crawl issues fixed. 24 pages rewritten, 140 keywords mapped. First new leads at $48 each.</p></div></a>
+    <a class="mini" href="everywatch.html"><img src="img/ext/ab13e1-photo-1547996160.jpg" alt="Luxury wristwatch" loading="lazy"><div><b>EveryWatch →</b><div class="k">20×</div><p>Monthly new users in 17 months, 9.1K → 182.8K, through reference-level content and small fixed-budget paid.</p></div></a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sh"><span class="n">04</span><h2>How I work</h2><p>Every case is read in this order. The ad channel comes in late, not first.</p></div>
+  <ol class="chain"><li>Business problem</li><li>Customer &amp; journey</li><li>Data joined</li><li>Leak found</li><li>Diagnosis</li><li>Fix &amp; build</li><li class="ad">Channel &amp; ads</li><li>Conversion</li><li>Revenue</li><li>Measured monthly</li></ol>
+  <div class="lks"><a href="https://dannygrowthmarketing.github.io/how-i-work/">Full method →</a><a href="https://dannygrowthmarketing.github.io/audit-journey/">How an audit runs →</a></div>
+</section>
+
+<section class="sec">
+  <div class="sh"><span class="n">05</span><h2>What I build and run</h2><p>Each card opens real work.</p></div>
+  <div class="skills">
+    <a class="skill" href="ads.html"><b>Paid media</b><p>Google Ads Search, Performance Max, Demand Gen. Meta lead, WhatsApp and call ads. LinkedIn.</p><span>See 23 live ads →</span></a>
+    <a class="skill" href="toniguy-bengaluru.html"><b>Local, SEO &amp; AI answers</b><p>Business Profile, competitor mapping, technical SEO, keyword maps, Ahrefs, Search Console.</p><span>69-rival audit →</span></a>
+    <a class="skill" href="https://dannygrowthmarketing.github.io/toniguy-bengaluru/toniguy-bengaluru-site.html#/"><b>Websites &amp; booking</b><p>Shopify, Netlify, landing pages, multi-page local sites, booking flows, an Android booking app.</p><span>355-page site →</span></a>
+    <a class="skill" href="elites-dental-dashboard.html"><b>Measurement</b><p>GA4, GTM, Looker Studio, Clarity, enhanced and offline conversions, ad-to-till reconciliation.</p><span>Live dashboard →</span></a>
+    <a class="skill" href="resort.html"><b>CRM &amp; reporting</b><p>HubSpot, Sheets CRM with Apps Script, n8n, WhatsApp follow-up, CEO reports, store-level P&amp;L.</p><span>Sales dashboard →</span></a>
+    <a class="skill" href="mr-jewels.html"><b>Revenue audits</b><p>8.6 lakh search terms, 26 months of spend, Shopify and billing reconciled against Google.</p><span>MR Jewels audit →</span></a>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="sh"><span class="n">06</span><h2>Ways to work with me</h2><p>Consulting, or inside your team. Same method either way.</p></div>
+  <div class="offer">
+    <div class="off"><i>2 weeks · fixed scope</i><b>Revenue audit</b><p>I join your sales, CRM and ad data, find where money leaks, and leave a ranked fix list.</p></div>
+    <div class="off"><i>Monthly retainer</i><b>Build and run</b><p>I run Google, Meta and Business Profile, fix tracking, and send a CEO report every month.</p></div>
+    <div class="off"><i>Defined end date</i><b>Fix or launch</b><p>Tracking repair, account rebuild, website, booking flow, CRM, or a new-location launch.</p></div>
+  </div>
+  <div class="free"><div><b>Send me your set-up. I'll send back the three leaks I'd fix first.</b><p>Free. A 20-minute call to walk through them, at a time that suits you.</p></div><a class="btn" href="mailto:danieldeepak3519@gmail.com?subject=Three%20fixes">Email Danny</a></div>
+</section>
+
+<section class="sec">
+  <div class="sh"><span class="n">07</span><h2>Career</h2></div>
+  <ol class="tl">
+    <li><time>Feb 2026 – now</time><b>Independent revenue consultant</b><p>TONI&amp;GUY Bangalore, MR Jewels, Gold Coins Resort, Elites Dental, TONI&amp;GUY Bengaluru franchise, Foremost Public Adjusters, Swift Restoration.</p></li>
+    <li><time>2024 – 2025</time><b>EveryWatch · Growth &amp; Performance Strategy Lead</b><p>Monthly new users 9.1K → 182.8K; organic impressions 0.10M → 5.5M a month.</p></li>
+    <li><time>2023</time><b>ClearSpot.ai · Growth Marketing Manager</b><p>Monthly conversions about 900 → 3,000+; 25–30% of MQLs moved to SQL.</p></li>
+    <li><time>2021 – 2022</time><b>Masira Digital Marketing · Performance Marketing Manager</b><p>Client leads +50%, CTR +22%, conversion rate +18% across Google and Meta.</p></li>
+    <li><time>2020 – 2021</time><b>QueueBuster POS · Digital Marketing Manager</b><p>Google and Meta lead generation for a B2B point-of-sale product.</p></li>
+  </ol>
+  <div class="edu"><div><b>MBA and Bachelor's, Marketing</b><br>St. Joseph's University, Bengaluru</div><div><b>Certifications</b><br>Google Ads Search · Google Analytics (GA4) · HubSpot · Meta Blueprint</div></div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>© 2026 Daniel Deepak · Bengaluru</span><span><a href="index.html">Revenue Casebook</a> · <a href="ads.html">Ad Showroom</a> · <a href="https://github.com/dannygrowthmarketing">GitHub</a> · Updated 19 Oct 2026</span></div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=b.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copied'},()=>{const s=getSelection(),r=document.createRange();r.selectNodeContents(b.previousElementSibling);s.removeAllRanges();s.addRange(r)})}));
+</script>
+</body></html>
