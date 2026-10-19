@@ -453,7 +453,7 @@
    "market": "India",
    "status": "Active",
    "period": "Data Jan – Sep 2026 · my work from Sep 2026",
-   "role": "Revenue audit, Business Profile, marketing + sales dashboard",
+   "role": "Revenue audit, Business Profile, sales dashboard, Google Ads from 17 Oct",
    "grade": "B",
    "gradeNote": "Sales CRM, Meta, Google Ads, GA4 and Business Profile; bookings not yet tied to channels",
    "leak": "Ad spend rose 3.2× in a quarter and bookings fell 13%: the leak sits between enquiry and booking",
@@ -499,11 +499,11 @@
    },
    "story60": {
     "problem": "Ad spend rose 3.2x from Q2 to Q3. Enquiries rose 46%. Bookings fell 13%.",
-    "leak": "Between enquiry and booking: conversion fell 24% to 14%, profile calls fell 65%, and no booking is tied to any ad.",
+    "leak": "Between enquiry and booking: conversion fell 24% to 14%, profile calls fell 55% May–Aug, and no booking is tied to any ad.",
     "discovered": "Joined CRM, Meta, Google, GA4 and Business Profile by month, then compared quarters before reading any campaign.",
-    "did": "45 Business Profile changes (live 28 Sep). Marketing and sales dashboard live. Pricing, tracking and ads audit. Source field recommended.",
-    "changed": "Nothing measured yet. Engagement began 28 Sep and Oct holds one day of data. Jan-Sep is the baseline.",
-    "evidence": "Sales CRM Jan-1 Oct, Meta and Google Ads exports, GA4, Business Profile Apr-Sep, joined by month.",
+    "did": "45 Business Profile changes (28 Sep). Sales dashboard. 17 Oct: Search rebuilt to 10 ad groups, 49 negatives, Performance Max on real-lead goals.",
+    "changed": "Bookings not yet measurable. Found 52 of 55 Google 'conversions' were map taps: about ₹580 per real lead, not ₹95.",
+    "evidence": "Sales CRM Jan–1 Oct, Meta and Google exports, GA4, Business Profile May–Oct (read 17 Oct), Google Ads 1–17 Oct.",
     "lesson": "Spend did not cause the drop. Conversion stepped down in June and bookings stayed near 100 a month at any volume."
    },
    "problemTags": [
