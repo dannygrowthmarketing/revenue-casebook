@@ -1,0 +1,314 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Systems · Connecting the dots · Danny Deepak</title><meta name="description" content="How I wire ads, calls, CRM, reviews and the website into one live dashboard for resorts and clinics, and what matching them up revealed. Includes a live demo.">
+<meta property="og:title" content="Connecting the dots: live CRM and marketing dashboards"><meta property="og:image" content="https://dannygrowthmarketing.github.io/revenue-casebook/img/systems/demo-glance.webp"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C1222"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"><style>:root{
+--bg:#F6F3ED;--surface:#FFFFFF;--surface-2:#EEEAE2;--ink:#0E1424;--ink-2:#3E4659;--ink-3:#7B8396;--rule:#E3DDD2;--mute:#CFC8BC;
+--leak:#E0454B;--leak-bg:#FCEBEA;--move:#4B49D9;--move-bg:#ECECFD;--flow:#0E9F6A;--flow-bg:#E3F5EC;--est:#B97F00;--est-bg:#FBF1D6;
+--night:#0C1222;--night-2:#151D33;--night-3:#222C47;--on-night:#F3F1EC;--on-night-2:#A8B0C4;--glow:#FFB547;
+--display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;--body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+--r:18px;--r-sm:10px;--shadow:0 1px 2px rgba(14,20,36,.05),0 8px 28px -12px rgba(14,20,36,.18);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0E19;--surface:#121829;--surface-2:#192038;--ink:#EEF0F6;--ink-2:#B9C0D0;--ink-3:#7F889D;--rule:#252E47;--mute:#3A4562;
+--leak:#FF6A6E;--leak-bg:rgba(255,106,110,.12);--move:#9491FF;--move-bg:rgba(148,145,255,.14);--flow:#33CF8E;--flow-bg:rgba(51,207,142,.12);--est:#F0B53A;--est-bg:rgba(240,181,58,.13);
+--night:#060913;--night-2:#10172A;--night-3:#1E2742;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0E19;--surface:#121829;--surface-2:#192038;--ink:#EEF0F6;--ink-2:#B9C0D0;--ink-3:#7F889D;--rule:#252E47;--mute:#3A4562;
+--leak:#FF6A6E;--leak-bg:rgba(255,106,110,.12);--move:#9491FF;--move-bg:rgba(148,145,255,.14);--flow:#33CF8E;--flow-bg:rgba(51,207,142,.12);--est:#F0B53A;--est-bg:rgba(240,181,58,.13);
+--night:#060913;--night-2:#10172A;--night-3:#1E2742;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;text-wrap:balance;font-weight:700}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:20px}
+.mono,.eyebrow{font:500 11.5px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:2px solid var(--move);outline-offset:2px;border-radius:4px}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--night) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.brand{white-space:nowrap;font:800 17px/1 var(--display);letter-spacing:-.01em;text-decoration:none;color:var(--on-night);display:flex;align-items:center;gap:10px}
+.brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--leak),var(--move) 55%,var(--flow));display:inline-block}
+.nav{display:flex;gap:2px}
+.nav a{white-space:nowrap;font:500 14px var(--body);color:var(--on-night-2);text-decoration:none;padding:8px 12px;border-radius:999px}
+.nav a:hover{color:var(--on-night);background:rgba(255,255,255,.06)}
+.nav a[aria-current]{color:var(--on-night);background:rgba(255,255,255,.1)}
+.nav a.cta{background:var(--on-night);color:var(--night);font-weight:600;margin-left:6px}
+@media(max-width:640px){.nav .hide-sm{display:none}.nav a{padding:8px 9px;font-size:13.5px}.brand i{display:none}}
+
+/* colour language chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--body);padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.chip.leak{background:var(--leak-bg);color:var(--leak)}
+.chip.move{background:var(--move-bg);color:var(--move)}
+.chip.flow{background:var(--flow-bg);color:var(--flow)}
+.chip i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.ev{display:inline-flex;align-items:center;gap:5px;font:600 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:6px;white-space:nowrap;vertical-align:middle}
+.ev::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ev.m{color:var(--flow);background:var(--flow-bg)}
+.ev.c{color:var(--move);background:var(--move-bg)}
+.ev.e{color:var(--est);background:var(--est-bg)}
+.ev.u{color:var(--ink-3);background:var(--surface-2)}
+.ev.u::before{background:transparent;border:1.5px dashed currentColor;width:5px;height:5px}
+
+/* dark bands */
+.band{background:var(--night);color:var(--on-night)}
+.band .eyebrow{color:var(--on-night-2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14.5px var(--body);padding:12px 18px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.foot{padding-block:28px 40px;font-size:13px;color:var(--on-night-2);background:var(--night);border-top:1px solid var(--night-3)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+.foot a{color:var(--on-night)}
+
+.btn.lite{background:var(--on-night);color:var(--night)}
+.band .btn.ghost{color:var(--on-night)}
+.shero{padding-block:72px 64px;background:radial-gradient(1200px 500px at 85% -10%,rgba(75,73,217,.35),transparent 60%),radial-gradient(900px 400px at 0% 110%,rgba(14,159,106,.25),transparent 60%),var(--night)}
+.shero h1{font-size:clamp(34px,5.6vw,64px);max-width:15ch;margin:14px 0 18px}
+.shero h1 em{font-style:normal;background:linear-gradient(90deg,#FFB547,#FF6A6E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(16px,1.8vw,19px);color:var(--on-night-2);max-width:60ch}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hstats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:48px;background:var(--night-3);border-radius:var(--r);overflow:hidden}
+.hstats div{background:var(--night-2);padding:20px 18px}
+.hstats b{display:block;font:800 clamp(30px,4vw,44px)/1 var(--display);letter-spacing:-.02em}
+.hstats span{color:var(--on-night-2);font-size:13.5px}
+@media(max-width:760px){.hstats{grid-template-columns:1fr 1fr}}
+.sec{padding-block:72px}
+.sec.alt{background:var(--surface-2)}
+.sec h2{font-size:clamp(28px,4vw,44px);margin:10px 0 12px;max-width:22ch}
+.sub{color:var(--ink-2);max-width:68ch;font-size:16.5px}
+.map{margin:34px 0 0;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;overflow-x:auto}
+.map svg{width:100%;min-width:760px;height:auto;display:block}
+.map text:not([fill]){fill:var(--ink)}
+.map .t{fill:var(--ink-3);font-weight:500;font-size:12px}
+.map .s{stroke-width:0}
+.map .ads,.legend .ads{fill:var(--move-bg);background:var(--move)}
+.map .web,.legend .web{fill:var(--est-bg);background:var(--est)}
+.map .loc,.legend .loc{fill:var(--flow-bg);background:var(--flow)}
+.map .sale,.legend .sale{fill:var(--leak-bg);background:var(--leak)}
+.map .dash{fill:var(--surface-2)}
+.map .act{fill:var(--surface-2)}
+.map .res{fill:var(--night)}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-size:13px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.dots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+@media(max-width:980px){.dots{grid-template-columns:1fr 1fr}}@media(max-width:640px){.dots{grid-template-columns:1fr}}
+.dot{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:10px}
+.pair{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair b{color:var(--ink-3)}
+.p{font:600 11.5px/1 var(--mono);letter-spacing:.04em;padding:6px 9px;border-radius:999px}
+.p.ads{background:var(--move-bg);color:var(--move)}.p.web{background:var(--est-bg);color:var(--est)}.p.loc{background:var(--flow-bg);color:var(--flow)}.p.sale{background:var(--leak-bg);color:var(--leak)}.p.est{background:var(--surface-2);color:var(--ink-2)}
+.num{font:800 clamp(38px,4.6vw,52px)/1 var(--display);letter-spacing:-.03em;margin-top:6px}
+.num.leak{color:var(--leak)}.num.flow{color:var(--flow)}.num.est{color:var(--est)}
+.dot h3{font-size:20px}
+.dot p{color:var(--ink-2);font-size:14.5px}
+.fix{background:var(--flow-bg);border-radius:var(--r-sm);padding:10px 12px;font-size:14px;margin-top:auto}
+.fix b{color:var(--flow);margin-right:6px;font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.dot a{font-weight:600;font-size:14px;color:var(--move);text-decoration:none}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px;align-items:start}
+.shot{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--surface);text-decoration:none}
+.shot img{width:100%;height:auto;display:block}
+.shot span{position:absolute;left:12px;bottom:12px;background:var(--night);color:var(--on-night);font:600 12.5px var(--body);padding:7px 11px;border-radius:999px}
+@media(max-width:700px){.shots{grid-template-columns:1fr}}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px}
+.note{color:var(--ink-3)}
+.tl{list-style:none;padding:0;margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}}@media(max-width:520px){.tl{grid-template-columns:1fr}}
+.tl li{background:var(--surface);border-radius:var(--r-sm);padding:16px;border-top:4px solid var(--move);display:flex;flex-direction:column;gap:6px}
+.tl li:nth-child(n+5){border-top-color:var(--flow)}
+.tl time{font:600 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.tl b{font:700 17px/1.2 var(--display)}
+.tl span{font-size:14px;color:var(--ink-2)}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}@media(max-width:860px){.two{grid-template-columns:1fr}}
+.ticks{list-style:none;padding:0;margin-top:18px;display:grid;gap:12px}
+.ticks li{padding-left:30px;position:relative;color:var(--ink-2)}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--flow-bg);color:var(--flow);font-weight:800;font-size:12px;display:grid;place-items:center}
+.ticks b{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tags span{background:var(--surface-2);border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:500}
+.ctab{padding-block:64px;text-align:left}
+.ctab h2{font-size:clamp(28px,4vw,42px);max-width:20ch}
+.ctab p{color:var(--on-night-2);margin-top:10px;max-width:56ch}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><i></i>Danny Deepak</a><nav class="nav" aria-label="Main"><a class="" href="index.html#cases">Cases</a><a href="systems.html" aria-current="page">Systems</a><a class="hide-sm" href="leaks.html">Playbook</a><a class="hide-sm" href="check.html">Free check</a><a class="cta" href="index.html#contact">Contact</a></nav></div></header>
+
+<section class="band shero"><div class="wrap">
+  <p class="eyebrow">Systems · built Sep – Nov 2026</p>
+  <h1>Your data already knows where the money leaks. <em>It's just in nine places.</em></h1>
+  <p class="lede">Ads, calls, the sales CRM, Google reviews, the website. Each tool tells its own story. I wire them into one database and one dashboard, then match them up. That's where the real problems show.</p>
+  <div class="acts"><a class="btn lite" href="demo/resort-dashboard/index.html#/monthly">Open the live demo</a><a class="btn ghost" href="#dots">See what the dots showed</a></div>
+  <div class="hstats">
+    <div><b>9</b><span>data sources wired per client</span></div>
+    <div><b>8,700+</b><span>sales enquiries joined to ad spend</span></div>
+    <div><b>15,700+</b><span>phone calls matched to the CRM</span></div>
+    <div><b>5,700+</b><span>Google reviews read and tagged</span></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <p class="eyebrow">01 · The wiring</p>
+  <h2>Nine tools in. One answer out.</h2>
+  <p class="sub">Every source syncs on its own clock, from every 5 minutes (calls) to daily (ads). Phone numbers are matched as anonymous codes, so calls, leads and bookings line up without copying anyone's number into the reporting layer.</p>
+  <figure class="map" aria-label="Diagram: nine data sources flow into one database, then a dashboard, then actions">
+  <svg viewBox="0 0 1160 520" role="img">
+    <defs>
+      <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#4B49D9"/><stop offset="1" stop-color="#0E9F6A"/></linearGradient>
+      <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--ink-3)"/></marker>
+    </defs>
+    <g font-family="Inter" font-size="14" font-weight="600">
+      <!-- sources -->
+      <g class="srcs">
+        <g transform="translate(0,20)"><rect width="230" height="40" rx="20" class="s ads"/><text x="20" y="25">Google Ads</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,72)"><rect width="230" height="40" rx="20" class="s ads"/><text x="20" y="25">Meta Ads</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,124)"><rect width="230" height="40" rx="20" class="s web"/><text x="20" y="25">Website (GA4)</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,176)"><rect width="230" height="40" rx="20" class="s web"/><text x="20" y="25">Search Console</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,228)"><rect width="230" height="40" rx="20" class="s loc"/><text x="20" y="25">Business Profile</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,280)"><rect width="230" height="40" rx="20" class="s loc"/><text x="20" y="25">Google reviews</text><text x="214" y="25" text-anchor="end" class="t">daily</text></g>
+        <g transform="translate(0,332)"><rect width="230" height="40" rx="20" class="s sale"/><text x="20" y="25">Phone calls</text><text x="214" y="25" text-anchor="end" class="t">5 min</text></g>
+        <g transform="translate(0,384)"><rect width="230" height="40" rx="20" class="s sale"/><text x="20" y="25">Sales CRM</text><text x="214" y="25" text-anchor="end" class="t">2 hours</text></g>
+        <g transform="translate(0,436)"><rect width="230" height="40" rx="20" class="s sale"/><text x="20" y="25">Patient / guest register</text><text x="214" y="25" text-anchor="end" class="t">import</text></g>
+      </g>
+      <!-- lines to hub -->
+      <g fill="none" stroke="var(--mute)" stroke-width="2">
+        <path d="M230 40 C 330 40, 330 250, 410 250"/><path d="M230 92 C 330 92, 330 250, 410 250"/><path d="M230 144 C 330 144, 330 250, 410 250"/>
+        <path d="M230 196 C 330 196, 330 250, 410 250"/><path d="M230 248 C 330 248, 330 250, 410 250"/><path d="M230 300 C 330 300, 330 250, 410 250"/>
+        <path d="M230 352 C 330 352, 330 250, 410 250"/><path d="M230 404 C 330 404, 330 250, 410 250"/><path d="M230 456 C 330 456, 330 250, 410 250"/>
+      </g>
+      <!-- hub -->
+      <g transform="translate(410,170)"><rect width="250" height="160" rx="22" fill="url(#gl)"/>
+        <text x="125" y="48" text-anchor="middle" fill="#fff" font-size="18" font-weight="800">One database</text>
+        <text x="125" y="78" text-anchor="middle" fill="#fff" font-weight="500" opacity=".9">matched by phone code,</text>
+        <text x="125" y="98" text-anchor="middle" fill="#fff" font-weight="500" opacity=".9">date and campaign</text>
+        <text x="125" y="132" text-anchor="middle" fill="#fff" font-size="12" font-weight="600" opacity=".8">numbers never in the reports</text></g>
+      <path d="M660 250 H730" stroke="var(--ink-3)" stroke-width="2.5" marker-end="url(#ar)"/>
+      <!-- dashboard -->
+      <g transform="translate(740,150)"><rect width="190" height="200" rx="18" class="dash"/>
+        <text x="95" y="38" text-anchor="middle" font-size="16" font-weight="800">Live dashboard</text>
+        <rect x="22" y="58" width="146" height="10" rx="5" fill="#4B49D9" opacity=".8"/><rect x="22" y="78" width="110" height="10" rx="5" fill="#0E9F6A" opacity=".8"/><rect x="22" y="98" width="128" height="10" rx="5" fill="#E0454B" opacity=".8"/>
+        <polyline points="22,170 52,150 82,158 112,128 142,136 168,112" fill="none" stroke="#4B49D9" stroke-width="3"/>
+        <text x="95" y="192" text-anchor="middle" class="t" font-size="11.5">monthly review · guest list</text></g>
+      <path d="M930 250 H990" stroke="var(--ink-3)" stroke-width="2.5" marker-end="url(#ar)"/>
+      <!-- actions -->
+      <g transform="translate(1000,120)">
+        <g><rect width="160" height="54" rx="14" class="act"/><text x="14" y="23">Call back</text><text x="14" y="42" class="t" font-size="11.5">missed callers</text></g>
+        <g transform="translate(0,66)"><rect width="160" height="54" rx="14" class="act"/><text x="14" y="23">Move budget</text><text x="14" y="42" class="t" font-size="11.5">to what books</text></g>
+        <g transform="translate(0,132)"><rect width="160" height="54" rx="14" class="act"/><text x="14" y="23">Reply · recall</text><text x="14" y="42" class="t" font-size="11.5">reviews, patients</text></g>
+        <g transform="translate(0,198)"><rect width="160" height="54" rx="14" class="act res"/><text x="14" y="23" fill="#fff">Monthly report</text><text x="14" y="42" fill="#fff" font-size="11.5" font-weight="500">budget, plan, proof</text></g>
+      </g>
+    </g>
+  </svg>
+  </figure>
+  <div class="legend"><span><i class="ads"></i>Paid media</span><span><i class="web"></i>Website &amp; search</span><span><i class="loc"></i>Google Maps profile</span><span><i class="sale"></i>Sales &amp; calls</span></div>
+</div></section>
+
+<section class="sec alt" id="dots"><div class="wrap">
+  <p class="eyebrow">02 · Connecting the dots</p>
+  <h2>What no single tool could see</h2>
+  <p class="sub">Each finding needed two sources side by side. Real numbers from live client work, Oct 2026.</p>
+  <div class="dots">
+    <article class="dot">
+      <div class="pair"><span class="p ads">Google Ads</span><b>+</b><span class="p sale">Sales CRM</span></div>
+      <div class="num leak">55 → 9</div>
+      <h3>"Conversions" vs real leads</h3>
+      <p>Google reported 55 conversions in half a month. About 9 were people who called, messaged or filled a form. The rest were map taps.</p>
+      <div class="fix"><b>Fix</b> Goals reset to real leads; Search rebuilt. Clicks per day 31 → 152 at a lower cost per click.</div>
+      <a href="resort.html">Gold Coins Club &amp; Resort →</a>
+    </article>
+    <article class="dot">
+      <div class="pair"><span class="p sale">Phone calls</span><b>+</b><span class="p sale">Sales CRM</span></div>
+      <div class="num leak">24%</div>
+      <h3>Callers who reach the CRM</h3>
+      <p>1,737 people called in October. Only 425 have any CRM record. 737 never got through at all.</p>
+      <div class="fix"><b>Fix</b> Same-day callback rule, every answered call logged, a callers-vs-CRM tracker on the dashboard.</div>
+      <a href="resort.html">Gold Coins Club &amp; Resort →</a>
+    </article>
+    <article class="dot">
+      <div class="pair"><span class="p ads">Meta Ads</span><b>+</b><span class="p sale">Sales CRM</span></div>
+      <div class="num leak">2% vs 21%</div>
+      <h3>Lead forms vs phone calls</h3>
+      <p>Meta lead forms booked 4 of 216. Phone enquiries booked 91 of 430. Same month, same resort.</p>
+      <div class="fix"><b>Fix</b> Budget moves from lead forms to click-to-WhatsApp ads and Search, where people already book.</div>
+      <a href="resort.html">Gold Coins Club &amp; Resort →</a>
+    </article>
+    <article class="dot">
+      <div class="pair"><span class="p sale">Sales CRM</span><b>+</b><span class="p est">Accounts figure</span></div>
+      <div class="num est">45%</div>
+      <h3>Revenue the CRM can explain</h3>
+      <p>The CRM covers less than half of what the sales team reports for the month. OTA, walk-in, events and F&amp;B never touch it.</p>
+      <div class="fix"><b>Fix</b> Revenue check on the dashboard; every booking tagged with its source from November.</div>
+      <a href="resort.html">Gold Coins Club &amp; Resort →</a>
+    </article>
+    <article class="dot">
+      <div class="pair"><span class="p sale">Patient register</span><b>+</b><span class="p loc">WhatsApp</span></div>
+      <div class="num flow">203</div>
+      <h3>Patients due for a check-up</h3>
+      <p>87% of the clinic's 796 patients visited once and never came back. 203 are due for a six-month recall today.</p>
+      <div class="fix"><b>Fix</b> Recall lists with one-tap WhatsApp messages, plus a QR card for a partner shop's 1,150 customers.</div>
+      <a href="elites-dental.html">Elites Dental Care →</a>
+    </article>
+    <article class="dot">
+      <div class="pair"><span class="p ads">Google Ads</span><b>+</b><span class="p web">Website</span></div>
+      <div class="num flow">₹79 → ₹21</div>
+      <h3>Cost per click, dental Search</h3>
+      <p>Broad keywords and a home-page landing burned budget on people who never booked.</p>
+      <div class="fix"><b>Fix</b> Seven treatment ad groups, each sent to its own page. Calls and WhatsApp tracked as the goal.</div>
+      <a href="elites-dental.html">Elites Dental Care →</a>
+    </article>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <p class="eyebrow">03 · Live demo</p>
+  <h2>Click through it yourself</h2>
+  <p class="sub">The same dashboard I run for a resort client, loaded with made-up numbers. Pick a month, filter the guest list, try the revenue check.</p>
+  <div class="shots">
+    <a class="shot big" href="demo/resort-dashboard/index.html#/monthly"><img src="img/systems/demo-glance.webp" alt="Demo dashboard: the month at a glance, marketing, sales and return on spend" loading="lazy"><span>Monthly review · month at a glance</span></a>
+    <a class="shot" href="demo/resort-dashboard/index.html#/monthly"><img src="img/systems/demo-trends.webp" alt="Demo dashboard: 12-month trend charts" loading="lazy"><span>12-month trends</span></a>
+    <a class="shot" href="demo/resort-dashboard/index.html#/monthly"><img src="img/systems/demo-callers.webp" alt="Demo dashboard: callers matched to the CRM" loading="lazy"><span>Callers vs CRM</span></a>
+    <a class="shot big" href="demo/resort-dashboard/index.html#/guests"><img src="img/systems/demo-guests.webp" alt="Demo dashboard: guest list with call and WhatsApp buttons" loading="lazy"><span>Guest list · one-tap call and WhatsApp</span></a>
+  </div>
+  <p class="cta-row"><a class="btn" href="demo/resort-dashboard/index.html#/monthly">Open the live demo</a><span class="mono note">Demo data only · no client information</span></p>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <p class="eyebrow">04 · What I built</p>
+  <h2>Six weeks, two live clients</h2>
+  <ol class="tl">
+    <li><time>27 Sep</time><b>Business Profile rebuilt</b><span>Resort: 45 changes, 17 priced services. Clinic: categories, services, replies.</span></li>
+    <li><time>1 Oct</time><b>Dental Search relaunched</b><span>7 treatment ad groups, each with its own landing page.</span></li>
+    <li><time>17 Oct</time><b>Resort Google Ads rebuilt</b><span>10 ad groups, 49 negatives, goals set to real leads.</span></li>
+    <li><time>20 Oct</time><b>Clinic dashboard live</b><span>Ads, website, Maps, calls and appointments in one place.</span></li>
+    <li><time>25 Oct</time><b>Resort dashboard live</b><span>Spend, enquiries and bookings joined for the first time.</span></li>
+    <li><time>28 Oct</time><b>CRM + call tracking connected</b><span>8,700+ enquiries and every call since April.</span></li>
+    <li><time>30 Oct</time><b>Reviews + search terms</b><span>5,700+ reviews tagged by topic; what people type to find you.</span></li>
+    <li><time>2 Nov</time><b>Patient recall + monthly review</b><span>Recall lists, partner QR card, callers vs CRM, revenue check, monthly report.</span></li>
+  </ol>
+</div></section>
+
+<section class="sec"><div class="wrap two">
+  <div>
+    <p class="eyebrow">05 · Under the hood</p>
+    <h2>Built to be trusted with real data</h2>
+    <ul class="ticks">
+      <li><b>Private by default.</b> Owner login only. Guest and patient contact details visible to owners and editors, nobody else.</li>
+      <li><b>No keys in the browser.</b> Ad, CRM and call-tracking credentials stay server-side.</li>
+      <li><b>Every number labelled.</b> Measured, calculated or estimated. Where data is missing, the page says so.</li>
+      <li><b>Runs itself.</b> Scheduled syncs, from every 5 minutes to daily. No spreadsheets to update.</li>
+    </ul>
+  </div>
+  <div class="stack">
+    <p class="eyebrow">Stack</p>
+    <div class="tags"><span>React</span><span>Supabase (Postgres)</span><span>Edge functions</span><span>Scheduled syncs</span><span>Google Ads API</span><span>Meta Marketing API</span><span>GA4 Data API</span><span>Search Console API</span><span>Business Profile API</span><span>Exotel</span><span>CRM API</span><span>Vercel</span><span>Claude (AI-assisted build)</span></div>
+    <p class="eyebrow" style="margin-top:22px">Works for</p>
+    <div class="tags"><span>Resorts &amp; hotels</span><span>Clinics</span><span>Salons</span><span>Multi-location retail</span><span>Local lead-gen</span></div>
+  </div>
+</div></section>
+
+<section class="band ctab"><div class="wrap">
+  <h2>Want to see your own dots connected?</h2>
+  <p>Start with the free 12-point leak check. If it finds something, I'll show you on a dashboard like this one.</p>
+  <div class="acts"><a class="btn lite" href="check.html">Run the free check</a><a class="btn ghost" href="mailto:danieldeepak3519@gmail.com">danieldeepak3519@gmail.com</a></div>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© 2026 Daniel Deepak · Bengaluru · Revenue growth consulting</span><span><a href="resume.html">Resume</a> · <a href="https://github.com/dannygrowthmarketing">GitHub</a> · <a href="llms.txt">llms.txt</a> · Updated 2026-11-02</span></div></footer>
+
+</body></html>
